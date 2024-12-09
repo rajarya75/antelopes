@@ -1,8 +1,22 @@
 // Colors
-$primary: #ECC4B3;
-$primaryLight: #FEFAEE;
-$secondary: #040100;
+$primary: #F8E9D4;
+$primaryLight: #F8E9D4;
+$secondary: #823C47;
 $white: #ffffff;
+
+@font-face {
+    font-family: 'Gtultra';
+    src: url('/assets/fonts/GT-Ultra-Fine-Thin-Trial.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Abcfavorite';
+    src: url('/assets/fonts/ABCFavoritMono-Book.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 h1,
 h2,
@@ -10,7 +24,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Lato", sans-serif;
+    font-family: Gtultra;
 }
 
 html {
@@ -18,9 +32,9 @@ html {
 }
 
 body {
-    font-family: "Source Sans 3", sans-serif;
+    font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
-    background: #FEFAEE;
+    background: $primary;
 }
 
 .main-wrapper {
@@ -72,22 +86,18 @@ body {
 }
 
 .heading {
-    font-size: 32px;
-    line-height: 38px;
+    font-size: 56px;
+    line-height: 66px;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 400;
-
-    &.black {
-        color: $secondary;
-    }
 
     &.primary {
         color: $primary;
     }
 
-    &.primarylight {
-        color: $primaryLight;
+    &.secondary {
+        color: $secondary;
     }
 
     &.white {
@@ -95,22 +105,27 @@ body {
     }
 }
 
+h2.heading {
+    text-transform: unset;
+    line-height: 42px;
+
+    span {
+        font-size: 36px;
+    }
+}
+
 .para {
     font-size: 18px;
-    line-height: 30px;
-    font-weight: 350;
+    line-height: 28px;
+    font-weight: 400;
     margin-bottom: 0;
-
-    &.black {
-        color: $secondary;
-    }
 
     &.primary {
         color: $primary;
     }
 
-    &.primarylight {
-        color: $primaryLight;
+    &.secondary {
+        color: $secondary;
     }
 
     &.white {
@@ -127,92 +142,69 @@ p.label {
     margin-bottom: 5px;
 }
 
+.uppercase {
+    text-transform: uppercase !important;
+}
+
 // Button
-.btn-amber {
-    padding: 12px 44px;
-    border-radius: 30px 0 30px 0;
-    border: 2px solid #C07841;
+.btn-antelopes {
+    padding: 12px 28px;
+    border-radius: 30px;
+    border: 1px solid $primary;
     font-size: 16px;
     font-weight: 500;
-    color: #C07841;
-    background: $primaryLight;
+    color: $primary;
+    background: $secondary;
     display: inline-block;
-    transition: all .2s;
+    transition: all 0.2s ease-in-out;
     position: relative;
     overflow: hidden;
     z-index: 1;
     text-decoration: none;
 
-    &:before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0%;
-        height: 100%;
-        background-color: #C07841;
-        transition: all .5s;
-        border-radius: 27px 0 27px 0;
-        z-index: -1;
-        animation-timing-function: ease-in-out;
-        animation-duration: 300ms;
-
+    img {
+        margin-left: 8px;
+        transition: transform 0.3s ease-in-out;
+        display: inline-block;
     }
-
 
     &:hover {
-        color: #FEFAEE;
+        color: $primary;
 
-        &:before {
-            width: 100%;
-        }
-
-        svg {
-            path {
-                fill: $primaryLight;
-            }
-        }
-
-        &:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60%;
-            height: 100%;
-            border-radius: 27px 27px 27px 0;
-            z-index: -2;
-            background-color: #c07841af;
-            animation-timing-function: ease-in-out;
-            animation-duration: 300ms;
-        }
-    }
-
-    &.btn-back {
-        svg {
-            margin-right: 7px;
+        img {
+            transform: translateX(5px);
         }
     }
 }
 
-.btn-amber1 {
-    padding: 12px 44px;
-    border-radius: 30px 0 30px 0;
-    border: 2px solid #C07841;
+
+.btn-antelopes1 {
+    padding: 12px 28px;
+    border-radius: 30px;
+    border: 1px solid $secondary;
     font-size: 16px;
     font-weight: 500;
-    color: #C07841;
-    background: $primaryLight;
+    color: $secondary;
+    background: $primary;
     display: inline-block;
-    transition: all .6s;
+    transition: all 0.2s ease-in-out;
     position: relative;
     overflow: hidden;
     z-index: 1;
     text-decoration: none;
 
+    img {
+        margin-left: 8px;
+        transition: transform 0.3s ease-in-out;
+        display: inline-block;
+    }
+
     &:hover {
-        background: #C07841;
-        color: $white;
+        color: $secondary;
+
+        img {
+            transform: translateX(5px);
+        }
     }
 }
 
@@ -247,7 +239,7 @@ p.label {
     }
 
     ul {
-        padding-left: 200px;
+        padding-left: 0;
         list-style-type: none;
         display: flex;
         justify-content: center;
@@ -255,29 +247,19 @@ p.label {
         gap: 20px;
         margin-bottom: 0;
         width: 100%;
-        background-color: #FEFAEE;
+        background-color: $primaryLight;
         transition: all 0.3s ease;
+        padding-top: 10px;
+        padding-bottom: 10px;
 
 
         li {
             .logo {
-                width: 215px;
-            }
-
-            .user {
-                border: 1px solid #010D07;
-                padding: 8px 16px;
-                border-radius: 25px 0 25px 0;
-
-                img {
-                    margin-top: -3px;
-                    margin-right: 3px;
-                }
+                width: 140px;
             }
 
             a {
-                padding-left: 10px;
-                padding-right: 10px;
+                padding: 6px 10px;
                 text-decoration: none;
                 color: #040100;
                 font-size: 14px;
@@ -313,14 +295,15 @@ p.label {
             text-align: center;
 
             img {
-                width: 500px;
+                width: 170px;
                 transition: width 0.5s ease;
+                padding-top: 6px;
             }
         }
 
         .content {
             text-align: center;
-            padding-top: 26vh;
+            padding-top: 20vh;
 
             .para {
                 padding-top: 10px;
@@ -349,6 +332,7 @@ p.label {
                 margin: 0 auto;
                 width: 30px;
                 transition: width 0.5s ease;
+                margin-top: 8px;
             }
 
             &:hover {
@@ -378,17 +362,6 @@ p.label {
                     font-size: 18px;
                     line-height: 40px;
                     color: $secondary;
-                }
-
-                .user {
-                    border: 1px solid #010D07;
-                    padding: 8px 16px;
-                    border-radius: 30px 0 30px 0;
-
-                    img {
-                        margin-top: -3px;
-                        margin-right: 3px;
-                    }
                 }
             }
         }
@@ -426,81 +399,66 @@ p.label {
 
         .logo {
             img {
-                width: 230px;
+                visibility: hidden;
             }
         }
 
-        .content {
-            padding-top: 33vh;
-        }
     }
 }
 
-// Start Project section
-.project {
-    display: flex;
-    background-image: url(/assets/images/amber-bg.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding-top: 130px;
-    padding-bottom: 130px;
+// Start About section
+.about {
     position: relative;
+    background-image: url(/assets/images/about-wave1.svg);
+    background-size: cover;
+    background-position: center center;
+    transition: background 0.5s ease-in-out;
+    height: 110vh;
 
     .row {
-        display: flex;
-        align-items: center;
+        padding-top: 100px;
+    }
 
-        .text-center {
-            padding-right: 50px;
+    .bottom {
+        padding-top: 320px;
+        margin-bottom: 30px;
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+
+            li {
+                font-weight: 500;
+                line-height: 40px;
+            }
         }
     }
 
-    .frame {
-        // border: 1px solid $primary;
-        // max-width: 384px;
-        // padding: 40px 58px;
-        // margin: 30px auto 0 0;
-        // position: relative;
-        background-image: url(/assets/images/frame.svg);
-        background-size: contain;
-        background-position: left;
-        background-repeat: no-repeat;
-        height: 280px;
-        margin-top: 30px;
-
-        .left {
-            position: absolute;
-            left: -20px;
-            top: -30px;
-        }
-
-        .right {
-            position: absolute;
-            right: -20px;
-            bottom: -30px;
-        }
-    }
-
-    .video-wrapper {
-        padding-left: 10px;
-
-        .video-background {
-            width: 100%;
-            height: 600px;
-            object-fit: cover;
-            z-index: 10;
-        }
-    }
-
-    .vector {
+    &::before {
+        content: "";
         position: absolute;
-        bottom: -100px;
-        right: -50px;
-        width: 300px;
-        z-index: 9;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(/assets/images/about-wave2.svg);
+        background-size: cover;
+        background-position: center center;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        z-index: 0;
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
+
+    * {
+        position: relative;
+        z-index: 1;
     }
 }
+
 
 // Start Style
 .style {
@@ -509,7 +467,7 @@ p.label {
     background-color: $primaryLight;
 
     .left-bg {
-        background-image: url(/assets/images/amber-bg.webp);
+        background-image: url(/assets/images/bg-sec.webp);
         background-size: cover;
         background-position: center;
         padding: 100px 50px;
