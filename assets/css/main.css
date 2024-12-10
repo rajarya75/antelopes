@@ -90,14 +90,6 @@ body {
   color: #ffffff;
 }
 
-h2.heading {
-  text-transform: unset;
-  line-height: 42px;
-}
-h2.heading span {
-  font-size: 36px;
-}
-
 .para {
   font-size: 18px;
   line-height: 28px;
@@ -113,6 +105,9 @@ h2.heading span {
 .para.white {
   color: #ffffff;
 }
+.para.fs-16 {
+  font-size: 16px;
+}
 
 p.label {
   font-size: 12px;
@@ -125,6 +120,12 @@ p.label {
 
 .uppercase {
   text-transform: uppercase !important;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .btn-antelopes {
@@ -141,6 +142,7 @@ p.label {
   overflow: hidden;
   z-index: 1;
   text-decoration: none;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2), 0px 5px 15px 0px rgba(5, 1, 0, 0.2);
 }
 .btn-antelopes img {
   margin-left: 8px;
@@ -168,6 +170,7 @@ p.label {
   overflow: hidden;
   z-index: 1;
   text-decoration: none;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2), 0px 5px 15px 0px rgba(5, 1, 0, 0.2);
 }
 .btn-antelopes1 img {
   margin-left: 8px;
@@ -347,6 +350,14 @@ p.label {
 .about .row {
   padding-top: 100px;
 }
+.about h2.heading {
+  text-transform: unset;
+  line-height: 42px;
+  font-size: 70px;
+}
+.about h2.heading span {
+  font-size: 36px;
+}
 .about .bottom {
   padding-top: 320px;
   margin-bottom: 30px;
@@ -382,9 +393,7 @@ p.label {
 }
 
 .style {
-  padding-top: 50px;
-  padding-bottom: 100px;
-  background-color: #F8E9D4;
+  padding-top: 70px;
 }
 .style .left-bg {
   background-image: url(/assets/images/bg-sec.webp);
@@ -424,6 +433,30 @@ p.label {
   margin-top: 10px;
 }
 
+.architecture {
+  padding-top: 90px;
+  padding-bottom: 80px;
+}
+.architecture .wonder {
+  padding-top: 250px;
+}
+.architecture .wonder p {
+  color: #823C47;
+  font-weight: 500;
+  font-size: 32px;
+}
+.architecture .wonder ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.architecture .wonder ul li {
+  color: #823C47;
+  line-height: 40px;
+}
+.architecture .creative {
+  position: relative;
+}
+
 .suites {
   position: relative;
 }
@@ -435,29 +468,64 @@ p.label {
   margin-left: 6px;
 }
 .suites .suites-info {
-  background: #FEFAEE;
-  box-shadow: 0px 0px 34px 0px rgba(57, 32, 32, 0.4509803922);
-  width: 500px;
-  padding: 70px 50px;
-  text-align: center;
+  background: #F8E9D4;
+  width: 700px;
+  padding: 30px;
   position: absolute;
   left: 50%;
-  top: 50%;
+  bottom: -26%;
   transform: translate(-50%, -50%);
 }
 
-.download {
-  padding-top: 130px;
-  padding-bottom: 130px;
-  text-align: center;
-  background: #F8E9D4;
+.amenities {
+  padding-top: 110px;
+  padding-bottom: 90px;
+}
+.amenities #pills-tab {
+  padding-top: 60px;
+  border-bottom: 1px solid #823C47;
+}
+.amenities #pills-tab .nav-item .nav-link {
+  color: #CFB694;
+  padding: 0.5rem 4rem 0.3rem 0;
+  font-size: 28px;
+}
+.amenities #pills-tab .nav-item .nav-link.active {
+  background: none;
+  color: #823C47;
+}
+.amenities .tab-content {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 10px;
+}
+.amenities .clubhouse {
+  padding-top: 80px;
+}
+.amenities .clubhouse .head {
+  border-bottom: 1px solid #823C47;
+  font-size: 28px;
+  color: #823C47;
+}
+.amenities .clubhouse .head span {
+  color: #CFB694;
+  padding-left: 16px;
+}
+.amenities .clubhouse .amenities-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.amenities .clubhouse .amenities-list .para {
+  width: 20%;
+  padding-top: 1.5rem;
 }
 
-.lifestyle {
+.interiors {
   display: flex;
   height: 700px;
 }
-.lifestyle .left {
+.interiors .left {
   width: 25%;
   background-image: url(/assets/images/luxury-left.webp);
   background-size: cover;
@@ -465,7 +533,7 @@ p.label {
   background-repeat: no-repeat;
   transition: width 0.5s ease;
 }
-.lifestyle .middle {
+.interiors .middle {
   width: 50%;
   text-align: center;
   background-image: url(/assets/images/amber-bg.webp);
@@ -475,11 +543,11 @@ p.label {
   align-items: center;
   transition: width 0.5s ease;
 }
-.lifestyle .middle .content {
+.interiors .middle .content {
   width: 550px;
   margin: 0 auto;
 }
-.lifestyle .right {
+.interiors .right {
   width: 25%;
   background-image: url(/assets/images/luxury-right.webp);
   background-size: cover;
@@ -487,88 +555,14 @@ p.label {
   background-repeat: no-repeat;
   transition: width 0.5s ease;
 }
-.lifestyle:hover .left {
+.interiors:hover .left {
   width: 27%;
 }
-.lifestyle:hover .middle {
+.interiors:hover .middle {
   width: 46%;
 }
-.lifestyle:hover .right {
+.interiors:hover .right {
   width: 27%;
-}
-
-.amenities {
-  padding-top: 80px;
-  padding-bottom: 110px;
-  background: #F8E9D4;
-}
-.amenities .slick-slider {
-  margin: 0 -10px;
-}
-.amenities .slick-slide {
-  margin-right: 10px;
-  margin-left: 10px;
-}
-.amenities .slick-arrow {
-  position: absolute;
-  top: 0;
-  z-index: 10;
-}
-.amenities .slick-arrow.prev {
-  left: -30px;
-  height: 100%;
-  cursor: pointer;
-}
-.amenities .slick-arrow.next {
-  right: -30px;
-  height: 100%;
-  cursor: pointer;
-}
-.amenities .info {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  height: 100%;
-  padding-left: 50px;
-  padding-right: 60px;
-}
-.amenities .specification {
-  padding-top: 110px;
-}
-.amenities .specification .s-info {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  height: 100%;
-  max-width: 550px;
-  margin: 0 auto;
-}
-
-.interiors {
-  height: 110vh;
-  background-image: url(/assets/images/interiors.webp);
-  background-size: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  position: relative;
-  transition: background-size 0.8s ease-in-out;
-  margin-bottom: 70px;
-}
-.interiors:hover {
-  background-size: 103%;
-}
-.interiors .i-info {
-  background-color: #FEFAEE;
-  max-width: 500px;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  padding: 50px 40px;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(3%, -50%);
 }
 
 .gallery {

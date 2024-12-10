@@ -105,14 +105,7 @@ body {
     }
 }
 
-h2.heading {
-    text-transform: unset;
-    line-height: 42px;
 
-    span {
-        font-size: 36px;
-    }
-}
 
 .para {
     font-size: 18px;
@@ -131,6 +124,10 @@ h2.heading {
     &.white {
         color: $white;
     }
+
+    &.fs-16 {
+        font-size: 16px;
+    }
 }
 
 p.label {
@@ -144,6 +141,12 @@ p.label {
 
 .uppercase {
     text-transform: uppercase !important;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 // Button
@@ -161,6 +164,7 @@ p.label {
     overflow: hidden;
     z-index: 1;
     text-decoration: none;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.20), 0px 5px 15px 0px rgba(5, 1, 0, 0.20);
 
     img {
         margin-left: 8px;
@@ -192,6 +196,7 @@ p.label {
     overflow: hidden;
     z-index: 1;
     text-decoration: none;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.20), 0px 5px 15px 0px rgba(5, 1, 0, 0.20);
 
     img {
         margin-left: 8px;
@@ -419,6 +424,17 @@ p.label {
         padding-top: 100px;
     }
 
+
+    h2.heading {
+        text-transform: unset;
+        line-height: 42px;
+        font-size: 70px;
+
+        span {
+            font-size: 36px;
+        }
+    }
+
     .bottom {
         padding-top: 320px;
         margin-bottom: 30px;
@@ -462,9 +478,7 @@ p.label {
 
 // Start Style
 .style {
-    padding-top: 50px;
-    padding-bottom: 100px;
-    background-color: $primaryLight;
+    padding-top: 70px;
 
     .left-bg {
         background-image: url(/assets/images/bg-sec.webp);
@@ -516,7 +530,37 @@ p.label {
 
 }
 
-// Start Suites
+// Start Architecture
+.architecture {
+    padding-top: 90px;
+    padding-bottom: 80px;
+
+    .wonder {
+        padding-top: 250px;
+
+        p {
+            color: $secondary;
+            font-weight: 500;
+            font-size: 32px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+
+            li {
+                color: $secondary;
+                line-height: 40px;
+            }
+        }
+    }
+
+    .creative {
+        position: relative;
+    }
+}
+
+// Start lifestyle
 .suites {
     position: relative;
 
@@ -530,28 +574,77 @@ p.label {
     }
 
     .suites-info {
-        background: #FEFAEE;
-        box-shadow: 0px 0px 34px 0px #39202073;
-        width: 500px;
-        padding: 70px 50px;
-        text-align: center;
+        background: $primary;
+        width: 700px;
+        padding: 30px;
         position: absolute;
         left: 50%;
-        top: 50%;
+        bottom: -26%;
         transform: translate(-50%, -50%);
     }
 }
 
-// Start download
-.download {
-    padding-top: 130px;
-    padding-bottom: 130px;
-    text-align: center;
-    background: $primaryLight;
+// Start amenities
+.amenities {
+    padding-top: 110px;
+    padding-bottom: 90px;
+
+    #pills-tab {
+        padding-top: 60px;
+        border-bottom: 1px solid $secondary;
+
+        .nav-item {
+
+            .nav-link {
+                color: #CFB694;
+                padding: .5rem 4rem .3rem 0;
+                font-size: 28px;
+
+                &.active {
+                    background: none;
+                    color: $secondary;
+                }
+            }
+        }
+    }
+
+    .tab-content {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 10px;
+    }
+
+    .clubhouse {
+        padding-top: 80px;
+
+        .head {
+            border-bottom: 1px solid $secondary;
+            font-size: 28px;
+            color: $secondary;
+
+            span {
+                color: #CFB694;
+                padding-left: 16px;
+            }
+        }
+
+        .amenities-list {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .para {
+                width: 20%;
+                padding-top: 1.5rem;
+            }
+        }
+
+    }
 }
 
-// Start lifestyle    
-.lifestyle {
+
+// Start Interiors 
+.interiors {
     display: flex;
     height: 700px;
 
@@ -601,93 +694,6 @@ p.label {
         .right {
             width: 27%;
         }
-    }
-}
-
-// Start Amenities
-.amenities {
-    padding-top: 80px;
-    padding-bottom: 110px;
-    background: $primaryLight;
-
-    .slick-slider {
-        margin: 0 -10px;
-    }
-
-    .slick-slide {
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-
-    .slick-arrow {
-        position: absolute;
-        top: 0;
-        z-index: 10;
-
-        &.prev {
-            left: -30px;
-            height: 100%;
-            cursor: pointer;
-
-        }
-
-        &.next {
-            right: -30px;
-            height: 100%;
-            cursor: pointer;
-        }
-    }
-
-    .info {
-        text-align: center;
-        display: flex;
-        align-items: center;
-        height: 100%;
-        padding-left: 50px;
-        padding-right: 60px;
-    }
-
-    .specification {
-        padding-top: 110px;
-
-        .s-info {
-            text-align: center;
-            display: flex;
-            align-items: center;
-            height: 100%;
-            max-width: 550px;
-            margin: 0 auto;
-        }
-    }
-}
-
-// Start Interiors
-.interiors {
-    height: 110vh;
-    background-image: url(/assets/images/interiors.webp);
-    background-size: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    position: relative;
-    transition: background-size 0.8s ease-in-out;
-    margin-bottom: 70px;
-
-    &:hover {
-        background-size: 103%;
-    }
-
-    .i-info {
-        background-color: #FEFAEE;
-        max-width: 500px;
-        display: flex;
-        align-items: center;
-        position: absolute;
-        padding: 50px 40px;
-        text-align: center;
-        top: 50%;
-        left: 50%;
-        transform: translate(3%, -50%);
     }
 }
 
