@@ -91,7 +91,7 @@ body {
 }
 
 .para {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 28px;
   font-weight: 400;
   margin-bottom: 0;
@@ -110,11 +110,11 @@ body {
 }
 
 p.label {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
-  color: #C07841;
-  letter-spacing: 5px;
+  color: #823C47;
+  letter-spacing: 1px;
   margin-bottom: 5px;
 }
 
@@ -345,7 +345,7 @@ p.label {
   background-size: cover;
   background-position: center center;
   transition: background 0.5s ease-in-out;
-  height: 110vh;
+  min-height: 110vh;
 }
 .about .row {
   padding-top: 100px;
@@ -523,22 +523,42 @@ p.label {
 
 .interiors {
   display: flex;
-  height: 700px;
+  min-height: 100vh;
+  background-image: url(/assets/images/lifestyle.webp);
+  background-size: cover;
+  background-position: center;
+}
+.interiors p.label {
+  color: #F8E9D4;
+}
+.interiors .heading {
+  line-height: 48px;
+  padding-top: 24px;
+  padding-bottom: 20px;
+}
+.interiors .heading span {
+  font-size: 75%;
 }
 .interiors .left {
-  width: 25%;
+  width: 40%;
+  position: relative;
+}
+.interiors .left .bg-left {
+  position: absolute;
+  top: 0;
+  left: -100%;
   background-image: url(/assets/images/luxury-left.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition: width 0.5s ease;
+  height: 100%;
+  width: 100%;
+  transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
 }
 .interiors .middle {
-  width: 50%;
-  text-align: center;
-  background-image: url(/assets/images/amber-bg.webp);
-  background-size: cover;
-  background-position: center;
+  width: 40%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   transition: width 0.5s ease;
@@ -548,29 +568,65 @@ p.label {
   margin: 0 auto;
 }
 .interiors .right {
-  width: 25%;
+  width: 20%;
+  position: relative;
+}
+.interiors .right .bg-right {
+  position: absolute;
+  top: 0;
+  right: -100%;
   background-image: url(/assets/images/luxury-right.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition: width 0.5s ease;
+  height: 100%;
+  width: 100%;
+  transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
 }
-.interiors:hover .left {
-  width: 27%;
+.interiors:hover .left .bg-left {
+  left: 0;
+  opacity: 1;
 }
 .interiors:hover .middle {
-  width: 46%;
+  width: 40%;
 }
-.interiors:hover .right {
-  width: 27%;
+.interiors:hover .right .bg-right {
+  right: 0;
+  opacity: 1;
 }
 
 .gallery {
   padding-top: 80px;
-  padding-bottom: 70px;
-  background-image: url(/assets/images/amber-bg.webp);
+  padding-bottom: 120px;
   background-position: center;
   background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.gallery::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/assets/images/gallery/gallery-bg.webp);
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: -1;
+}
+.gallery:hover::before {
+  opacity: 1;
+}
+.gallery .heading {
+  color: #61624D;
+  margin-bottom: 40px;
+}
+.gallery .container-fluid {
+  max-width: 1400px;
 }
 .gallery .container {
   width: 1200px;
@@ -587,14 +643,14 @@ p.label {
   text-align: center;
 }
 .gallery .slick-dots li {
-  background: rgba(254, 250, 238, 0.4862745098);
+  background: rgba(97, 98, 77, 0.5176470588);
   border-radius: 50%;
   width: 12px;
   height: 12px;
   margin: 0 8px;
 }
 .gallery .slick-dots li.slick-active {
-  background-color: #C07841;
+  background-color: #61624D;
   width: 13px;
   height: 13px;
 }
@@ -652,22 +708,22 @@ p.label {
 }
 
 .plans {
-  padding-top: 110px;
-  padding-bottom: 100px;
-  background-color: #F8E9D4;
+  padding-top: 70px;
+  padding-bottom: 90px;
+  background-color: #61624D;
   padding-left: 60px;
   padding-right: 60px;
 }
+.plans .heading {
+  padding-bottom: 50px;
+  text-align: right;
+}
 .plans .plan-item {
-  margin-bottom: 30px;
-  cursor: pointer;
+  margin-bottom: 10px;
+  background: #F8E9D4;
+  border-radius: 40px;
   overflow: hidden;
-}
-.plans .plan-item img {
-  transition: transform 0.4s ease-in-out;
-}
-.plans .plan-item:hover img {
-  transform: scale(1.03);
+  padding: 20px;
 }
 
 .location {
