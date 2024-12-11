@@ -184,6 +184,34 @@ p.label {
   transform: translateX(5px);
 }
 
+.btn-antelopes2 {
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: 1px solid #61624D;
+  font-size: 16px;
+  font-weight: 500;
+  color: #61624D;
+  background: #F8E9D4;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2), 0px 5px 15px 0px rgba(5, 1, 0, 0.2);
+}
+.btn-antelopes2 img {
+  margin-left: 8px;
+  transition: transform 0.3s ease-in-out;
+  display: inline-block;
+}
+.btn-antelopes2:hover {
+  color: #61624D;
+}
+.btn-antelopes2:hover img {
+  transform: translateX(5px);
+}
+
 .call {
   position: fixed;
   right: 5px;
@@ -713,35 +741,58 @@ p.label {
   background-color: #61624D;
   padding-left: 60px;
   padding-right: 60px;
+  background-image: url(/assets/images/plans/floorplans.png);
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
 }
-.plans .heading {
-  padding-bottom: 50px;
+.plans h2.heading {
   text-align: right;
+  padding-bottom: 60px;
+}
+.plans h3.heading {
+  color: #61624D;
+  font-size: 40px;
+  line-height: 50px;
+  padding-top: 10px;
+}
+.plans p {
+  color: #61624D;
 }
 .plans .plan-item {
   margin-bottom: 10px;
   background: #F8E9D4;
   border-radius: 40px;
   overflow: hidden;
-  padding: 20px;
+  padding: 26px 10px;
+  text-align: center;
+}
+.plans .plan-item .img-box {
+  position: relative;
+  margin-top: -10px;
+}
+.plans .plan-item .img-box .btn-antelopes2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .location {
-  background-color: #F8E9D4;
-  padding-bottom: 120px;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-bottom: 30px;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 .location .bg {
   background-image: url(/assets/images/location-bg.webp);
   background-size: contain;
-  background-position: 0px center;
+  background-position: 120% top;
   background-repeat: no-repeat;
-  height: 1100px;
+  height: 1000px;
   transition: background-position 1s ease-in-out;
 }
 .location .bg .info {
-  background-image: url(/assets/images/loc-bg.webp);
+  background: #F8E9D4;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -750,10 +801,15 @@ p.label {
   align-items: center;
   padding-left: 80px;
   padding-right: 80px;
-  text-align: center;
+}
+.location .bg .info .heading {
+  color: #61624D;
+}
+.location .bg .info p {
+  color: #61624D;
 }
 .location:hover .bg {
-  background-position: -60px center;
+  background-position: 100% top;
 }
 @media (min-width: 1600px) {
   .location .bg {
@@ -761,61 +817,15 @@ p.label {
   }
 }
 
-.comfort {
-  position: relative;
-  background-image: url(/assets/images/comfort-bg.webp);
-  background-size: cover;
-  background-position: left center;
-  height: 600px;
-  transition: background-position 1s ease-in-out;
-}
-.comfort:hover {
-  background-position: right center;
-}
-.comfort .confort-info {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-6%, -50%);
-  display: flex;
-  align-items: center;
-  background: #FEFAEE;
-  max-width: 600px;
-  text-align: center;
-  padding: 60px;
-}
-
 .distination {
-  padding-top: 100px;
   padding-bottom: 80px;
-  background: #F8E9D4;
-}
-.distination ul {
-  list-style-type: none;
-  padding-left: 70px;
-  padding-top: 30px;
-}
-.distination ul li {
-  margin-bottom: 20px;
-}
-.distination ul li p.para {
-  color: #040100;
-  font-weight: 400;
-  line-height: 18px;
-}
-.distination ul li p.label {
-  line-height: 18px;
-  letter-spacing: 0px;
 }
 .distination .map-bg {
   background-image: url(/assets/images/map-bg.webp);
   background-size: 100%;
   background-position: center;
-  transition: background-size 0.5s ease-in-out;
   position: relative;
-}
-.distination .map-bg:hover {
-  background-size: 120%;
+  height: 800px;
 }
 .distination .map-bg .zoom {
   position: absolute;
@@ -826,6 +836,52 @@ p.label {
 }
 .distination .map-bg .zoom:hover {
   transform: scale(1.1);
+}
+.distination .heading {
+  color: #61624D;
+  text-align: center;
+}
+.distination #accordionExample {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.distination .accordion-collapse {
+  transition: height 0.5s ease, opacity 0.5s ease;
+}
+.distination .accordion-body {
+  transition: opacity 0.5s ease;
+}
+.distination .accordion-item {
+  background-color: #FBE8D1;
+  overflow: hidden;
+  border-radius: 40px !important;
+  margin-top: 18px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+}
+.distination .accordion-item .accordion-button {
+  background-color: #FBE8D1;
+  color: #61624B;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 28px;
+  outline: none;
+  box-shadow: none;
+  border-bottom: 1px solid rgba(97, 98, 75, 0.3215686275);
+}
+.distination .accordion-item .accordion-button:after {
+  width: 1.4rem;
+  height: 1.4rem;
+  background-image: url(/assets/images/accarrow.png);
+}
+.distination .accordion-item .accordion-button:not(.collapsed)::after {
+  transform: rotate(-150deg);
+}
+.distination .accordion-item .accordion-button.collapsed {
+  border-bottom: 0;
+}
+.distination .accordion-item p {
+  color: #61624B;
+  margin-bottom: 8px;
 }
 
 .contact {
