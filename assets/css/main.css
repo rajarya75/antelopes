@@ -285,6 +285,10 @@ p.label {
   font-size: 64px;
   line-height: 70px;
   font-weight: 500;
+  font-feature-settings: "liga" off, "clig" off;
+  -webkit-text-stroke-color: #FBE8D1;
+  -webkit-text-stroke-width: 1;
+  -webkit-text-stroke-color: color(display-p3 0.9725 0.9137 0.8314);
 }
 .banner .middle .logo {
   text-align: center;
@@ -388,6 +392,9 @@ p.label {
   line-height: 60px;
   font-size: 92px;
   letter-spacing: 1px;
+}
+.about h2.heading.lheight {
+  line-height: 50px;
 }
 .about h2.heading span {
   font-size: 48px;
@@ -642,7 +649,7 @@ p.label {
 }
 .amenities .clubhouse .amenities-list .para {
   width: 20%;
-  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .interiors {
@@ -834,8 +841,8 @@ p.label {
 }
 
 .plans {
-  padding-top: 70px;
-  padding-bottom: 90px;
+  padding-top: 90px;
+  padding-bottom: 110px;
   background-color: #61624D;
   background-image: url(/assets/images/plans/floorplans.png);
   background-size: cover;
@@ -844,7 +851,7 @@ p.label {
 }
 .plans h2.heading {
   text-align: right;
-  padding-bottom: 70px;
+  padding-bottom: 100px;
   font-size: 96px;
 }
 .plans h3.heading {
@@ -884,7 +891,7 @@ p.label {
 .location .bg {
   background-image: url(/assets/images/location-bg.webp);
   background-size: contain;
-  background-position: 120% top;
+  background-position: 135% top;
   background-repeat: no-repeat;
   height: 100vh;
   transition: background-position 1s ease-in-out;
@@ -918,7 +925,7 @@ p.label {
   background-size: 100%;
   background-position: center;
   position: relative;
-  height: 1000px;
+  height: 1050px;
 }
 .distination .map-bg .zoom {
   position: absolute;
@@ -1068,6 +1075,7 @@ p.label {
   font-size: 16px;
   line-height: 24px;
   text-transform: capitalize;
+  color: #61624D;
 }
 .footer .top p,
 .footer .top ul li {
@@ -1134,6 +1142,7 @@ p.label {
 .btn-close {
   background: url(/assets/images/close.png);
   background-repeat: no-repeat;
+  opacity: 1;
 }
 
 #downloadBrochure .modal-dialog {
@@ -1144,6 +1153,7 @@ p.label {
   background-size: cover;
   background-position: center;
   padding-left: 80px;
+  padding-bottom: 30px;
 }
 #downloadBrochure .modal-dialog .modal-content .heading {
   color: #F8E9D4;

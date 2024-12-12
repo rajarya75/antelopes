@@ -23,9 +23,9 @@
 </head>
 
 <body>
-    <div id="loader">
+    <!-- <div id="loader">
         <img src="/assets/images/loader.webp" alt="">
-    </div>
+    </div> -->
     <div class="main-wrapper">
         <section class="desktop-header sticky desktop">
             <ul>
@@ -91,7 +91,7 @@
                         </h2>
                     </div>
                     <div class="col-md-7">
-                        <h2 class="heading secondary">
+                        <h2 class="heading secondary lheight">
                             <span>Situated in the</span> 135 Acre <br /><span>Brigade Orchards in Devanahalli</span>
                         </h2>
                     </div>
@@ -216,7 +216,7 @@
         <section class="suites" id="lifestyle">
             <div class="container">
                 <div class="row">
-                    <p class="label">life-style</p>
+                    <p class="label">lifestyle</p>
                     <h2 class="heading secondary">Community That Reflects<br /> the Depth of Your Life</h2>
                 </div>
             </div>
@@ -323,23 +323,46 @@
                         </div>
                     </div>
                     <div class="clubhouse">
-                        <div class="head"> Carnelian Clubhouse (7,939 sq ft, 2 storeys) <span>Family and
-                                Entertainment</span>
-                        </div>
-                        <div class="amenities-list">
-                            <p class="para secondary">Open-air leisure areas </p>
-                            <p class="para secondary"> Golf putting</p>
-                            <p class="para secondary">Co-working spaces </p>
-                            <p class="para secondary"> Squash court</p>
-                            <p class="para secondary"> Meditation zones</p>
-                            <p class="para secondary"> Restaurant & café bar</p>
-                            <p class="para secondary"> Gym & fitness center</p>
-                            <p class="para secondary"> Billiards</p>
-                            <p class="para secondary">Cards </p>
-                            <p class="para secondary"> Air hockey</p>
-                            <p class="para secondary">Arcade </p>
-                            <p class="para secondary">Swimming Pool </p>
-                            <p class="para secondary">Foosball </p>
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-home1-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-home1" type="button" role="tab" aria-controls="pills-home1"
+                                    aria-selected="true">Carnelian Clubhouse (7,939 sq ft, 2 storeys)</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-profile1-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-profile1" type="button" role="tab"
+                                    aria-controls="pills-profile1" aria-selected="false">Family and
+                                    Entertainment</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-home1" role="tabpanel"
+                                aria-labelledby="pills-home1-tab">
+                                <div class="amenities-list">
+                                    <p class="para secondary">Open-air leisure areas </p>
+                                    <p class="para secondary"> Golf putting</p>
+                                    <p class="para secondary">Co-working spaces </p>
+                                    <p class="para secondary"> Squash court</p>
+                                    <p class="para secondary"> Meditation zones</p>
+                                    <p class="para secondary"> Restaurant & café bar</p>
+                                    <p class="para secondary"> Gym & fitness center</p>
+                                    <p class="para secondary"> Billiards</p>
+                                    <p class="para secondary">Cards </p>
+                                    <p class="para secondary"> Air hockey</p>
+                                    <p class="para secondary">Arcade </p>
+                                    <p class="para secondary">Swimming Pool </p>
+                                    <p class="para secondary">Foosball </p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-profile1" role="tabpanel"
+                                aria-labelledby="pills-profile1-tab">
+                                <div class="flex-between">
+                                    <p class="para secondary"> Open-air theatre and BBQ area</p>
+                                    <p class="para secondary"> Viewing decks</p>
+                                    <p class="para secondary"> Elevated event spaces for gatherings</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -485,8 +508,8 @@
                         <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                         Workspaces </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
@@ -721,12 +744,12 @@
                     <div class="box1">
                         <img src="assets/images/logo-footer.webp" alt="">
                         <div class="mt-1">
-                            <a href="/" target="_blank">A project by <img style="margin-top: -4px"
-                                    src="/assets/images/merusri.png" alt=""></a>
+                            <a href="https://www.merusridevelopers.com" target="_blank">A project by <img
+                                    style="margin-top: -4px" src="/assets/images/merusri.png" alt=""></a>
                         </div>
                     </div>
                     <div class="box2">
-                        <p class="label">building aDdress</p>
+                        <p class="label">building Address</p>
                         <p class="para">17/1, Ground Floor, MERUSRI DEVELOPERS, NCC Urban - <br />Windsor, Bellary Rd,
                             opp. Jakkur Aerodrome, Yashoda <br />Nagar, Yelahanka, Bengaluru, Karnataka - 560064</p>
                         <div class="pt-3 pb-3">
