@@ -1124,6 +1124,27 @@ p.label {
 .footer .bottom p img {
   width: 30px;
 }
+.footer.thankfooter .top {
+  justify-content: space-between;
+  align-items: center;
+}
+.footer.thankfooter .top .box1 {
+  width: 100%;
+}
+.footer.thankfooter .top .box-4 {
+  width: 100%;
+}
+.footer.thankfooter a {
+  white-space: nowrap;
+}
+.footer.thankfooter .social {
+  margin-top: 20px;
+  display: flex;
+}
+.footer.thankfooter .social a {
+  display: block;
+  margin-right: 15px;
+}
 
 .modal-title {
   color: #F8E9D4;
@@ -1163,135 +1184,80 @@ p.label {
   padding-right: 30px;
 }
 
-#thanYouModal .modal-dialog {
-  max-width: 900px;
-}
-#thanYouModal .modal-dialog .modal-content {
-  background-color: #F8E9D4;
-}
-#thanYouModal .modal-dialog .modal-content .btn-close {
-  margin-top: 8px;
-}
-#thanYouModal .modal-dialog .modal-content .modal-body {
-  padding: 0;
+.thanks {
+  height: 100vh;
+  position: relative;
   overflow: hidden;
 }
-#thanYouModal .modal-dialog .modal-content .modal-body .thanks-box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 20px;
-  padding-bottom: 70px;
-}
-#thanYouModal .modal-dialog .modal-content .modal-body .thanks-box .left {
-  text-align: center;
-  width: 50%;
-}
-
-#specificationModal .modal-dialog {
-  max-width: 1100px;
-}
-#specificationModal .modal-dialog .modal-body {
-  padding: 0;
-}
-#specificationModal .modal-dialog .modal-body .btn-close {
+.thanks .thanks-content {
   position: absolute;
-  right: 33px;
-  top: 30px;
-  opacity: 0;
-  z-index: 1000;
+  bottom: 25%;
+  right: 5%;
+  text-align: right;
 }
-
-.thanks-box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 20px;
-  padding-bottom: 60px;
+.thanks .thanks-content .heading {
+  font-size: 96px;
+  line-height: 74px;
 }
-.thanks-box .left {
-  padding-left: 50px;
+.thanks .thanks-content .heading span {
+  font-size: 75%;
 }
-.thanks-box .heading {
-  color: #F8E9D4;
-}
-.thanks-box .ready {
-  color: #F8E9D4;
-}
-
-.floorPlans .slick-prev {
-  width: 30px;
-  z-index: 10;
-  left: 0;
-}
-.floorPlans .slick-prev:before {
-  content: url(/assets/images/prev.png);
-}
-.floorPlans .slick-next {
-  width: 30px;
-  z-index: 10;
-  right: 0;
-}
-.floorPlans .slick-next:before {
-  content: url(/assets/images/next.png);
-}
-.floorPlans .modal-dialog {
-  max-width: 1400px;
-}
-.floorPlans .modal-dialog .modal-content .modal-body {
-  padding: 0;
-}
-.floorPlans .modal-dialog .modal-content .modal-body .btn-close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  opacity: 1;
-  z-index: 100;
-}
-.floorPlans .modal-dialog .modal-content .modal-body .plan-content {
-  display: flex;
-  align-items: center;
-}
-.floorPlans .modal-dialog .modal-content .modal-body .plan-content .left {
-  background: rgba(192, 120, 65, 0.1019607843);
-  padding-left: 30px;
-  padding-right: 30px;
-  width: 30%;
-  text-align: center;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-}
-.floorPlans .modal-dialog .modal-content .modal-body .plan-content .left h2 {
+.thanks .thanks-content .para {
   font-size: 32px;
-  line-height: 40px;
-  color: #823C47;
-  letter-spacing: 2px;
-  font-weight: 400;
 }
-.floorPlans .modal-dialog .modal-content .modal-body .plan-content .left h5 {
-  font-size: 16px;
-  line-height: 28px;
-  color: #823C47;
-  letter-spacing: 2px;
-  font-weight: 400;
+.thanks .logo1 {
+  padding-left: 120px;
+  padding-top: 100px;
 }
-.floorPlans .modal-dialog .modal-content .modal-body .plan-content .left h3 {
-  font-size: 18px;
-  line-height: 22px;
-  color: #C07841;
-  font-weight: 700;
-  margin-top: 60px;
-  margin-bottom: 60px;
+.thanks .logo2 {
+  left: 120px;
+  top: 100px;
+  z-index: 100;
+  position: absolute;
+  display: none;
 }
-.floorPlans .modal-dialog .modal-content .modal-body .plan-content .left p {
-  font-size: 18px;
-  line-height: 22px;
-  color: #823C47;
-  font-weight: 300;
+.thanks .bg-top,
+.thanks .bg-bottom {
+  position: absolute;
+  width: 100%;
+  animation-duration: 2s;
+  /* Duration of the animation */
+  animation-timing-function: ease-out;
+  /* Smooth animation */
+  animation-fill-mode: forwards;
+  /* Keeps the end state */
 }
-.floorPlans .modal-dialog .modal-content .modal-body .plan-content .right {
-  width: 70%;
+.thanks .bg-top {
+  top: -100%;
+  /* Start above the view */
+  animation-name: slideDown;
+  /* Animation name */
+}
+.thanks .bg-bottom {
+  bottom: -100%;
+  /* Start below the view */
+  animation-name: slideUp;
+  /* Animation name */
+}
+@keyframes slideDown {
+  from {
+    top: -100%;
+    /* Starting position */
+  }
+  to {
+    top: -5%;
+    /* End position */
+  }
+}
+@keyframes slideUp {
+  from {
+    bottom: -100%;
+    /* Starting position */
+  }
+  to {
+    bottom: -5%;
+    /* End position */
+  }
 }
 
 #map .modal-dialog {
