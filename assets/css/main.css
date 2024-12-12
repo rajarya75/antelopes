@@ -50,7 +50,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C07841;
+  background: #823C47;
   border: solid 1px #F8E9D4;
   border-radius: 5px;
 }
@@ -642,7 +642,7 @@ p.label {
 }
 .amenities .clubhouse .amenities-list .para {
   width: 20%;
-  padding-top: 1.5rem;
+  padding-top: 2rem;
 }
 
 .interiors {
@@ -1137,16 +1137,20 @@ p.label {
 }
 
 #downloadBrochure .modal-dialog {
-  max-width: 1050px;
+  max-width: 1450px;
 }
 #downloadBrochure .modal-dialog .modal-content {
-  background-image: url(/assets/images/amber-bg.webp);
+  background-image: url(/assets/images/form-bg.webp);
   background-size: cover;
   background-position: center;
+  padding-left: 80px;
+}
+#downloadBrochure .modal-dialog .modal-content .heading {
+  color: #F8E9D4;
 }
 #downloadBrochure .modal-dialog .modal-content .contact-form {
-  width: 90%;
-  margin: 30px auto;
+  padding-left: 20px;
+  padding-right: 30px;
 }
 
 #thanYouModal .modal-dialog {

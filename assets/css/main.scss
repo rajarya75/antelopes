@@ -59,7 +59,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #C07841;
+    background: $secondary;
     border: solid 1px $primary;
     border-radius: 5px;
 }
@@ -792,7 +792,7 @@ p.label {
 
             .para {
                 width: 20%;
-                padding-top: 1.5rem;
+                padding-top: 2rem;
             }
         }
 
@@ -1405,17 +1405,24 @@ p.label {
 
 #downloadBrochure {
     .modal-dialog {
-        max-width: 1050px;
+        max-width: 1450px;
+
 
         .modal-content {
-            background-image: url(/assets/images/amber-bg.webp);
+            background-image: url(/assets/images/form-bg.webp);
             background-size: cover;
             background-position: center;
+            padding-left: 80px;
+
+            .heading {
+                color: $primary;
+            }
 
             .contact-form {
-                width: 90%;
-                margin: 30px auto;
+                padding-left: 20px;
+                padding-right: 30px;
             }
+
         }
     }
 }
