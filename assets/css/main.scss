@@ -1,5 +1,6 @@
 // Colors
 $primary: #F8E9D4;
+$primaryLight: #F8F2EF;
 $primarydark: #61624D;
 $secondary: #823C47;
 $white: #ffffff;
@@ -76,7 +77,7 @@ body {
 
 @media (min-width: 1600px) {
     .container {
-        max-width: 1600px;
+        max-width: 1688px;
     }
 }
 
@@ -86,9 +87,9 @@ body {
 }
 
 .heading {
-    font-size: 56px;
-    line-height: 66px;
-    letter-spacing: 2px;
+    font-size: 72px;
+    line-height: 80px;
+    letter-spacing: 5px;
     text-transform: uppercase;
     font-weight: 400;
 
@@ -108,8 +109,8 @@ body {
 
 
 .para {
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 20px;
+    line-height: 30px;
     font-weight: 400;
     margin-bottom: 0;
 
@@ -131,8 +132,8 @@ body {
 }
 
 p.label {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 24px;
     text-transform: uppercase;
     color: $secondary;
     letter-spacing: 1px;
@@ -906,8 +907,6 @@ p.label {
     padding-top: 70px;
     padding-bottom: 90px;
     background-color: #61624D;
-    padding-left: 60px;
-    padding-right: 60px;
     background-image: url(/assets/images/plans/floorplans.png);
     background-size: cover;
     background-position: top left;
@@ -963,7 +962,7 @@ p.label {
         background-size: contain;
         background-position: 120% top;
         background-repeat: no-repeat;
-        height: 1000px;
+        height: 100vh;
         transition: background-position 1s ease-in-out;
 
         .info {
@@ -993,11 +992,6 @@ p.label {
         }
     }
 
-    @media(min-width: 1600px) {
-        .bg {
-            height: 1300px;
-        }
-    }
 }
 
 // Start map
@@ -1009,7 +1003,7 @@ p.label {
         background-size: 100%;
         background-position: center;
         position: relative;
-        height: 800px;
+        height: 1000px;
 
         .zoom {
             position: absolute;
@@ -1027,6 +1021,8 @@ p.label {
     .heading {
         color: $primarydark;
         text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 
     #accordionExample {
@@ -1046,14 +1042,14 @@ p.label {
         background-color: #FBE8D1;
         overflow: hidden;
         border-radius: 40px !important;
-        margin-top: 18px;
+        margin-top: 24px;
         box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
 
         .accordion-button {
             background-color: #FBE8D1;
             color: #61624B;
             text-transform: uppercase;
-            font-size: 20px;
+            font-size: 24px;
             line-height: 28px;
             outline: none;
             box-shadow: none;
@@ -1083,15 +1079,17 @@ p.label {
 
 // Start Contact 
 .contact {
-    background-image: url(/assets/images/amber-bg.webp);
+    background-image: url(/assets/images/form-bg.webp);
     background-size: cover;
     background-position: center;
-    padding-top: 60px;
-    padding-bottom: 20px;
+    padding-top: 90px;
+    padding-bottom: 90px;
 
     .heading {
-        color: #F7F2EF;
+        color: $primaryLight;
         margin-bottom: 10px;
+        font-size: 96px;
+        line-height: 106px;
     }
 
     p.label {
@@ -1101,24 +1099,25 @@ p.label {
 }
 
 .contact-form {
-    width: 80%;
-    margin: 50px auto;
+    width: 100%;
+    padding-left: 140px;
 
     label {
-        font-size: 12px;
+        font-size: 16px;
         text-transform: uppercase;
         color: $primary;
+        margin-bottom: 0;
     }
 
-    p {
-        text-align: right;
-        color: $primary;
-        margin-top: -30px;
-        margin-bottom: 30px;
-    }
 
     .mb-3 {
         margin-bottom: 50px !important;
+    }
+
+    p.required {
+        color: $primary;
+        text-align: right;
+        margin-top: -2.5rem;
     }
 
     .form-control,
@@ -1130,6 +1129,9 @@ p.label {
         border-radius: 0;
         border-bottom: 1px solid $primary;
         color: $primary;
+        height: 60px;
+        padding-left: 0;
+        font-size: 18px;
     }
 
     .form-select {
@@ -1159,16 +1161,32 @@ p.label {
 
 // Start footer
 .footer {
-    background-color: $primary;
 
     .top {
-        padding-top: 20px;
-        padding-bottom: 0px;
+        padding-top: 30px;
+        padding-bottom: 10px;
         border-bottom: 1px solid #000;
         display: flex;
 
         a {
             color: #040100;
+        }
+
+        p.label {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            text-transform: capitalize;
+        }
+
+        p,
+        ul li {
+            font-size: 14px;
+            color: #050100;
+        }
+
+        ul li {
+            padding-bottom: 5px;
         }
 
         .box2 {
@@ -1194,22 +1212,17 @@ p.label {
         }
 
         .box1 {
-            width: 40%;
+            width: 33.33%;
         }
 
         .box2 {
-            width: 20%;
+            width: 33.33%;
         }
 
         .box3 {
-            width: 20%;
-            padding-left: 40px;
+            width: 33.33%;
         }
 
-        .box4 {
-            width: 20%;
-            padding-left: 50px;
-        }
     }
 
     .bottom {

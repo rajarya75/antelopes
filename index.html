@@ -24,9 +24,6 @@
 
 <body>
     <div class="main-wrapper">
-        <div class="call">
-            <a href="tel:+97145663676"><img src="/assets/images/call.png" alt=""></a>
-        </div>
         <section class="desktop-header sticky desktop">
             <ul>
                 <li><a href="#project">Project</a></li>
@@ -379,7 +376,7 @@
             <div class="container">
                 <h2 class="heading primary">Unit Plans</h2>
             </div>
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="plan-item">
@@ -622,7 +619,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="text-center mt-3">
+                        <div class="text-center mt-4">
                             <button class="btn-antelopes2">Discover More <img src="/assets/images/arrow1.png"
                                     alt=""></button>
                         </div>
@@ -633,64 +630,57 @@
         <!-- Start Contact  -->
         <section class="contact" id="discoverMore">
             <div class="container">
-                <div class="text-center">
-                    <h1 class="heading">Contact us</h1>
-                    <p class="label">For any enquiries or appointment requests</p>
-                </div>
-                <form action="" class="contact-form" id="contactForm">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="mb-3">
-                                <label for="fullname" class="form-label">FULL Name*</label>
-                                <input type="text" class="form-control" id="fullname" placeholder="" required>
+                <div class="row">
+                    <div class="col-md-3">
+                        <h2 class="heading">Get In <br /> Touch</h2>
+                    </div>
+                    <div class="col-md-9">
+                        <form action="" class="contact-form" id="contactForm">
+                            <p class="para primary pb-5 mb-1">For any enquiries or appointment requests</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="fullname" class="form-label">FULL Name*</label>
+                                        <input type="text" class="form-control" id="fullname" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="phonenumber" class="form-label">PHONE NUMBER*</label>
+                                        <input type="text" class="form-control" id="phonenumber" placeholder=""
+                                            required>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="mb-3">
-                                <label for="phonenumber" class="form-label">PHONE NUMBER*</label>
-                                <input type="text" class="form-control" id="phonenumber" placeholder="" required>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email Address*</label>
+                                        <input type="email" class="form-control" id="email" placeholder="" required>
+                                    </div>
+                                </div>
                             </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label">MESSAGE</label>
+                                        <textarea class="form-control" id="message" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="required">*Required fields</p>
+                            <div class="row">
+                                <div class="col-md-12" style="text-align: right;">
+                                    <button class="btn-antelopes2 mt-3" type="submit">Submit <img
+                                            src="/assets/images/arrow1.png" alt=""></button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="successMessage" style="display: none; text-align: center;" class="py-5 px-2">
+                            <h1 class="heading">Thank you for your enquiry!</h1>
+                            <p class="para white">We have received your message and will get back to you shortly.</p>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email Address*</label>
-                                <input type="email" class="form-control" id="email" placeholder="" required>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="mb-3">
-                                <label for="enquiry" class="form-label">TYPE OF ENQUIRY</label>
-                                <select class="form-select" id="enquiry" aria-label="Default select example" required>
-                                    <option selected disabled>Select</option>
-                                    <option value="Sales">Sales</option>
-                                    <option value="Customer Care">Customer Care</option>
-                                    <option value="Press & Media">Press & Media</option>
-                                    <option value="Investor Relations">Investor Relations</option>
-                                    <option value="Agent Relations">Agent Relations</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="mb-3">
-                                <label for="message" class="form-label">MESSAGE</label>
-                                <textarea class="form-control" id="message" rows="3"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <p>*Required fields</p>
-                    <div class="row">
-                        <div class="col-md-12" style="text-align: right;">
-                            <button class="btn-antelopes1" type="submit">Submit</button>
-                        </div>
-                    </div>
-                </form>
-                <div id="successMessage" style="display: none; text-align: center;" class="py-5 px-2">
-                    <h1 class="heading">Thank you for your enquiry!</h1>
-                    <p class="para white">We have received your message and will get back to you shortly.</p>
                 </div>
             </div>
         </section>
@@ -699,68 +689,45 @@
             <div class="container">
                 <div class="top">
                     <div class="box1">
-                        <img src="assets/images/amber-logo.png" width="200" style="margin-left: -22px;" alt="">
-                        <div>
-                            <a href="https://www.enso.inc/" target="_blank">A project by <img
-                                    src="/assets/images/enso.png" alt=""></a>
+                        <img src="assets/images/logo-footer.webp" alt="">
+                        <div class="mt-1">
+                            <a href="/" target="_blank">A project by <img style="margin-top: -4px"
+                                    src="/assets/images/merusri.png" alt=""></a>
                         </div>
                     </div>
                     <div class="box2">
                         <p class="label">building aDdress</p>
-                        <p class="para">Enso Amber<br /> Jumeirah Garden City<br /> Next to City Walk<br /> 30A St - Al
-                            Satwa<br /> Dubai - United Arab Emirates</p>
-                        <div class="social">
-                            <a href="https://www.facebook.com/profile.php?id=61556199790459" target="_blank">
-                                <img src="/assets/images/fb.png" alt="">
-                            </a>
-                            <a href="https://www.linkedin.com/company/enso-development/" target="_blank">
-                                <img src="/assets/images/in.png" alt="">
-                            </a>
-                            <a href="https://www.instagram.com/ensodevelopment/" target="_blank">
-                                <img src="/assets/images/insta.png" alt="">
-                            </a>
-                            <a href="https://www.threads.net/?onboarding_complete=true" target="_blank">
-                                <img src="/assets/images/td.png" alt="">
-                            </a>
-                            <a href="https://x.com/EnsoDevelopment" target="_blank">
-                                <img src="/assets/images/x.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="box3">
-                        <div>
+                        <p class="para">17/1, Ground Floor, MERUSRI DEVELOPERS, NCC Urban - <br />Windsor, Bellary Rd,
+                            opp. Jakkur Aerodrome, Yashoda <br />Nagar, Yelahanka, Bengaluru, Karnataka - 560064</p>
+                        <div class="pt-3 pb-3">
                             <p class="label">phone number</p>
-                            <a href="tel:+97145663676">+971 45 663 676</a>
+                            <a href="tel:+919632076076">+91 9632076076</a> / <a href="tel:+918792968444">+91
+                                8792968444</a>
                         </div>
                         <div>
                             <p class="label">email address</p>
-                            <a href="mailto:info@enso.inc">info@enso.inc </a>
-                        </div>
-                        <div>
-                            <p class="label">Developed by</p>
-                            <a href="/">Enso Development LLC</a>
+                            <a href="mailto:www.merusridevelopers.com">www.merusridevelopers.com </a>
                         </div>
                     </div>
-                    <div class="box4">
-                        <div class="mb-4"><a href="privacy-policy.html">Privacy Policy</a></div>
-                        <div> <a href="terms.html"> Terms & Conditions</a>
-                        </div>
+                    <div class="box3">
+                        <p class="label">RERA Number</p>
+                        <p>PRM/KA/RERA/1250/303/PR/160824/006974</p>
+                        <p class="label">Terms and Conditions</p>
+                        <ul>
+                            <li>Details mentioned are tentative and images are representative, not to be considered
+                                actual.</li>
+                            <li>This is a plotted development approval. Merusri Developers is executing the design and
+                                construction of the villas.</li>
+                            <li>Merusri Antelopes is the codename for marketing purposes; the actual name of the project
+                                as per RERA is Merusri Swamy Orchards.</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="bottom">
                     <div class="box1 mobile mb-3">
-                        <img src="assets/images/amber-logo.png" width="200" style="margin-left: -22px;" alt="">
-                        <div>
-                            <a href="https://www.enso.inc/" target="_blank">A project by <img
-                                    src="/assets/images/enso.png" alt=""></a>
-                        </div>
+                        <img src="assets/images/logo-footer.webp" alt="">
                     </div>
-                    <div class="box4 mobile mb-2 pb-2">
-                        <div class="mb-2"><a href="privacy-policy.html">Privacy Policy</a></div>
-                        <div> <a href="terms.html"> Terms & Conditions</a>
-                        </div>
-                    </div>
-                    <p class="para black">© 2024 Enso Development LLC. All Rights Reserved.</p>
+                    <p class="para black">© All Rights Reserved.</p>
                     <p class="para">Designed And Developed By : <a href="https://modtraa.com/" target="_blank"><img
                                 src="/assets/images/modtraa.png" alt=""> Modtraa</a></p>
                 </div>
@@ -853,18 +820,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Specification Modal -->
-        <div class="modal fade" id="specificationModal" aria-hidden="true" aria-labelledby="specificationModal"
-            tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        <img src="/assets/images/specificationModal.webp" class="img-fluid" alt="">
                     </div>
                 </div>
             </div>
