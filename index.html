@@ -23,6 +23,9 @@
 </head>
 
 <body>
+    <div id="loader">
+        <img src="/assets/images/loader.webp" alt="">
+    </div>
     <div class="main-wrapper">
         <section class="desktop-header sticky desktop">
             <ul>
@@ -949,6 +952,28 @@
                     $(".banner").addClass("full-banner");
                     $(".desktop-header").css('visibility', 'visible');
                 }, 500);
+            });
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Simulate a delay to mimic data loading (optional, for testing)
+                setTimeout(() => {
+                    const loader = document.getElementById("loader");
+                    const mainWrapper = document.querySelector(".main-wrapper");
+
+                    // Hide the loader
+                    loader.style.opacity = "0";
+                    loader.style.transition = "opacity 0.5s ease-in-out";
+
+                    // After transition ends, remove the loader from the DOM
+                    loader.addEventListener("transitionend", () => {
+                        loader.style.display = "none";
+                    });
+
+                    // Show the main content
+                    mainWrapper.style.opacity = "1";
+                    mainWrapper.style.transition = "opacity 0.5s ease-in-out";
+                }, 1000); // Simulated delay of 2 seconds
             });
         </script>
 </body>
