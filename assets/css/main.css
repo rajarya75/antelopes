@@ -1308,13 +1308,72 @@ p.label {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(/assets/images/loader/loader-bg.webp);
+  /* Animation: Reveal letters */
 }
-
-#loader img {
+#loader .letters {
+  position: relative;
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 100vh;
+  /* Full-screen height */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* Allows wrapping of items */
+}
+#loader .letters img {
+  position: absolute;
+  opacity: 0;
+  /* Hidden initially */
+  transform: scale(0.5);
+  /* Smaller size initially */
+  transition: all 1s ease-in-out;
+  /* Smooth transition for animation */
+  /* Position each letter dynamically */
+}
+#loader .letters img.a {
+  top: 10%;
+  left: 10%;
+}
+#loader .letters img.n {
+  top: 20%;
+  left: 35%;
+}
+#loader .letters img.t {
+  top: 10%;
+  left: 60%;
+}
+#loader .letters img.e {
+  top: 40%;
+  left: 80%;
+}
+#loader .letters img.l {
+  bottom: 10%;
+  left: 10%;
+}
+#loader .letters img.o {
+  bottom: 20%;
+  left: 33%;
+}
+#loader .letters img.p {
+  bottom: 32%;
+  left: 60%;
+}
+#loader .letters img.e1 {
+  bottom: 5%;
+  right: 20%;
+}
+#loader .letters img.s {
+  bottom: 10%;
+  right: 5%;
+}
+#loader .letters img.animate {
+  opacity: 1;
+  /* Fully visible */
+  transform: scale(1);
+  /* Original size */
 }
 
 .main-wrapper {
