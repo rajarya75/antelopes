@@ -285,6 +285,10 @@ p.label {
   font-size: 64px;
   line-height: 70px;
   font-weight: 500;
+  font-feature-settings: "liga" off, "clig" off;
+  -webkit-text-stroke-color: #FBE8D1;
+  -webkit-text-stroke-width: 1;
+  -webkit-text-stroke-color: color(display-p3 0.9725 0.9137 0.8314);
 }
 .banner .middle .logo {
   text-align: center;
@@ -388,6 +392,9 @@ p.label {
   line-height: 60px;
   font-size: 92px;
   letter-spacing: 1px;
+}
+.about h2.heading.lheight {
+  line-height: 50px;
 }
 .about h2.heading span {
   font-size: 48px;
@@ -642,7 +649,7 @@ p.label {
 }
 .amenities .clubhouse .amenities-list .para {
   width: 20%;
-  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .interiors {
@@ -834,8 +841,8 @@ p.label {
 }
 
 .plans {
-  padding-top: 70px;
-  padding-bottom: 90px;
+  padding-top: 90px;
+  padding-bottom: 110px;
   background-color: #61624D;
   background-image: url(/assets/images/plans/floorplans.png);
   background-size: cover;
@@ -844,7 +851,7 @@ p.label {
 }
 .plans h2.heading {
   text-align: right;
-  padding-bottom: 70px;
+  padding-bottom: 100px;
   font-size: 96px;
 }
 .plans h3.heading {
@@ -884,7 +891,7 @@ p.label {
 .location .bg {
   background-image: url(/assets/images/location-bg.webp);
   background-size: contain;
-  background-position: 120% top;
+  background-position: 135% top;
   background-repeat: no-repeat;
   height: 100vh;
   transition: background-position 1s ease-in-out;
@@ -918,7 +925,7 @@ p.label {
   background-size: 100%;
   background-position: center;
   position: relative;
-  height: 1000px;
+  height: 1050px;
 }
 .distination .map-bg .zoom {
   position: absolute;
@@ -1068,6 +1075,7 @@ p.label {
   font-size: 16px;
   line-height: 24px;
   text-transform: capitalize;
+  color: #61624D;
 }
 .footer .top p,
 .footer .top ul li {
@@ -1116,6 +1124,27 @@ p.label {
 .footer .bottom p img {
   width: 30px;
 }
+.footer.thankfooter .top {
+  justify-content: space-between;
+  align-items: center;
+}
+.footer.thankfooter .top .box1 {
+  width: 100%;
+}
+.footer.thankfooter .top .box-4 {
+  width: 100%;
+}
+.footer.thankfooter a {
+  white-space: nowrap;
+}
+.footer.thankfooter .social {
+  margin-top: 20px;
+  display: flex;
+}
+.footer.thankfooter .social a {
+  display: block;
+  margin-right: 15px;
+}
 
 .modal-title {
   color: #F8E9D4;
@@ -1134,6 +1163,7 @@ p.label {
 .btn-close {
   background: url(/assets/images/close.png);
   background-repeat: no-repeat;
+  opacity: 1;
 }
 
 #downloadBrochure .modal-dialog {
@@ -1144,6 +1174,7 @@ p.label {
   background-size: cover;
   background-position: center;
   padding-left: 80px;
+  padding-bottom: 30px;
 }
 #downloadBrochure .modal-dialog .modal-content .heading {
   color: #F8E9D4;
@@ -1153,135 +1184,80 @@ p.label {
   padding-right: 30px;
 }
 
-#thanYouModal .modal-dialog {
-  max-width: 900px;
-}
-#thanYouModal .modal-dialog .modal-content {
-  background-color: #F8E9D4;
-}
-#thanYouModal .modal-dialog .modal-content .btn-close {
-  margin-top: 8px;
-}
-#thanYouModal .modal-dialog .modal-content .modal-body {
-  padding: 0;
+.thanks {
+  height: 100vh;
+  position: relative;
   overflow: hidden;
 }
-#thanYouModal .modal-dialog .modal-content .modal-body .thanks-box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 20px;
-  padding-bottom: 70px;
-}
-#thanYouModal .modal-dialog .modal-content .modal-body .thanks-box .left {
-  text-align: center;
-  width: 50%;
-}
-
-#specificationModal .modal-dialog {
-  max-width: 1100px;
-}
-#specificationModal .modal-dialog .modal-body {
-  padding: 0;
-}
-#specificationModal .modal-dialog .modal-body .btn-close {
+.thanks .thanks-content {
   position: absolute;
-  right: 33px;
-  top: 30px;
-  opacity: 0;
-  z-index: 1000;
+  bottom: 25%;
+  right: 5%;
+  text-align: right;
 }
-
-.thanks-box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 20px;
-  padding-bottom: 60px;
+.thanks .thanks-content .heading {
+  font-size: 96px;
+  line-height: 74px;
 }
-.thanks-box .left {
-  padding-left: 50px;
+.thanks .thanks-content .heading span {
+  font-size: 75%;
 }
-.thanks-box .heading {
-  color: #F8E9D4;
-}
-.thanks-box .ready {
-  color: #F8E9D4;
-}
-
-.floorPlans .slick-prev {
-  width: 30px;
-  z-index: 10;
-  left: 0;
-}
-.floorPlans .slick-prev:before {
-  content: url(/assets/images/prev.png);
-}
-.floorPlans .slick-next {
-  width: 30px;
-  z-index: 10;
-  right: 0;
-}
-.floorPlans .slick-next:before {
-  content: url(/assets/images/next.png);
-}
-.floorPlans .modal-dialog {
-  max-width: 1400px;
-}
-.floorPlans .modal-dialog .modal-content .modal-body {
-  padding: 0;
-}
-.floorPlans .modal-dialog .modal-content .modal-body .btn-close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  opacity: 1;
-  z-index: 100;
-}
-.floorPlans .modal-dialog .modal-content .modal-body .plan-content {
-  display: flex;
-  align-items: center;
-}
-.floorPlans .modal-dialog .modal-content .modal-body .plan-content .left {
-  background: rgba(192, 120, 65, 0.1019607843);
-  padding-left: 30px;
-  padding-right: 30px;
-  width: 30%;
-  text-align: center;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-}
-.floorPlans .modal-dialog .modal-content .modal-body .plan-content .left h2 {
+.thanks .thanks-content .para {
   font-size: 32px;
-  line-height: 40px;
-  color: #823C47;
-  letter-spacing: 2px;
-  font-weight: 400;
 }
-.floorPlans .modal-dialog .modal-content .modal-body .plan-content .left h5 {
-  font-size: 16px;
-  line-height: 28px;
-  color: #823C47;
-  letter-spacing: 2px;
-  font-weight: 400;
+.thanks .logo1 {
+  padding-left: 120px;
+  padding-top: 100px;
 }
-.floorPlans .modal-dialog .modal-content .modal-body .plan-content .left h3 {
-  font-size: 18px;
-  line-height: 22px;
-  color: #C07841;
-  font-weight: 700;
-  margin-top: 60px;
-  margin-bottom: 60px;
+.thanks .logo2 {
+  left: 120px;
+  top: 100px;
+  z-index: 100;
+  position: absolute;
+  display: none;
 }
-.floorPlans .modal-dialog .modal-content .modal-body .plan-content .left p {
-  font-size: 18px;
-  line-height: 22px;
-  color: #823C47;
-  font-weight: 300;
+.thanks .bg-top,
+.thanks .bg-bottom {
+  position: absolute;
+  width: 100%;
+  animation-duration: 2s;
+  /* Duration of the animation */
+  animation-timing-function: ease-out;
+  /* Smooth animation */
+  animation-fill-mode: forwards;
+  /* Keeps the end state */
 }
-.floorPlans .modal-dialog .modal-content .modal-body .plan-content .right {
-  width: 70%;
+.thanks .bg-top {
+  top: -100%;
+  /* Start above the view */
+  animation-name: slideDown;
+  /* Animation name */
+}
+.thanks .bg-bottom {
+  bottom: -100%;
+  /* Start below the view */
+  animation-name: slideUp;
+  /* Animation name */
+}
+@keyframes slideDown {
+  from {
+    top: -100%;
+    /* Starting position */
+  }
+  to {
+    top: -5%;
+    /* End position */
+  }
+}
+@keyframes slideUp {
+  from {
+    bottom: -100%;
+    /* Starting position */
+  }
+  to {
+    bottom: -5%;
+    /* End position */
+  }
 }
 
 #map .modal-dialog {
@@ -1332,13 +1308,72 @@ p.label {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(/assets/images/loader/loader-bg.webp);
+  /* Animation: Reveal letters */
 }
-
-#loader img {
+#loader .letters {
+  position: relative;
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 100vh;
+  /* Full-screen height */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* Allows wrapping of items */
+}
+#loader .letters img {
+  position: absolute;
+  opacity: 0;
+  /* Hidden initially */
+  transform: scale(0.5);
+  /* Smaller size initially */
+  transition: all 1s ease-in-out;
+  /* Smooth transition for animation */
+  /* Position each letter dynamically */
+}
+#loader .letters img.a {
+  top: 10%;
+  left: 10%;
+}
+#loader .letters img.n {
+  top: 20%;
+  left: 35%;
+}
+#loader .letters img.t {
+  top: 10%;
+  left: 60%;
+}
+#loader .letters img.e {
+  top: 40%;
+  left: 80%;
+}
+#loader .letters img.l {
+  bottom: 10%;
+  left: 10%;
+}
+#loader .letters img.o {
+  bottom: 20%;
+  left: 33%;
+}
+#loader .letters img.p {
+  bottom: 32%;
+  left: 60%;
+}
+#loader .letters img.e1 {
+  bottom: 5%;
+  right: 20%;
+}
+#loader .letters img.s {
+  bottom: 10%;
+  right: 5%;
+}
+#loader .letters img.animate {
+  opacity: 1;
+  /* Fully visible */
+  transform: scale(1);
+  /* Original size */
 }
 
 .main-wrapper {
@@ -1347,33 +1382,33 @@ p.label {
 
 @media (max-width: 768px) {
   .heading {
-    font-size: 22px;
-    line-height: 28px;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 1px;
+  }
+  .heading br {
+    display: none;
   }
   .desktop {
     display: none;
   }
-  .para {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 300;
-  }
-  .btn-amber {
-    font-size: 12px;
-    padding: 10px 40px;
-  }
   .mobile {
     display: block;
   }
+  .para {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+    text-align: justify;
+  }
   .banner {
     height: 100vh;
-    background-image: url(/assets/images/banner-res.webp);
+    background-image: url(/assets/images/res/banner.webp);
   }
   .banner .middle {
     min-width: 100% !important;
   }
   .banner .middle .logo {
-    background: #F8E9D4;
     position: fixed;
     width: 100%;
     z-index: 10;
@@ -1381,13 +1416,15 @@ p.label {
   .banner .middle .logo img {
     width: 250px;
   }
-  .banner .middle .content {
-    padding-top: 24vh !important;
-    width: 230px;
-    margin: 0 auto;
+  .banner .middle .heading {
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 1px;
   }
-  .banner .middle .discover {
-    display: none;
+  .banner .middle .content {
+    padding-top: 30vh;
+    max-width: 380px;
+    margin: 0 auto;
   }
   .banner .left {
     width: 0;
@@ -1396,41 +1433,69 @@ p.label {
     width: 0;
   }
   .banner .right {
-    width: 70%;
+    width: 80%;
     position: fixed !important;
     right: 0;
     height: 100%;
-    z-index: 10;
+    z-index: 13;
   }
   .banner .right .humbergure {
     right: 10px !important;
     top: 9px !important;
   }
-  .project {
-    padding-top: 60px;
+  .banner .right .btn-antelopes {
+    margin-left: 16px;
+    margin-top: 44px;
+  }
+  .banner .right ul li a {
+    line-height: 50px;
+    color: #050100;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  .mobile-header {
+    background: #F8E9D4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px;
+    z-index: 11;
+  }
+  .about {
+    background-image: url(/assets/images/res/about.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0% 62%;
     padding-bottom: 60px;
   }
-  .project br {
-    display: none;
+  .about:hover {
+    background-image: unset;
   }
-  .project .frame {
-    background-size: 330px;
-    background-position: center;
+  .about .row {
+    padding-top: 70px;
   }
-  .project .row .text-center {
-    padding-right: 0;
+  .about h2.heading {
+    font-size: 40px;
+    line-height: 34px;
   }
-  .project .video-wrapper {
-    padding-left: 0px;
+  .about h2.heading span {
+    font-size: 64%;
   }
-  .project .video-wrapper .video-background {
-    height: 246px;
-    margin-top: 30px;
+  .about h2.heading.lheight {
+    line-height: 34px;
   }
-  .project .vector {
-    bottom: -130px;
-    right: -5px;
-    width: 120px;
+  .about .col-md-5 {
+    padding-bottom: 50px;
+  }
+  .about .bottom .col-md-7 .heading.secondary {
+    margin-top: 270px;
+  }
+  .about .bottom .col-md-7 h2.heading.secondary.uppercase.pb-2 span {
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: 2px;
   }
   .style {
     padding-top: 0;
@@ -1442,92 +1507,119 @@ p.label {
   .style .style-images {
     padding-left: 0;
   }
+  .style .py-5 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  .style .heading {
+    font-size: 28px;
+    letter-spacing: 2px;
+    line-height: 36px;
+  }
+  .style .heading br {
+    display: none;
+  }
+  .architecture {
+    padding-top: 79px;
+    padding-bottom: 70px;
+  }
+  .architecture .col-md-8,
+  .architecture .col-md-4 {
+    width: 100%;
+  }
+  .architecture .wonder {
+    padding-top: 10%;
+  }
+  .architecture .wonder ul li {
+    line-height: 44px;
+  }
   .suites {
-    padding-top: 360px;
+    height: 100vh;
+  }
+  .suites .suites-slider {
+    display: none;
   }
   .suites .suites-info {
     left: 0;
-    top: 0;
+    top: 52%;
     transform: unset;
     width: auto;
-    padding: 40px 15px;
+    padding: 15px;
     box-shadow: none;
   }
-  .download {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-  .lifestyle {
-    flex-wrap: wrap;
-    height: auto;
-  }
-  .lifestyle .middle {
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .lifestyle .middle .content {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-  .lifestyle .left {
-    background-image: url(/assets/images/luxury-left-res.webp);
-  }
-  .lifestyle .left,
-  .lifestyle .right {
-    width: 100%;
-    height: 250px;
-  }
-  .lifestyle:hover .middle,
-  .lifestyle:hover .left,
-  .lifestyle:hover .right {
-    width: 100%;
-  }
-  .lifestyle .py-5 {
-    padding-top: 2rem !important;
-  }
   .amenities {
-    padding-bottom: 20px;
-    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-top: 40px;
+    position: relative;
   }
   .amenities br {
     display: none;
   }
-  .amenities .info {
-    margin-bottom: 40px;
-    padding-left: 15px;
-    padding-right: 15px;
+  .amenities .heading {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 2px;
   }
-  .amenities .specification {
-    padding-top: 40px;
+  .amenities #pills-tab {
+    padding-top: 30px;
   }
-  .amenities .specification .row {
-    flex-direction: column-reverse;
+  .amenities #pills-tab .nav-item .nav-link {
+    font-size: 20px;
+    padding: 0.5rem 1.5rem 0.3rem 0;
   }
-  .amenities .specification .s-img {
-    margin-left: -15px;
-    margin-right: -15px;
+  .amenities .tab-content .flex-between {
+    flex-wrap: wrap;
   }
-  .amenities .specification .s-info {
-    margin-bottom: 20px;
-    padding-top: 40px;
+  .amenities .tab-content .flex-between p {
+    width: 50%;
+    padding-bottom: 10px;
   }
-  .amenities .pb-5 {
-    padding-bottom: 2rem !important;
+  .amenities .clubhouse {
+    padding-top: 30px;
+  }
+  .amenities .clubhouse .nav-item .nav-link {
+    text-align: left;
+  }
+  .amenities .clubhouse .amenities-list {
+    justify-content: space-between;
+  }
+  .amenities .clubhouse .amenities-list .para {
+    width: 49%;
+    padding-bottom: 16px;
   }
   .interiors {
-    background-position: top center;
-    margin-bottom: 0;
+    min-height: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
-  .interiors .i-info {
-    transform: unset;
-    top: 185px;
-    left: 0;
-    padding: 40px 15px;
+  .interiors .left,
+  .interiors .right {
+    display: none;
+  }
+  .interiors .middle {
+    width: 100%;
+    padding: 0 16px;
+  }
+  .interiors .middle .content {
+    width: 100%;
+  }
+  .interiors .middle .content .heading {
+    font-size: 44px;
+    line-height: 36px;
+  }
+  .interiors .middle .content .heading span {
+    font-size: 70%;
   }
   .gallery {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .gallery:before {
+    background-image: url(/assets/images/res/gallery.webp);
+    background-size: contain;
+  }
+  .gallery .heading {
+    font-size: 44px;
   }
   .gallery .container {
     max-width: 100%;
@@ -1535,98 +1627,92 @@ p.label {
   .gallery .slick-list {
     padding-bottom: 12% !important;
   }
-  .gallery .slick-arrow.prev {
-    left: 10%;
-  }
-  .gallery .slick-arrow.next {
-    right: 10%;
+  .gallery .slick-arrow {
+    display: none !important;
   }
   .plans {
-    padding: 40px 0;
+    padding: 60px 0;
+    background-size: contain;
   }
-  .plans .col-md-4 {
-    padding-left: 0;
-    padding-right: 0;
+  .plans h2.heading {
+    font-size: 44px;
+    line-height: 60px;
+    text-align: center;
+    padding-bottom: 20px;
   }
-  .location {
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0;
+  .plans h3.heading {
+    font-size: 30px;
+    padding-top: 0;
+  }
+  .plans p {
+    font-size: 18px;
+  }
+  .plans .btn-antelopes2 {
+    min-width: 216px !important;
   }
   .location .bg {
-    background-position: top center;
-    height: auto;
+    background-position: bottom left;
   }
   .location .bg .info {
     height: auto;
     padding: 40px 15px;
-    margin-left: -15px;
-    margin-right: -15px;
-    margin-top: 410px;
   }
   .location:hover .bg {
     background-position: top center;
   }
-  .comfort {
-    background-position: bottom center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: none;
-    height: 545px;
-  }
-  .comfort .confort-info {
-    position: unset;
-    transform: unset;
-    padding: 40px 15px;
-  }
-  .comfort:hover {
-    background-position: bottom;
-  }
   .distination {
-    padding: 40px 15px;
+    padding: 30px 0;
+  }
+  .distination .row {
+    flex-direction: column-reverse;
   }
   .distination .heading {
     text-align: left !important;
-  }
-  .distination .mb-5 {
-    margin-bottom: 2rem !important;
-  }
-  .distination ul {
-    padding-left: 0;
     padding-top: 0;
+    padding-bottom: 10px;
+    font-size: 44px;
+  }
+  .distination .text-center {
+    text-align: left !important;
+  }
+  .distination .text-center .btn-antelopes2 {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  .distination #accordionExample {
+    padding: 0;
+  }
+  .distination #accordionExample .accordion-item .accordion-button {
+    padding-top: 20px;
+    padding-bottom: 16px;
   }
   .distination .map-bg {
-    height: 250px;
+    background-image: url(/assets/images/res/map.webp);
     background-repeat: no-repeat;
-  }
-  .distination .map-bg .zoom {
-    bottom: unset;
-    top: 20px;
+    height: 460px;
   }
   .contact {
     padding-top: 40px;
-    padding-bottom: 1px;
+    padding-bottom: 40px;
+  }
+  .contact .heading {
+    font-size: 44px;
   }
   .contact-form {
     width: 98%;
+    padding-left: 0;
+  }
+  .footer {
+    position: relative;
   }
   .footer .top {
     flex-wrap: wrap;
     background-image: url(/assets/images/amber-bg.webp);
     background-size: cover;
     background-position: center;
-    margin-left: -15px;
-    margin-right: -15px;
-    padding-left: 15px;
-    padding-bottom: 70px;
-    padding-top: 0;
+    padding-bottom: 15px;
     position: relative;
   }
-  .footer .top p.para,
-  .footer .top a {
-    color: #F8E9D4;
-  }
-  .footer .top .box1,
   .footer .top .box4 {
     display: none;
   }
@@ -1668,26 +1754,27 @@ p.label {
   .footer .bottom a {
     color: #7d7d7d;
   }
-  .floorPlans .modal-dialog .modal-content .modal-body .plan-content {
-    flex-wrap: wrap;
+  .thanks .thanks-content {
+    bottom: 42%;
   }
-  .floorPlans .modal-dialog .modal-content .modal-body .plan-content .left {
-    width: 100%;
-    height: auto;
-    padding: 15px;
+  .thanks .thanks-content .heading {
+    font-size: 44px;
+    line-height: 50px;
   }
-  .floorPlans .modal-dialog .modal-content .modal-body .plan-content .left h2 {
-    font-size: 22px;
-    line-height: 26px;
+  .thanks .thanks-content .heading br {
+    display: block;
   }
-  .floorPlans .modal-dialog .modal-content .modal-body .plan-content .left h3 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+  .thanks .thanks-content .para {
+    font-size: 20px;
   }
-  .floorPlans .modal-dialog .modal-content .modal-body .plan-content .left p {
-    font-weight: 14px;
+  .thanks .logo2 {
+    top: 30px;
+    left: 36%;
   }
-  .floorPlans .modal-dialog .modal-content .modal-body .plan-content .right {
-    width: 100%;
+  .thanks .logo2 img {
+    width: 100px;
+  }
+  #loader .letters img {
+    width: 60px;
   }
 }/*# sourceMappingURL=main.css.map */
