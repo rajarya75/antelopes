@@ -24,7 +24,17 @@
 
 <body>
     <div id="loader">
-        <img src="/assets/images/loader.webp" alt="">
+        <div class="letters">
+            <img class="a" src="/assets/images/loader/a.png" alt="">
+            <img class="n" src="/assets/images/loader/n.png" alt="">
+            <img class="t" src="/assets/images/loader/t.png" alt="">
+            <img class="e" src="/assets/images/loader/e.png" alt="">
+            <img class="l" src="/assets/images/loader/l.png" alt="">
+            <img class="o" src="/assets/images/loader/o.png" alt="">
+            <img class="p" src="/assets/images/loader/p.png" alt="">
+            <img class="e1" src="/assets/images/loader/e.png" alt="">
+            <img class="s" src="/assets/images/loader/s.png" alt="">
+        </div>
     </div>
     <div class="main-wrapper">
         <section class="desktop-header sticky desktop">
@@ -40,6 +50,9 @@
                 <li><a href="#location">Location</a></li>
             </ul>
         </section>
+        <div class="mobile-header mobile">
+            <img src="/assets/images/res/logo.png" alt="">
+        </div>
         <section class="banner">
             <div class="left"></div>
             <div class="middle">
@@ -61,11 +74,9 @@
             <div class="right">
                 <div class="mobile">
                     <button class="btn-antelopes btn-back">
-                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.52604 6L7.70623 1.90276C7.89686 1.74665 8.00234 1.53756 7.99996 1.32053C7.99758 1.10351 7.88752 0.895902 7.69349 0.742435C7.49946 0.588968 7.23698 0.501917 6.96259 0.500031C6.6882 0.498145 6.42385 0.581576 6.22648 0.732352L0.306402 5.4148C0.110213 5.57002 0 5.78052 0 6C0 6.21948 0.110213 6.42998 0.306402 6.5852L6.22648 11.2676C6.42385 11.4184 6.6882 11.5019 6.96259 11.5C7.23698 11.4981 7.49946 11.411 7.69349 11.2576C7.88752 11.1041 7.99758 10.8965 7.99996 10.6795C8.00234 10.4624 7.89686 10.2534 7.70623 10.0972L2.52604 6Z"
-                                fill="#C07841" />
-                        </svg> Back </button>
+                        <img src="/assets/images/arrow.png"
+                            style="transform: rotate(180deg); margin-right: 10px; margin-top: -3px; margin-left: -5px;"
+                            alt="">Back </button>
                     <img class="humbergure" src="assets/images/humbergure.svg" alt="">
                     <ul>
                         <li><a href="#project">Project</a></li>
@@ -78,7 +89,7 @@
                         <li><a href="#location">Location</a></li>
                     </ul>
                     <button class="btn-antelopes" data-bs-target="#downloadBrochure" data-bs-toggle="modal">Discover
-                        More </button>
+                        More <img src="/assets/images/arrow.png" alt=""> </button>
                 </div>
             </div>
         </section>
@@ -91,7 +102,7 @@
                         </h2>
                     </div>
                     <div class="col-md-7">
-                        <h2 class="heading secondary">
+                        <h2 class="heading secondary lheight">
                             <span>Situated in the</span> 135 Acre <br /><span>Brigade Orchards in Devanahalli</span>
                         </h2>
                     </div>
@@ -139,7 +150,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-7 style-images">
+                    <div class="col-md-7 style-images desktop">
                         <div class="top">
                             <div class="s-item">
                                 <img src="/assets/images/s1.webp" class="img-fluid" alt="">
@@ -162,6 +173,9 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-7 style-images mobile">
+                        <img class="imf-fluid" src="/assets/images/res/style.webp" alt="">
+                    </div>
                 </div>
             </div>
         </section>
@@ -174,6 +188,9 @@
                         <h2 class="heading secondary">Multidimensional <span style="font-size: 70%;">and</span>
                             <br />multisensory experience.
                         </h2>
+                        <div class="mobile">
+                            <img class="img-fluid" src="/assets/images/res/Architecture.webp" alt="">
+                        </div>
                         <div class="wonder">
                             <p>MYSTERY & WONDER</p>
                             <ul>
@@ -184,7 +201,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 desktop">
                         <div class="creative">
                             <div>
                                 <img class="img-fluid art1" src="/assets/images/art1.png" alt="">
@@ -216,9 +233,10 @@
         <section class="suites" id="lifestyle">
             <div class="container">
                 <div class="row">
-                    <p class="label">life-style</p>
+                    <p class="label">lifestyle</p>
                     <h2 class="heading secondary">Community That Reflects<br /> the Depth of Your Life</h2>
                 </div>
+                <img class="img-fluid mobile" src="/assets/images/res/lifestyle.webp" alt="">
             </div>
             <div class="suites-slider">
                 <div>
@@ -323,23 +341,46 @@
                         </div>
                     </div>
                     <div class="clubhouse">
-                        <div class="head"> Carnelian Clubhouse (7,939 sq ft, 2 storeys) <span>Family and
-                                Entertainment</span>
-                        </div>
-                        <div class="amenities-list">
-                            <p class="para secondary">Open-air leisure areas </p>
-                            <p class="para secondary"> Golf putting</p>
-                            <p class="para secondary">Co-working spaces </p>
-                            <p class="para secondary"> Squash court</p>
-                            <p class="para secondary"> Meditation zones</p>
-                            <p class="para secondary"> Restaurant & café bar</p>
-                            <p class="para secondary"> Gym & fitness center</p>
-                            <p class="para secondary"> Billiards</p>
-                            <p class="para secondary">Cards </p>
-                            <p class="para secondary"> Air hockey</p>
-                            <p class="para secondary">Arcade </p>
-                            <p class="para secondary">Swimming Pool </p>
-                            <p class="para secondary">Foosball </p>
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-home1-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-home1" type="button" role="tab" aria-controls="pills-home1"
+                                    aria-selected="true">Carnelian Clubhouse (7,939 sq ft, 2 storeys)</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-profile1-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-profile1" type="button" role="tab"
+                                    aria-controls="pills-profile1" aria-selected="false">Family and
+                                    Entertainment</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-home1" role="tabpanel"
+                                aria-labelledby="pills-home1-tab">
+                                <div class="amenities-list">
+                                    <p class="para secondary">Open-air leisure areas </p>
+                                    <p class="para secondary"> Golf putting</p>
+                                    <p class="para secondary">Co-working spaces </p>
+                                    <p class="para secondary"> Squash court</p>
+                                    <p class="para secondary"> Meditation zones</p>
+                                    <p class="para secondary"> Restaurant & café bar</p>
+                                    <p class="para secondary"> Gym & fitness center</p>
+                                    <p class="para secondary"> Billiards</p>
+                                    <p class="para secondary">Cards </p>
+                                    <p class="para secondary"> Air hockey</p>
+                                    <p class="para secondary">Arcade </p>
+                                    <p class="para secondary">Swimming Pool </p>
+                                    <p class="para secondary">Foosball </p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-profile1" role="tabpanel"
+                                aria-labelledby="pills-profile1-tab">
+                                <div class="flex-between">
+                                    <p class="para secondary"> Open-air theatre and BBQ area</p>
+                                    <p class="para secondary"> Viewing decks</p>
+                                    <p class="para secondary"> Elevated event spaces for gatherings</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -485,8 +526,8 @@
                         <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                         Workspaces </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
@@ -721,12 +762,12 @@
                     <div class="box1">
                         <img src="assets/images/logo-footer.webp" alt="">
                         <div class="mt-1">
-                            <a href="/" target="_blank">A project by <img style="margin-top: -4px"
-                                    src="/assets/images/merusri.png" alt=""></a>
+                            <a href="https://www.merusridevelopers.com" target="_blank">A project by <img
+                                    style="margin-top: -4px" src="/assets/images/merusri.png" alt=""></a>
                         </div>
                     </div>
                     <div class="box2">
-                        <p class="label">building aDdress</p>
+                        <p class="label">building Address</p>
                         <p class="para">17/1, Ground Floor, MERUSRI DEVELOPERS, NCC Urban - <br />Windsor, Bellary Rd,
                             opp. Jakkur Aerodrome, Yashoda <br />Nagar, Yelahanka, Bengaluru, Karnataka - 560064</p>
                         <div class="pt-3 pb-3">
@@ -754,9 +795,6 @@
                     </div>
                 </div>
                 <div class="bottom">
-                    <div class="box1 mobile mb-3">
-                        <img src="assets/images/logo-footer.webp" alt="">
-                    </div>
                     <p class="para black">© All Rights Reserved.</p>
                     <p class="para">Designed And Developed By : <a href="https://modtraa.com/" target="_blank"><img
                                 src="/assets/images/modtraa.png" alt=""> Modtraa</a></p>
@@ -947,33 +985,48 @@
 
         </script>
         <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                setTimeout(() => {
-                    $(".banner").addClass("full-banner");
-                    $(".desktop-header").css('visibility', 'visible');
-                }, 500);
-            });
-        </script>
-        <script>
             document.addEventListener("DOMContentLoaded", function () {
-                // Simulate a delay to mimic data loading (optional, for testing)
                 setTimeout(() => {
                     const loader = document.getElementById("loader");
                     const mainWrapper = document.querySelector(".main-wrapper");
 
-                    // Hide the loader
-                    loader.style.opacity = "0";
-                    loader.style.transition = "opacity 0.5s ease-in-out";
+                    if (loader) {
+                        // Smoothly hide the loader
+                        loader.style.transition = "opacity 0.5s ease-in-out";
+                        loader.style.opacity = "0";
 
-                    // After transition ends, remove the loader from the DOM
-                    loader.addEventListener("transitionend", () => {
-                        loader.style.display = "none";
-                    });
+                        loader.addEventListener("transitionend", () => {
+                            loader.style.display = "none";
+                        });
+                    }
 
-                    // Show the main content
-                    mainWrapper.style.opacity = "1";
-                    mainWrapper.style.transition = "opacity 0.5s ease-in-out";
-                }, 1000); // Simulated delay of 2 seconds
+                    if (mainWrapper) {
+                        // Smoothly show the main content
+                        mainWrapper.style.transition = "opacity 0.5s ease-in-out";
+                        mainWrapper.style.opacity = "1";
+                    }
+                }, 3000);
+
+                setTimeout(() => {
+                    const banner = document.querySelector(".banner");
+                    const desktopHeader = document.querySelector(".desktop-header");
+
+                    if (banner) {
+                        banner.classList.add("full-banner");
+                    }
+
+                    if (desktopHeader) {
+                        desktopHeader.style.visibility = "visible";
+                    }
+                }, 4000);
+
+                // letters
+                const letters = document.querySelectorAll('.letters img');
+                letters.forEach((letter, index) => {
+                    setTimeout(() => {
+                        letter.classList.add('animate');
+                    }, index * 200); // Delay of 200ms between letters
+                });
             });
         </script>
 </body>
