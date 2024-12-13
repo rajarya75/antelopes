@@ -1382,33 +1382,33 @@ p.label {
 
 @media (max-width: 768px) {
   .heading {
-    font-size: 22px;
-    line-height: 28px;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 1px;
+  }
+  .heading br {
+    display: none;
   }
   .desktop {
     display: none;
   }
-  .para {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 300;
-  }
-  .btn-amber {
-    font-size: 12px;
-    padding: 10px 40px;
-  }
   .mobile {
     display: block;
   }
+  .para {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 300;
+    text-align: justify;
+  }
   .banner {
     height: 100vh;
-    background-image: url(/assets/images/banner-res.webp);
+    background-image: url(/assets/images/res/banner.webp);
   }
   .banner .middle {
     min-width: 100% !important;
   }
   .banner .middle .logo {
-    background: #F8E9D4;
     position: fixed;
     width: 100%;
     z-index: 10;
@@ -1416,13 +1416,15 @@ p.label {
   .banner .middle .logo img {
     width: 250px;
   }
-  .banner .middle .content {
-    padding-top: 24vh !important;
-    width: 230px;
-    margin: 0 auto;
+  .banner .middle .heading {
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 1px;
   }
-  .banner .middle .discover {
-    display: none;
+  .banner .middle .content {
+    padding-top: 30vh;
+    max-width: 380px;
+    margin: 0 auto;
   }
   .banner .left {
     width: 0;
@@ -1431,41 +1433,69 @@ p.label {
     width: 0;
   }
   .banner .right {
-    width: 70%;
+    width: 80%;
     position: fixed !important;
     right: 0;
     height: 100%;
-    z-index: 10;
+    z-index: 13;
   }
   .banner .right .humbergure {
     right: 10px !important;
     top: 9px !important;
   }
-  .project {
-    padding-top: 60px;
+  .banner .right .btn-antelopes {
+    margin-left: 16px;
+    margin-top: 44px;
+  }
+  .banner .right ul li a {
+    line-height: 50px;
+    color: #050100;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  .mobile-header {
+    background: #F8E9D4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px;
+    z-index: 11;
+  }
+  .about {
+    background-image: url(/assets/images/res/about.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0% 62%;
     padding-bottom: 60px;
   }
-  .project br {
-    display: none;
+  .about:hover {
+    background-image: unset;
   }
-  .project .frame {
-    background-size: 330px;
-    background-position: center;
+  .about .row {
+    padding-top: 70px;
   }
-  .project .row .text-center {
-    padding-right: 0;
+  .about h2.heading {
+    font-size: 40px;
+    line-height: 34px;
   }
-  .project .video-wrapper {
-    padding-left: 0px;
+  .about h2.heading span {
+    font-size: 64%;
   }
-  .project .video-wrapper .video-background {
-    height: 246px;
-    margin-top: 30px;
+  .about h2.heading.lheight {
+    line-height: 34px;
   }
-  .project .vector {
-    bottom: -130px;
-    right: -5px;
-    width: 120px;
+  .about .col-md-5 {
+    padding-bottom: 50px;
+  }
+  .about .bottom .col-md-7 .heading.secondary {
+    margin-top: 270px;
+  }
+  .about .bottom .col-md-7 h2.heading.secondary.uppercase.pb-2 span {
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: 2px;
   }
   .style {
     padding-top: 0;
@@ -1476,6 +1506,32 @@ p.label {
   }
   .style .style-images {
     padding-left: 0;
+  }
+  .style .py-5 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  .style .heading {
+    font-size: 28px;
+    letter-spacing: 2px;
+    line-height: 36px;
+  }
+  .style .heading br {
+    display: none;
+  }
+  .architecture {
+    padding-top: 79px;
+    padding-bottom: 70px;
+  }
+  .architecture .col-md-8,
+  .architecture .col-md-4 {
+    width: 100%;
+  }
+  .architecture .wonder {
+    padding-top: 10%;
+  }
+  .architecture .wonder ul li {
+    line-height: 44px;
   }
   .suites {
     padding-top: 360px;

@@ -1703,8 +1703,6 @@ p.label {
 
 }
 
-
-
 .main-wrapper {
     visibility: none;
 }
@@ -1712,38 +1710,38 @@ p.label {
 // Responsiveness
 @media(max-width: 768px) {
     .heading {
-        font-size: 22px;
-        line-height: 28px;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: 1px;
+
+        br {
+            display: none;
+        }
     }
 
     .desktop {
         display: none;
     }
 
-    .para {
-        font-size: 16px;
-        line-height: 24px;
-        font-weight: 300;
-    }
-
-    .btn-amber {
-        font-size: 12px;
-        padding: 10px 40px;
-    }
-
     .mobile {
         display: block;
     }
 
+    .para {
+        font-size: 18px;
+        line-height: 27px;
+        font-weight: 300;
+        text-align: justify;
+    }
+
     .banner {
         height: 100vh;
-        background-image: url(/assets/images/banner-res.webp);
+        background-image: url(/assets/images/res/banner.webp);
 
         .middle {
             min-width: 100% !important;
 
             .logo {
-                background: $primary;
                 position: fixed;
                 width: 100%;
                 z-index: 10;
@@ -1753,15 +1751,19 @@ p.label {
                 }
             }
 
+            .heading {
+                font-size: 26px;
+                line-height: 32px;
+                letter-spacing: 1px;
+            }
+
             .content {
-                padding-top: 24vh !important;
-                width: 230px;
+                padding-top: 30vh;
+                max-width: 380px;
                 margin: 0 auto;
             }
 
-            .discover {
-                display: none;
-            }
+
         }
 
         .left {
@@ -1775,50 +1777,88 @@ p.label {
         }
 
         .right {
-            width: 70%;
+            width: 80%;
             position: fixed !important;
             right: 0;
             height: 100%;
-            z-index: 10;
+            z-index: 13;
 
             .humbergure {
                 right: 10px !important;
                 top: 9px !important;
             }
+
+            .btn-antelopes {
+                margin-left: 16px;
+                margin-top: 44px
+            }
+
+            ul li a {
+                line-height: 50px;
+                color: #050100;
+                text-transform: uppercase;
+                font-size: 14px;
+            }
         }
     }
 
-    .project {
-        padding-top: 60px;
+    .mobile-header {
+        background: $primary;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding: 10px;
+        z-index: 11;
+    }
+
+    .about {
+        background-image: url(/assets/images/res/about.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 0% 62%;
         padding-bottom: 60px;
 
-        br {
-            display: none;
+        &:hover {
+            background-image: unset;
         }
 
-        .frame {
-            background-size: 330px;
-            background-position: center;
+        .row {
+            padding-top: 70px;
         }
 
-        .row .text-center {
-            padding-right: 0;
-        }
+        h2.heading {
+            font-size: 40px;
+            line-height: 34px;
 
-        .video-wrapper {
-            padding-left: 0px;
+            span {
+                font-size: 64%;
+            }
 
-            .video-background {
-                height: 246px;
-                margin-top: 30px;
+            &.lheight {
+                line-height: 34px;
             }
         }
 
-        .vector {
-            bottom: -130px;
-            right: -5px;
-            width: 120px;
+        .col-md-5 {
+            padding-bottom: 50px;
         }
+
+        .bottom {
+            .col-md-7 {
+                .heading.secondary {
+                    margin-top: 270px;
+                }
+
+                h2.heading.secondary.uppercase.pb-2 span {
+                    font-size: 30px;
+                    line-height: 38px;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+
     }
 
     .style {
@@ -1831,6 +1871,39 @@ p.label {
 
         .style-images {
             padding-left: 0;
+        }
+
+        .py-5 {
+            padding-top: 2rem !important;
+            padding-bottom: 2rem !important;
+        }
+
+        .heading {
+            font-size: 28px;
+            letter-spacing: 2px;
+            line-height: 36px;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .architecture {
+        padding-top: 79px;
+        padding-bottom: 70px;
+
+        .col-md-8,
+        .col-md-4 {
+            width: 100%;
+        }
+
+        .wonder {
+            padding-top: 10%;
+
+            ul li {
+                line-height: 44px;
+            }
         }
     }
 

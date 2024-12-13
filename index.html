@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <div id="loader">
+    <!-- <div id="loader">
         <div class="letters">
             <img class="a" src="/assets/images/loader/a.png" alt="">
             <img class="n" src="/assets/images/loader/n.png" alt="">
@@ -35,7 +35,7 @@
             <img class="e1" src="/assets/images/loader/e.png" alt="">
             <img class="s" src="/assets/images/loader/s.png" alt="">
         </div>
-    </div>
+    </div> -->
     <div class="main-wrapper">
         <section class="desktop-header sticky desktop">
             <ul>
@@ -50,6 +50,9 @@
                 <li><a href="#location">Location</a></li>
             </ul>
         </section>
+        <div class="mobile-header mobile">
+            <img src="/assets/images/res/logo.png" alt="">
+        </div>
         <section class="banner">
             <div class="left"></div>
             <div class="middle">
@@ -71,11 +74,9 @@
             <div class="right">
                 <div class="mobile">
                     <button class="btn-antelopes btn-back">
-                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.52604 6L7.70623 1.90276C7.89686 1.74665 8.00234 1.53756 7.99996 1.32053C7.99758 1.10351 7.88752 0.895902 7.69349 0.742435C7.49946 0.588968 7.23698 0.501917 6.96259 0.500031C6.6882 0.498145 6.42385 0.581576 6.22648 0.732352L0.306402 5.4148C0.110213 5.57002 0 5.78052 0 6C0 6.21948 0.110213 6.42998 0.306402 6.5852L6.22648 11.2676C6.42385 11.4184 6.6882 11.5019 6.96259 11.5C7.23698 11.4981 7.49946 11.411 7.69349 11.2576C7.88752 11.1041 7.99758 10.8965 7.99996 10.6795C8.00234 10.4624 7.89686 10.2534 7.70623 10.0972L2.52604 6Z"
-                                fill="#C07841" />
-                        </svg> Back </button>
+                        <img src="/assets/images/arrow.png"
+                            style="transform: rotate(180deg); margin-right: 10px; margin-top: -3px; margin-left: -5px;"
+                            alt="">Back </button>
                     <img class="humbergure" src="assets/images/humbergure.svg" alt="">
                     <ul>
                         <li><a href="#project">Project</a></li>
@@ -88,7 +89,7 @@
                         <li><a href="#location">Location</a></li>
                     </ul>
                     <button class="btn-antelopes" data-bs-target="#downloadBrochure" data-bs-toggle="modal">Discover
-                        More </button>
+                        More <img src="/assets/images/arrow.png" alt=""> </button>
                 </div>
             </div>
         </section>
@@ -149,7 +150,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-7 style-images">
+                    <div class="col-md-7 style-images desktop">
                         <div class="top">
                             <div class="s-item">
                                 <img src="/assets/images/s1.webp" class="img-fluid" alt="">
@@ -172,6 +173,9 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-7 style-images mobile">
+                        <img class="imf-fluid" src="/assets/images/res/style.webp" alt="">
+                    </div>
                 </div>
             </div>
         </section>
@@ -184,6 +188,9 @@
                         <h2 class="heading secondary">Multidimensional <span style="font-size: 70%;">and</span>
                             <br />multisensory experience.
                         </h2>
+                        <div class="mobile">
+                            <img class="img-fluid" src="/assets/images/res/Architecture.webp" alt="">
+                        </div>
                         <div class="wonder">
                             <p>MYSTERY & WONDER</p>
                             <ul>
@@ -194,7 +201,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 desktop">
                         <div class="creative">
                             <div>
                                 <img class="img-fluid art1" src="/assets/images/art1.png" alt="">
