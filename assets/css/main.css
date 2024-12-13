@@ -1398,7 +1398,7 @@ p.label {
   .para {
     font-size: 18px;
     line-height: 27px;
-    font-weight: 300;
+    font-weight: 400;
     text-align: justify;
   }
   .banner {
@@ -1534,91 +1534,92 @@ p.label {
     line-height: 44px;
   }
   .suites {
-    padding-top: 360px;
+    height: 100vh;
+  }
+  .suites .suites-slider {
+    display: none;
   }
   .suites .suites-info {
     left: 0;
-    top: 0;
+    top: 52%;
     transform: unset;
     width: auto;
-    padding: 40px 15px;
+    padding: 15px;
     box-shadow: none;
   }
-  .download {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-  .lifestyle {
-    flex-wrap: wrap;
-    height: auto;
-  }
-  .lifestyle .middle {
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .lifestyle .middle .content {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-  .lifestyle .left {
-    background-image: url(/assets/images/luxury-left-res.webp);
-  }
-  .lifestyle .left,
-  .lifestyle .right {
-    width: 100%;
-    height: 250px;
-  }
-  .lifestyle:hover .middle,
-  .lifestyle:hover .left,
-  .lifestyle:hover .right {
-    width: 100%;
-  }
-  .lifestyle .py-5 {
-    padding-top: 2rem !important;
-  }
   .amenities {
-    padding-bottom: 20px;
-    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-top: 40px;
+    position: relative;
   }
   .amenities br {
     display: none;
   }
-  .amenities .info {
-    margin-bottom: 40px;
-    padding-left: 15px;
-    padding-right: 15px;
+  .amenities .heading {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 2px;
   }
-  .amenities .specification {
-    padding-top: 40px;
+  .amenities #pills-tab {
+    padding-top: 30px;
   }
-  .amenities .specification .row {
-    flex-direction: column-reverse;
+  .amenities #pills-tab .nav-item .nav-link {
+    font-size: 20px;
+    padding: 0.5rem 1.5rem 0.3rem 0;
   }
-  .amenities .specification .s-img {
-    margin-left: -15px;
-    margin-right: -15px;
+  .amenities .tab-content .flex-between {
+    flex-wrap: wrap;
   }
-  .amenities .specification .s-info {
-    margin-bottom: 20px;
-    padding-top: 40px;
+  .amenities .tab-content .flex-between p {
+    width: 50%;
+    padding-bottom: 10px;
   }
-  .amenities .pb-5 {
-    padding-bottom: 2rem !important;
+  .amenities .clubhouse {
+    padding-top: 30px;
+  }
+  .amenities .clubhouse .nav-item .nav-link {
+    text-align: left;
+  }
+  .amenities .clubhouse .amenities-list {
+    justify-content: space-between;
+  }
+  .amenities .clubhouse .amenities-list .para {
+    width: 49%;
+    padding-bottom: 16px;
   }
   .interiors {
-    background-position: top center;
-    margin-bottom: 0;
+    min-height: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
-  .interiors .i-info {
-    transform: unset;
-    top: 185px;
-    left: 0;
-    padding: 40px 15px;
+  .interiors .left,
+  .interiors .right {
+    display: none;
+  }
+  .interiors .middle {
+    width: 100%;
+    padding: 0 16px;
+  }
+  .interiors .middle .content {
+    width: 100%;
+  }
+  .interiors .middle .content .heading {
+    font-size: 44px;
+    line-height: 36px;
+  }
+  .interiors .middle .content .heading span {
+    font-size: 70%;
   }
   .gallery {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .gallery:before {
+    background-image: url(/assets/images/res/gallery.webp);
+    background-size: contain;
+  }
+  .gallery .heading {
+    font-size: 44px;
   }
   .gallery .container {
     max-width: 100%;
@@ -1626,98 +1627,92 @@ p.label {
   .gallery .slick-list {
     padding-bottom: 12% !important;
   }
-  .gallery .slick-arrow.prev {
-    left: 10%;
-  }
-  .gallery .slick-arrow.next {
-    right: 10%;
+  .gallery .slick-arrow {
+    display: none !important;
   }
   .plans {
-    padding: 40px 0;
+    padding: 60px 0;
+    background-size: contain;
   }
-  .plans .col-md-4 {
-    padding-left: 0;
-    padding-right: 0;
+  .plans h2.heading {
+    font-size: 44px;
+    line-height: 60px;
+    text-align: center;
+    padding-bottom: 20px;
   }
-  .location {
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0;
+  .plans h3.heading {
+    font-size: 30px;
+    padding-top: 0;
+  }
+  .plans p {
+    font-size: 18px;
+  }
+  .plans .btn-antelopes2 {
+    min-width: 216px !important;
   }
   .location .bg {
-    background-position: top center;
-    height: auto;
+    background-position: bottom left;
   }
   .location .bg .info {
     height: auto;
     padding: 40px 15px;
-    margin-left: -15px;
-    margin-right: -15px;
-    margin-top: 410px;
   }
   .location:hover .bg {
     background-position: top center;
   }
-  .comfort {
-    background-position: bottom center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: none;
-    height: 545px;
-  }
-  .comfort .confort-info {
-    position: unset;
-    transform: unset;
-    padding: 40px 15px;
-  }
-  .comfort:hover {
-    background-position: bottom;
-  }
   .distination {
-    padding: 40px 15px;
+    padding: 30px 0;
+  }
+  .distination .row {
+    flex-direction: column-reverse;
   }
   .distination .heading {
     text-align: left !important;
-  }
-  .distination .mb-5 {
-    margin-bottom: 2rem !important;
-  }
-  .distination ul {
-    padding-left: 0;
     padding-top: 0;
+    padding-bottom: 10px;
+    font-size: 44px;
+  }
+  .distination .text-center {
+    text-align: left !important;
+  }
+  .distination .text-center .btn-antelopes2 {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  .distination #accordionExample {
+    padding: 0;
+  }
+  .distination #accordionExample .accordion-item .accordion-button {
+    padding-top: 20px;
+    padding-bottom: 16px;
   }
   .distination .map-bg {
-    height: 250px;
+    background-image: url(/assets/images/res/map.webp);
     background-repeat: no-repeat;
-  }
-  .distination .map-bg .zoom {
-    bottom: unset;
-    top: 20px;
+    height: 460px;
   }
   .contact {
     padding-top: 40px;
-    padding-bottom: 1px;
+    padding-bottom: 40px;
+  }
+  .contact .heading {
+    font-size: 44px;
   }
   .contact-form {
     width: 98%;
+    padding-left: 0;
+  }
+  .footer {
+    position: relative;
   }
   .footer .top {
     flex-wrap: wrap;
     background-image: url(/assets/images/amber-bg.webp);
     background-size: cover;
     background-position: center;
-    margin-left: -15px;
-    margin-right: -15px;
-    padding-left: 15px;
-    padding-bottom: 70px;
-    padding-top: 0;
+    padding-bottom: 15px;
     position: relative;
   }
-  .footer .top p.para,
-  .footer .top a {
-    color: #F8E9D4;
-  }
-  .footer .top .box1,
   .footer .top .box4 {
     display: none;
   }
@@ -1759,26 +1754,27 @@ p.label {
   .footer .bottom a {
     color: #7d7d7d;
   }
-  .floorPlans .modal-dialog .modal-content .modal-body .plan-content {
-    flex-wrap: wrap;
+  .thanks .thanks-content {
+    bottom: 42%;
   }
-  .floorPlans .modal-dialog .modal-content .modal-body .plan-content .left {
-    width: 100%;
-    height: auto;
-    padding: 15px;
+  .thanks .thanks-content .heading {
+    font-size: 44px;
+    line-height: 50px;
   }
-  .floorPlans .modal-dialog .modal-content .modal-body .plan-content .left h2 {
-    font-size: 22px;
-    line-height: 26px;
+  .thanks .thanks-content .heading br {
+    display: block;
   }
-  .floorPlans .modal-dialog .modal-content .modal-body .plan-content .left h3 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+  .thanks .thanks-content .para {
+    font-size: 20px;
   }
-  .floorPlans .modal-dialog .modal-content .modal-body .plan-content .left p {
-    font-weight: 14px;
+  .thanks .logo2 {
+    top: 30px;
+    left: 36%;
   }
-  .floorPlans .modal-dialog .modal-content .modal-body .plan-content .right {
-    width: 100%;
+  .thanks .logo2 img {
+    width: 100px;
+  }
+  #loader .letters img {
+    width: 60px;
   }
 }/*# sourceMappingURL=main.css.map */
