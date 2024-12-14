@@ -1,10 +1,17 @@
 $(document).ready(function () {
   $(".btn-back").click(function () {
     $(".banner").toggleClass("full-banner");
+    $(".right").removeClass("open");
+  });
+
+  $(".close-menu").click(function () {
+    $(".banner").toggleClass("full-banner");
+    $(".right").removeClass("open");
   });
 
   $(".humbergure").click(function () {
     $(".banner").toggleClass("full-banner");
+    $(".right").addClass("open");
   });
 });
 

@@ -48,6 +48,7 @@ body {
     overflow-x: hidden;
     background: $primary;
     font-weight: 300;
+    scroll-behavior: smooth;
 }
 
 .main-wrapper {
@@ -1737,6 +1738,49 @@ p.label {
 }
 
 // Responsiveness
+@media(max-width: 1440px) and (min-width: 1200px) {
+    .about h2.heading {
+        font-size: 70px;
+    }
+
+    .heading {
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    .para {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .style .left-bg {
+        padding: 30px 60px;
+    }
+
+    .amenities .heading,
+    .contact .heading,
+    .plans h2.heading,
+    .gallery .heading {
+        font-size: 70px;
+        line-height: 80px;
+    }
+
+    .interiors .heading {
+        font-size: 60px;
+        line-height: 44px;
+    }
+
+    .location br {
+        display: none;
+    }
+
+    .location .bg .info {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+}
+
 @media(max-width: 768px) {
     .heading {
         font-size: 28px;
@@ -1794,18 +1838,30 @@ p.label {
             width: 0;
         }
 
+        .right {
+            width: 0;
+        }
+
         &.full-banner {
             .right {
                 width: 0;
+
+                .humbergure {
+                    right: 10px;
+                    top: 6px;
+                    z-index: 100;
+                    position: fixed;
+                }
             }
         }
 
-        .right {
+        .right.open {
             width: 80%;
             position: fixed !important;
             right: 0;
             height: 100%;
             z-index: 13;
+            transition: width .5s ease-in-out;
 
             .humbergure {
                 right: 10px !important;
@@ -1958,6 +2014,10 @@ p.label {
             width: auto;
             padding: 15px;
             box-shadow: none;
+        }
+
+        .mb-5 {
+            margin-bottom: 2rem !important;
         }
     }
 
@@ -2187,6 +2247,7 @@ p.label {
             background-image: url(/assets/images/res/map.webp);
             background-repeat: no-repeat;
             height: 460px;
+            cursor: pointer;
         }
     }
 
@@ -2340,7 +2401,12 @@ p.label {
     }
 
     #loader {
+        background-image: url(/assets/images/res/Loading.png);
+        background-position: center center;
+
         .letters {
+            height: 400px;
+
             img {
                 width: 24px;
 
@@ -2463,6 +2529,10 @@ p.label {
 
     .about {
         background-position: 0% 356px;
+    }
+
+    .amenities {
+        padding-top: 80px;
     }
 
     .amenities .para {
