@@ -1402,6 +1402,40 @@ p.label {
   visibility: none;
 }
 
+@media (max-width: 1440px) and (min-width: 1200px) {
+  .about h2.heading {
+    font-size: 70px;
+  }
+  .heading {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .para {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .style .left-bg {
+    padding: 30px 60px;
+  }
+  .amenities .heading,
+  .contact .heading,
+  .plans h2.heading,
+  .gallery .heading {
+    font-size: 70px;
+    line-height: 80px;
+  }
+  .interiors .heading {
+    font-size: 60px;
+    line-height: 44px;
+  }
+  .location br {
+    display: none;
+  }
+  .location .bg .info {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
 @media (max-width: 768px) {
   .heading {
     font-size: 28px;
@@ -1447,10 +1481,19 @@ p.label {
   .banner .left {
     width: 0;
   }
+  .banner .right {
+    width: 0;
+  }
   .banner.full-banner .right {
     width: 0;
   }
-  .banner .right {
+  .banner.full-banner .right .humbergure {
+    right: 10px;
+    top: 6px;
+    z-index: 100;
+    position: fixed;
+  }
+  .banner .right.open {
     width: 80%;
     position: fixed !important;
     right: 0;
@@ -1458,21 +1501,21 @@ p.label {
     z-index: 13;
     transition: width 0.5s ease-in-out;
   }
-  .banner .right .humbergure {
+  .banner .right.open .humbergure {
     right: 10px !important;
     top: 9px !important;
   }
-  .banner .right .btn-antelopes {
+  .banner .right.open .btn-antelopes {
     margin-left: 16px;
     margin-top: 20px;
     width: 200px;
   }
-  .banner .right .btn-antelopes.btn-back {
+  .banner .right.open .btn-antelopes.btn-back {
     width: 130px;
     display: block;
     margin-top: 50px;
   }
-  .banner .right ul li a {
+  .banner .right.open ul li a {
     line-height: 50px;
     color: #050100;
     text-transform: uppercase;
@@ -1576,6 +1619,9 @@ p.label {
     width: auto;
     padding: 15px;
     box-shadow: none;
+  }
+  .suites .mb-5 {
+    margin-bottom: 2rem !important;
   }
   .amenities {
     padding-bottom: 30px;
@@ -1750,6 +1796,7 @@ p.label {
     background-image: url(/assets/images/res/map.webp);
     background-repeat: no-repeat;
     height: 460px;
+    cursor: pointer;
   }
   .contact {
     padding-top: 40px;
@@ -1860,6 +1907,13 @@ p.label {
   #downloadBrochure .modal-dialog .modal-content .contact-form .form-select {
     height: 50px;
   }
+  #loader {
+    background-image: url(/assets/images/res/Loading.png);
+    background-position: center center;
+  }
+  #loader .letters {
+    height: 400px;
+  }
   #loader .letters img {
     width: 24px;
   }
@@ -1955,6 +2009,9 @@ p.label {
   }
   .about {
     background-position: 0% 356px;
+  }
+  .amenities {
+    padding-top: 80px;
   }
   .amenities .para {
     font-size: 14px;
