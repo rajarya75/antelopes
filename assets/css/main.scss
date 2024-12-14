@@ -2374,11 +2374,18 @@ p.label {
 
                 .heading {
                     margin-top: -40px;
-                    font-size: 40px;
-                    line-height: 54px;
+                    font-size: 32px;
+                    line-height: 38px;
                 }
 
+                .modal-body {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
 
+                .pb-5 {
+                    padding-bottom: 2rem !important;
+                }
 
                 .contact-form {
                     padding: 0;
@@ -2393,7 +2400,7 @@ p.label {
 
                     .form-control,
                     .form-select {
-                        height: 50px;
+                        height: 40px;
                     }
                 }
             }

@@ -1891,8 +1891,15 @@ p.label {
   }
   #downloadBrochure .modal-dialog .modal-content .heading {
     margin-top: -40px;
-    font-size: 40px;
-    line-height: 54px;
+    font-size: 32px;
+    line-height: 38px;
+  }
+  #downloadBrochure .modal-dialog .modal-content .modal-body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #downloadBrochure .modal-dialog .modal-content .pb-5 {
+    padding-bottom: 2rem !important;
   }
   #downloadBrochure .modal-dialog .modal-content .contact-form {
     padding: 0;
@@ -1905,7 +1912,7 @@ p.label {
   }
   #downloadBrochure .modal-dialog .modal-content .contact-form .form-control,
   #downloadBrochure .modal-dialog .modal-content .contact-form .form-select {
-    height: 50px;
+    height: 40px;
   }
   #loader {
     background-image: url(/assets/images/res/Loading.png);
