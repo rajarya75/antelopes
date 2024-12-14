@@ -1,85 +1,112 @@
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault(); // Prevent the default form submission
-
-  const fullName = document.getElementById("fullname").value;
-  const phoneNumber = document.getElementById("phonenumber").value;
-  const email = document.getElementById("email").value;
-  const enquiryType = document.getElementById("enquiry").value;
-  const message = document.getElementById("message").value;
-
-  const data = {
-    name: fullName,
-    email: email,
-    mobileCode: "+971",
-    contactNumber: phoneNumber,
-    message: message,
-    typeOfEnquiry: enquiryType,
-    from: "Enso Amber",
-  };
-
-  fetch("https://test.com/api/website/enquiry", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      // On success, hide the form and show the success message
-      document.getElementById("contactForm").style.display = "none";
-      document.getElementById("successMessage").style.display = "block";
-    })
-    .catch((error) => {
-      // Handle error - maybe show an error message
-      console.error("Error:", error);
-    });
-});
-
-// Download Brochure===================================================================
+// Main Contact Form Submission
 document
-  .getElementById("brochureForm")
-  .addEventListener("submit", function (event) {
+  .getElementById("contactForm")
+  .addEventListener("submit", async function (event) {
     event.preventDefault();
 
-    // Gather form data
-    const fullName = document.getElementById("fullName1").value;
-    const phoneNumber = document.getElementById("phonenumber1").value;
-    const email = document.getElementById("email1").value;
-    const enquiryType = document.getElementById("enquiry1").value;
-    const message = document.getElementById("message1").value;
+    const fullname = document.getElementById("fullname").value.trim();
+    const phoneNumber = document.getElementById("phonenumber").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-    const data = {
-      name: fullName,
-      email: email,
-      mobileCode: "+971",
-      contactNumber: phoneNumber,
-      message: message,
-      typeOfEnquiry: enquiryType,
-      from: "Enso Amber",
+    const [firstName, ...lastNameArr] = fullname.split(" ");
+    const lastName = lastNameArr.join(" ");
+
+    const payload = {
+      LeadDetails: [
+        { Attribute: "Phone", Value: phoneNumber },
+        { Attribute: "FirstName", Value: firstName },
+        { Attribute: "LastName", Value: lastName || "" },
+        { Attribute: "EmailAddress", Value: email },
+        { Attribute: "mx_City", Value: "Bangalore" },
+        { Attribute: "SearchBy", Value: "Phone" },
+      ],
+      Opportunity: {
+        OpportunityEventCode: 12000,
+        Fields: [
+          { SchemaName: "mx_Custom_1", Value: `${firstName} - TPT` },
+          { SchemaName: "mx_Custom_16", Value: "TPT" },
+          { SchemaName: "mx_Custom_17", Value: "Residential" },
+          { SchemaName: "mx_Custom_64", Value: "1 BHK" },
+          { SchemaName: "Owner", Value: "digital.integration@xanadu.in" },
+          { SchemaName: "mx_Custom_73", Value: "Web Leads" },
+          { SchemaName: "Status", Value: "Open" },
+          { SchemaName: "mx_Custom_2", Value: "Not Attempted" },
+          { SchemaName: "mx_Custom_3", Value: "Facebook" },
+          { SchemaName: "mx_Custom_20", Value: "Test" },
+          { SchemaName: "mx_Custom_21", Value: "XYZ" },
+        ],
+      },
     };
 
-    // Send data to API
-    fetch("https://test.com/api/website/enquiry", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.status) {
-          // Adjust based on your API response
-          // Hide form and open thank you modal
-          document.getElementById("brochureForm").style.display = "none";
-          new bootstrap.Modal(document.getElementById("thankYouModal")).show();
-
-          // Open PDF in new tab
-          window.open("/assets/images/video/Enso_Amber_Brochure.pdf", "_blank");
-        } else {
-          alert("There was an issue with your submission. Please try again.");
-        }
-      })
-      .catch((error) => console.error("Error:", error));
+    await handleSubmit(payload);
   });
+
+// Modal Contact Form Submission
+document
+  .getElementById("contactForm1")
+  .addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const fullname = document.getElementById("fullname1").value.trim();
+    const phoneNumber = document.getElementById("phonenumber1").value.trim();
+    const email = document.getElementById("email1").value.trim();
+    const message = document.getElementById("message1").value.trim();
+
+    const [firstName, ...lastNameArr] = fullname.split(" ");
+    const lastName = lastNameArr.join(" ");
+
+    const payload = {
+      LeadDetails: [
+        { Attribute: "Phone", Value: phoneNumber },
+        { Attribute: "FirstName", Value: firstName },
+        { Attribute: "LastName", Value: lastName || "" },
+        { Attribute: "EmailAddress", Value: email },
+        { Attribute: "mx_City", Value: "Bangalore" },
+        { Attribute: "SearchBy", Value: "Phone" },
+      ],
+      Opportunity: {
+        OpportunityEventCode: 12000,
+        Fields: [
+          { SchemaName: "mx_Custom_1", Value: `${firstName} - TPT` },
+          { SchemaName: "mx_Custom_16", Value: "TPT" },
+          { SchemaName: "mx_Custom_17", Value: "Residential" },
+          { SchemaName: "mx_Custom_64", Value: "1 BHK" },
+          { SchemaName: "Owner", Value: "digital.integration@xanadu.in" },
+          { SchemaName: "mx_Custom_73", Value: "Web Leads" },
+          { SchemaName: "Status", Value: "Open" },
+          { SchemaName: "mx_Custom_2", Value: "Not Attempted" },
+          { SchemaName: "mx_Custom_3", Value: "Facebook" },
+          { SchemaName: "mx_Custom_20", Value: "Test" },
+          { SchemaName: "mx_Custom_21", Value: "XYZ" },
+        ],
+      },
+    };
+
+    await handleSubmit(payload);
+  });
+
+async function handleSubmit(payload) {
+  try {
+    const response = await fetch(
+      "https://api-in21.leadsquared.com/v2/OpportunityManagement.svc/Capture?accessKey=u%24r7b3a5c5c20947d02ad372f707c93a0b6&secretKey=8d135be8ffe8346e335fe50ef899a55c9618ce9b",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      }
+    );
+
+    if (response.ok) {
+      window.location.href = "/thank-you.html";
+    } else {
+      const errorData = await response.json();
+      alert("Error: " + errorData.Message || "Failed to submit the form");
+    }
+  } catch (error) {
+    console.error("Submission error:", error);
+    alert("There was an error submitting the form. Please try again.");
+  }
+}
