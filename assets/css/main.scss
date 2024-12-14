@@ -6,17 +6,28 @@ $secondary: #823C47;
 $white: #ffffff;
 
 @font-face {
-    font-family: 'Gtultra';
-    src: url('/assets/fonts/GT-Ultra-Fine-Thin-Trial.woff2') format('woff2');
-    font-weight: 400;
+    font-family: 'GT-Ultra';
+    src: url('/assets/fonts/GT-Ultra-Fine-Thin-Trial.otf') format('opentype');
     font-style: normal;
+    font-weight: normal;
 }
 
 @font-face {
-    font-family: 'Abcfavorite';
-    src: url('/assets/fonts/ABCFavoritMono-Book.otf') format('opentype');
-    font-weight: normal;
+    font-family: 'Abc-Fvorite';
+    src: url('/assets/fonts/ABCFavorit-Regular-Trial.woff2') format('woff2'),
+        url('/assets/fonts/ABCFavorit-Regular-Trial.woff') format('woff'),
+        url('/assets/fonts/ABCFavorit-Regular-Trial.otf') format('opentype');
     font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Abc-Fvorite';
+    src: url('/assets/fonts/ABCFavorit-Light-Trial.woff2') format('woff2'),
+        url('/assets/fonts/ABCFavorit-Light-Trial.woff') format('woff'),
+        url('/assets/fonts/ABCFavorit-Light-Trial.otf') format('opentype');
+    font-style: normal;
+    font-weight: 300;
 }
 
 h1,
@@ -25,7 +36,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Gtultra;
+    font-family: 'GT-Ultra';
 }
 
 html {
@@ -33,9 +44,10 @@ html {
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Abc-Fvorite';
     overflow-x: hidden;
     background: $primary;
+    font-weight: 300;
 }
 
 .main-wrapper {
@@ -111,7 +123,6 @@ body {
 .para {
     font-size: 20px;
     line-height: 30px;
-    font-weight: 400;
     margin-bottom: 0;
 
     &.primary {
@@ -263,7 +274,7 @@ p.label {
     justify-content: center;
     z-index: 1000;
     position: relative;
-    transition: all 0.3s ease;
+    transition: visibility 1s ease;
     visibility: hidden;
 
     &.sticky {
@@ -319,7 +330,7 @@ p.label {
     .left {
         width: 20%;
         background: $primary;
-        transition: width 0.5s ease;
+        transition: width 1s ease-in-out;
 
     }
 
@@ -331,7 +342,7 @@ p.label {
         .heading {
             font-size: 64px;
             line-height: 70px;
-            font-weight: 500;
+            font-weight: 600;
             font-feature-settings: 'liga' off, 'clig' off;
             -webkit-text-stroke-color: #FBE8D1;
             -webkit-text-stroke-width: 1;
@@ -343,7 +354,7 @@ p.label {
 
             img {
                 width: 170px;
-                transition: width 0.5s ease;
+                transition: visibility 1s ease;
                 padding-top: 6px;
             }
         }
@@ -361,7 +372,7 @@ p.label {
         .discover {
             position: absolute;
             left: 50%;
-            bottom: 15px;
+            bottom: 30px;
             transform: translate(-50%);
 
             a {
@@ -372,29 +383,39 @@ p.label {
                 color: $primary;
                 font-weight: 400;
                 text-transform: uppercase;
+                position: relative;
             }
 
             img {
                 display: block;
                 margin: 0 auto;
                 width: 30px;
-                transition: width 0.5s ease;
-                margin-top: 8px;
+                margin-top: 12px;
+
+                &.circle {
+                    position: absolute;
+                    top: 19px;
+                    left: 31px;
+                    transform: rotate(0deg) scale(1);
+                    transition: transform 0.5s ease;
+                    /* Smooth rotation and scaling */
+                }
             }
 
-            &:hover {
-                img {
-                    width: 35px;
-                    transition: width 0.5s ease;
+            a:hover {
+                .circle {
+                    transform: rotate(60deg) scale(1.2);
+                    /* Rotate and enlarge */
                 }
             }
         }
+
     }
 
     .right {
         width: 20%;
         background: $primary;
-        transition: width 0.5s ease;
+        transition: width 1s ease-in-out;
 
         .btn-back {
             margin: 30px;
@@ -458,7 +479,7 @@ p.label {
     position: relative;
     background-image: url(/assets/images/about-wave1.svg);
     background-size: cover;
-    background-position: center center;
+    background-position: center -14px;
     transition: background 0.5s ease-in-out;
     min-height: 100vh;
 
@@ -483,7 +504,7 @@ p.label {
     }
 
     .bottom {
-        padding-top: 26%;
+        padding-top: 440px;
         margin-bottom: 30px;
 
         ul {
@@ -590,7 +611,7 @@ p.label {
 // Start Architecture
 .architecture {
     padding-top: 100px;
-    padding-bottom: 80px;
+    padding-bottom: 0px;
     min-height: 100vh;
 
     .col-md-8 {
@@ -606,7 +627,7 @@ p.label {
 
         p {
             color: $secondary;
-            font-weight: 500;
+            font-weight: 400;
             font-size: 32px;
         }
 
@@ -617,6 +638,7 @@ p.label {
             li {
                 color: $secondary;
                 line-height: 56px;
+                font-weight: 400;
             }
         }
     }
@@ -723,6 +745,7 @@ p.label {
 // Start lifestyle
 .suites {
     position: relative;
+    padding-top: 60px;
 
     .slick-slider {
         margin: 0 -6px;
@@ -755,7 +778,7 @@ p.label {
     }
 
     #pills-tab {
-        padding-top: 80px;
+        padding-top: 100px;
         border-bottom: 1px solid $secondary;
 
         .nav-item {
@@ -779,8 +802,12 @@ p.label {
         padding-top: 10px;
     }
 
+    .para {
+        font-weight: 400;
+    }
+
     .clubhouse {
-        padding-top: 100px;
+        padding-top: 30px;
 
         .head {
             border-bottom: 1px solid $secondary;
@@ -801,6 +828,7 @@ p.label {
             .para {
                 width: 20%;
                 padding-bottom: 2rem;
+                font-weight: 400;
             }
         }
 
@@ -1040,7 +1068,7 @@ p.label {
 // Start Plans
 .plans {
     padding-top: 90px;
-    padding-bottom: 110px;
+    padding-bottom: 120px;
     background-color: #61624D;
     background-image: url(/assets/images/plans/floorplans.png);
     background-size: cover;
@@ -1064,6 +1092,7 @@ p.label {
         color: $primarydark;
         font-size: 20px;
         margin-top: 12px;
+        font-weight: 400;
     }
 
     .plan-item {
@@ -1646,7 +1675,7 @@ p.label {
         /* Smooth transition for animation */
         /* Position each letter dynamically */
         &.a {
-            top: 10%;
+            top: 8%;
             left: 10%;
         }
 
@@ -1666,7 +1695,7 @@ p.label {
         }
 
         &.l {
-            bottom: 10%;
+            bottom: 8%;
             left: 10%;
         }
 
@@ -1713,10 +1742,6 @@ p.label {
         font-size: 28px;
         line-height: 36px;
         letter-spacing: 1px;
-
-        br {
-            display: none;
-        }
     }
 
     .desktop {
@@ -1728,9 +1753,8 @@ p.label {
     }
 
     .para {
-        font-size: 18px;
-        line-height: 27px;
-        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
         text-align: justify;
     }
 
@@ -1742,13 +1766,7 @@ p.label {
             min-width: 100% !important;
 
             .logo {
-                position: fixed;
-                width: 100%;
-                z-index: 10;
-
-                img {
-                    width: 250px;
-                }
+                display: none;
             }
 
             .heading {
@@ -1758,9 +1776,15 @@ p.label {
             }
 
             .content {
-                padding-top: 30vh;
+                padding-top: 33vh;
                 max-width: 380px;
                 margin: 0 auto;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .para {
+                text-align: center;
             }
 
 
@@ -1790,7 +1814,14 @@ p.label {
 
             .btn-antelopes {
                 margin-left: 16px;
-                margin-top: 44px
+                margin-top: 20px;
+                width: 200px;
+
+                &.btn-back {
+                    width: 130px;
+                    display: block;
+                    margin-top: 50px;
+                }
             }
 
             ul li a {
@@ -1798,6 +1829,7 @@ p.label {
                 color: #050100;
                 text-transform: uppercase;
                 font-size: 14px;
+                font-weight: 400;
             }
         }
     }
@@ -1817,11 +1849,15 @@ p.label {
         background-image: url(/assets/images/res/about.png);
         background-size: contain;
         background-repeat: no-repeat;
-        background-position: 0% 62%;
+        background-position: 0% 300px;
         padding-bottom: 60px;
 
         &:hover {
-            background-image: unset;
+            background-image: url(/assets/images/res/about.png);
+        }
+
+        &::before {
+            display: none;
         }
 
         .row {
@@ -1867,6 +1903,10 @@ p.label {
 
         .left-bg {
             padding: 60px 15px;
+
+            p {
+                line-height: 30px;
+            }
         }
 
         .style-images {
@@ -1891,7 +1931,7 @@ p.label {
 
     .architecture {
         padding-top: 79px;
-        padding-bottom: 70px;
+        padding-bottom: 0px;
 
         .col-md-8,
         .col-md-4 {
@@ -1909,14 +1949,11 @@ p.label {
 
     .suites {
         height: 100vh;
-
-        .suites-slider {
-            display: none;
-        }
+        padding-top: 40px;
 
         .suites-info {
             left: 0;
-            top: 52%;
+            top: 60%;
             transform: unset;
             width: auto;
             padding: 15px;
@@ -1953,7 +1990,7 @@ p.label {
                 flex-wrap: wrap;
 
                 p {
-                    width: 50%;
+                    width: 49%;
                     padding-bottom: 10px;
                 }
             }
@@ -1964,6 +2001,10 @@ p.label {
 
             .nav-item .nav-link {
                 text-align: left;
+            }
+
+            .full-width p {
+                width: 100%;
             }
 
             .amenities-list {
@@ -1979,18 +2020,39 @@ p.label {
     }
 
     .interiors {
-        min-height: auto;
-        padding-top: 70px;
-        padding-bottom: 70px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        display: flex;
+        flex-direction: column;
+        height: auto;
 
-        .left,
+        .left {
+            width: 100%;
+
+            .bg-left {
+                position: relative;
+                opacity: 1 !important;
+                left: 0 !important;
+                background-image: url(/assets/images/res/int-1.webp);
+                height: 390px;
+            }
+        }
+
         .right {
-            display: none;
+            width: 100%;
+
+            .bg-right {
+                position: relative;
+                opacity: 1 !important;
+                right: 0 !important;
+                background-image: url(/assets/images/res/int-2.webp);
+                height: 390px;
+            }
         }
 
         .middle {
-            width: 100%;
-            padding: 0 16px;
+            width: 100% !important;
+            padding: 30px 16px;
 
             .content {
                 width: 100%;
@@ -2035,7 +2097,7 @@ p.label {
     }
 
     .plans {
-        padding: 60px 0;
+        padding: 60px 16px 40px 16px;
         background-size: contain;
 
         h2.heading {
@@ -2058,12 +2120,21 @@ p.label {
             min-width: 216px !important;
         }
 
+        .carousel-control-next-icon {
+            background-image: url(/assets/images/res/next.png);
+            margin-right: -50px;
+        }
+
+        .carousel-control-prev-icon {
+            background-image: url(/assets/images/res/prev.png);
+            margin-left: -50px;
+        }
     }
 
     .location {
 
         .bg {
-            background-position: bottom left;
+            background-position: bottom;
 
             .info {
                 height: auto;
@@ -2074,7 +2145,7 @@ p.label {
 
         &:hover {
             .bg {
-                background-position: top center;
+                background-position: bottom;
             }
         }
     }
@@ -2108,6 +2179,7 @@ p.label {
             .accordion-item .accordion-button {
                 padding-top: 20px;
                 padding-bottom: 16px;
+                font-size: 18px;
             }
         }
 
@@ -2124,6 +2196,7 @@ p.label {
 
         .heading {
             font-size: 44px;
+            line-height: 50px;
         }
     }
 
@@ -2202,10 +2275,11 @@ p.label {
     .thanks {
         .thanks-content {
             bottom: 42%;
+            right: 3%;
 
             .heading {
-                font-size: 44px;
-                line-height: 50px;
+                font-size: 38px;
+                line-height: 46px;
 
                 br {
                     display: block;
@@ -2213,7 +2287,8 @@ p.label {
             }
 
             .para {
-                font-size: 20px;
+                font-size: 16px;
+                text-align: right;
             }
 
 
@@ -2229,7 +2304,173 @@ p.label {
         }
     }
 
-    #loader .letters img {
-        width: 60px;
+    #downloadBrochure {
+        .modal-dialog {
+            .modal-content {
+                padding-left: 0;
+                border-radius: 20px;
+                padding-bottom: 10px;
+
+                .heading {
+                    margin-top: -40px;
+                    font-size: 40px;
+                    line-height: 54px;
+                }
+
+
+
+                .contact-form {
+                    padding: 0;
+
+                    p.required {
+                        margin-top: -1.5rem;
+                    }
+
+                    .mb-3 {
+                        margin-bottom: 30px !important;
+                    }
+
+                    .form-control,
+                    .form-select {
+                        height: 50px;
+                    }
+                }
+            }
+        }
+    }
+
+    #loader {
+        .letters {
+            img {
+                width: 24px;
+
+                &.a {
+                    top: 25%;
+                    left: 5%;
+                }
+
+                &.n {
+                    top: 32%;
+                    left: 25%;
+                }
+
+                &.t {
+                    top: 30%;
+                    left: 53%;
+                }
+
+                &.e {
+                    top: 45%;
+                    left: 66%;
+                }
+
+                &.l {
+                    bottom: 25%;
+                    left: 5%;
+                }
+
+                &.o {
+                    bottom: 30%;
+                    left: 27%;
+                }
+
+                &.p {
+                    bottom: 33%;
+                    left: 50%;
+                }
+
+                &.e1 {
+                    bottom: 25%;
+                    right: 20%;
+                }
+
+                &.s {
+                    bottom: 40%;
+                    right: 8%;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 375px) {
+    .about h2.heading {
+        font-size: 34px;
+        line-height: 32px;
+    }
+
+    .about .bottom .col-md-7 .heading.secondary {
+        margin-top: 195px;
+    }
+
+    .modal-body {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .about {
+        background-position: 0% 320px;
+    }
+
+    .style .left-bg p {
+        line-height: 28px;
+    }
+
+    .heading {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .architecture .wonder p {
+        font-size: 26px;
+    }
+
+    .suites .suites-info {
+        top: 56%;
+    }
+
+    .amenities #pills-tab .nav-item .nav-link {
+        font-size: 18px;
+        padding: 0.5rem 1rem 0.3rem 0;
+    }
+
+    .location .heading {
+        font-size: 28px;
+
+        br {
+            display: none;
+        }
+    }
+
+    .distination .heading {
+        line-height: 50px;
+    }
+
+    .thanks .thanks-content .heading {
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .thanks .logo2 img {
+        width: 81px;
+    }
+}
+
+@media(max-width: 340px) {
+    .about h2.heading {
+        font-size: 32px;
+    }
+
+    .about {
+        background-position: 0% 356px;
+    }
+
+    .amenities .para {
+        font-size: 14px;
+    }
+
+    .architecture .wonder ul li {
+        font-size: 14px;
+        line-height: 38px;
     }
 }

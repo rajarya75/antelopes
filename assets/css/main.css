@@ -1,14 +1,20 @@
 @font-face {
-  font-family: "Gtultra";
-  src: url("/assets/fonts/GT-Ultra-Fine-Thin-Trial.woff2") format("woff2");
-  font-weight: 400;
+  font-family: "GT-Ultra";
+  src: url("/assets/fonts/GT-Ultra-Fine-Thin-Trial.otf") format("opentype");
   font-style: normal;
+  font-weight: normal;
 }
 @font-face {
-  font-family: "Abcfavorite";
-  src: url("/assets/fonts/ABCFavoritMono-Book.otf") format("opentype");
-  font-weight: normal;
+  font-family: "Abc-Fvorite";
+  src: url("/assets/fonts/ABCFavorit-Regular-Trial.woff2") format("woff2"), url("/assets/fonts/ABCFavorit-Regular-Trial.woff") format("woff"), url("/assets/fonts/ABCFavorit-Regular-Trial.otf") format("opentype");
   font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Abc-Fvorite";
+  src: url("/assets/fonts/ABCFavorit-Light-Trial.woff2") format("woff2"), url("/assets/fonts/ABCFavorit-Light-Trial.woff") format("woff"), url("/assets/fonts/ABCFavorit-Light-Trial.otf") format("opentype");
+  font-style: normal;
+  font-weight: 300;
 }
 h1,
 h2,
@@ -16,7 +22,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Gtultra;
+  font-family: "GT-Ultra";
 }
 
 html {
@@ -24,9 +30,10 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Abc-Fvorite";
   overflow-x: hidden;
   background: #F8E9D4;
+  font-weight: 300;
 }
 
 .main-wrapper {
@@ -93,7 +100,6 @@ body {
 .para {
   font-size: 20px;
   line-height: 30px;
-  font-weight: 400;
   margin-bottom: 0;
 }
 .para.primary {
@@ -228,7 +234,7 @@ p.label {
   justify-content: center;
   z-index: 1000;
   position: relative;
-  transition: all 0.3s ease;
+  transition: visibility 1s ease;
   visibility: hidden;
 }
 .desktop-header.sticky ul {
@@ -274,7 +280,7 @@ p.label {
 .banner .left {
   width: 20%;
   background: #F8E9D4;
-  transition: width 0.5s ease;
+  transition: width 1s ease-in-out;
 }
 .banner .middle {
   width: 60%;
@@ -284,7 +290,7 @@ p.label {
 .banner .middle .heading {
   font-size: 64px;
   line-height: 70px;
-  font-weight: 500;
+  font-weight: 600;
   font-feature-settings: "liga" off, "clig" off;
   -webkit-text-stroke-color: #FBE8D1;
   -webkit-text-stroke-width: 1;
@@ -295,7 +301,7 @@ p.label {
 }
 .banner .middle .logo img {
   width: 170px;
-  transition: width 0.5s ease;
+  transition: visibility 1s ease;
   padding-top: 6px;
 }
 .banner .middle .content {
@@ -309,7 +315,7 @@ p.label {
 .banner .middle .discover {
   position: absolute;
   left: 50%;
-  bottom: 15px;
+  bottom: 30px;
   transform: translate(-50%);
 }
 .banner .middle .discover a {
@@ -320,22 +326,30 @@ p.label {
   color: #F8E9D4;
   font-weight: 400;
   text-transform: uppercase;
+  position: relative;
 }
 .banner .middle .discover img {
   display: block;
   margin: 0 auto;
   width: 30px;
-  transition: width 0.5s ease;
-  margin-top: 8px;
+  margin-top: 12px;
 }
-.banner .middle .discover:hover img {
-  width: 35px;
-  transition: width 0.5s ease;
+.banner .middle .discover img.circle {
+  position: absolute;
+  top: 19px;
+  left: 31px;
+  transform: rotate(0deg) scale(1);
+  transition: transform 0.5s ease;
+  /* Smooth rotation and scaling */
+}
+.banner .middle .discover a:hover .circle {
+  transform: rotate(60deg) scale(1.2);
+  /* Rotate and enlarge */
 }
 .banner .right {
   width: 20%;
   background: #F8E9D4;
-  transition: width 0.5s ease;
+  transition: width 1s ease-in-out;
 }
 .banner .right .btn-back {
   margin: 30px;
@@ -380,7 +394,7 @@ p.label {
   position: relative;
   background-image: url(/assets/images/about-wave1.svg);
   background-size: cover;
-  background-position: center center;
+  background-position: center -14px;
   transition: background 0.5s ease-in-out;
   min-height: 100vh;
 }
@@ -400,7 +414,7 @@ p.label {
   font-size: 48px;
 }
 .about .bottom {
-  padding-top: 26%;
+  padding-top: 440px;
   margin-bottom: 30px;
 }
 .about .bottom ul {
@@ -482,7 +496,7 @@ p.label {
 
 .architecture {
   padding-top: 100px;
-  padding-bottom: 80px;
+  padding-bottom: 0px;
   min-height: 100vh;
 }
 .architecture .col-md-8 {
@@ -496,7 +510,7 @@ p.label {
 }
 .architecture .wonder p {
   color: #823C47;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 32px;
 }
 .architecture .wonder ul {
@@ -506,6 +520,7 @@ p.label {
 .architecture .wonder ul li {
   color: #823C47;
   line-height: 56px;
+  font-weight: 400;
 }
 .architecture .creative {
   position: relative;
@@ -586,6 +601,7 @@ p.label {
 
 .suites {
   position: relative;
+  padding-top: 60px;
 }
 .suites .slick-slider {
   margin: 0 -6px;
@@ -613,7 +629,7 @@ p.label {
   line-height: 100px;
 }
 .amenities #pills-tab {
-  padding-top: 80px;
+  padding-top: 100px;
   border-bottom: 1px solid #823C47;
 }
 .amenities #pills-tab .nav-item .nav-link {
@@ -630,8 +646,11 @@ p.label {
   padding-right: 0;
   padding-top: 10px;
 }
+.amenities .para {
+  font-weight: 400;
+}
 .amenities .clubhouse {
-  padding-top: 100px;
+  padding-top: 30px;
 }
 .amenities .clubhouse .head {
   border-bottom: 1px solid #823C47;
@@ -650,6 +669,7 @@ p.label {
 .amenities .clubhouse .amenities-list .para {
   width: 20%;
   padding-bottom: 2rem;
+  font-weight: 400;
 }
 
 .interiors {
@@ -842,7 +862,7 @@ p.label {
 
 .plans {
   padding-top: 90px;
-  padding-bottom: 110px;
+  padding-bottom: 120px;
   background-color: #61624D;
   background-image: url(/assets/images/plans/floorplans.png);
   background-size: cover;
@@ -864,6 +884,7 @@ p.label {
   color: #61624D;
   font-size: 20px;
   margin-top: 12px;
+  font-weight: 400;
 }
 .plans .plan-item {
   margin-bottom: 10px;
@@ -1334,7 +1355,7 @@ p.label {
   /* Position each letter dynamically */
 }
 #loader .letters img.a {
-  top: 10%;
+  top: 8%;
   left: 10%;
 }
 #loader .letters img.n {
@@ -1350,7 +1371,7 @@ p.label {
   left: 80%;
 }
 #loader .letters img.l {
-  bottom: 10%;
+  bottom: 8%;
   left: 10%;
 }
 #loader .letters img.o {
@@ -1386,9 +1407,6 @@ p.label {
     line-height: 36px;
     letter-spacing: 1px;
   }
-  .heading br {
-    display: none;
-  }
   .desktop {
     display: none;
   }
@@ -1396,9 +1414,8 @@ p.label {
     display: block;
   }
   .para {
-    font-size: 18px;
-    line-height: 27px;
-    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
     text-align: justify;
   }
   .banner {
@@ -1409,12 +1426,7 @@ p.label {
     min-width: 100% !important;
   }
   .banner .middle .logo {
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-  }
-  .banner .middle .logo img {
-    width: 250px;
+    display: none;
   }
   .banner .middle .heading {
     font-size: 26px;
@@ -1422,9 +1434,14 @@ p.label {
     letter-spacing: 1px;
   }
   .banner .middle .content {
-    padding-top: 30vh;
+    padding-top: 33vh;
     max-width: 380px;
     margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .banner .middle .para {
+    text-align: center;
   }
   .banner .left {
     width: 0;
@@ -1445,13 +1462,20 @@ p.label {
   }
   .banner .right .btn-antelopes {
     margin-left: 16px;
-    margin-top: 44px;
+    margin-top: 20px;
+    width: 200px;
+  }
+  .banner .right .btn-antelopes.btn-back {
+    width: 130px;
+    display: block;
+    margin-top: 50px;
   }
   .banner .right ul li a {
     line-height: 50px;
     color: #050100;
     text-transform: uppercase;
     font-size: 14px;
+    font-weight: 400;
   }
   .mobile-header {
     background: #F8E9D4;
@@ -1467,11 +1491,14 @@ p.label {
     background-image: url(/assets/images/res/about.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: 0% 62%;
+    background-position: 0% 300px;
     padding-bottom: 60px;
   }
   .about:hover {
-    background-image: unset;
+    background-image: url(/assets/images/res/about.png);
+  }
+  .about::before {
+    display: none;
   }
   .about .row {
     padding-top: 70px;
@@ -1504,6 +1531,9 @@ p.label {
   .style .left-bg {
     padding: 60px 15px;
   }
+  .style .left-bg p {
+    line-height: 30px;
+  }
   .style .style-images {
     padding-left: 0;
   }
@@ -1521,7 +1551,7 @@ p.label {
   }
   .architecture {
     padding-top: 79px;
-    padding-bottom: 70px;
+    padding-bottom: 0px;
   }
   .architecture .col-md-8,
   .architecture .col-md-4 {
@@ -1535,13 +1565,11 @@ p.label {
   }
   .suites {
     height: 100vh;
-  }
-  .suites .suites-slider {
-    display: none;
+    padding-top: 40px;
   }
   .suites .suites-info {
     left: 0;
-    top: 52%;
+    top: 60%;
     transform: unset;
     width: auto;
     padding: 15px;
@@ -1571,7 +1599,7 @@ p.label {
     flex-wrap: wrap;
   }
   .amenities .tab-content .flex-between p {
-    width: 50%;
+    width: 49%;
     padding-bottom: 10px;
   }
   .amenities .clubhouse {
@@ -1579,6 +1607,9 @@ p.label {
   }
   .amenities .clubhouse .nav-item .nav-link {
     text-align: left;
+  }
+  .amenities .clubhouse .full-width p {
+    width: 100%;
   }
   .amenities .clubhouse .amenities-list {
     justify-content: space-between;
@@ -1588,17 +1619,35 @@ p.label {
     padding-bottom: 16px;
   }
   .interiors {
-    min-height: auto;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
   }
-  .interiors .left,
+  .interiors .left {
+    width: 100%;
+  }
+  .interiors .left .bg-left {
+    position: relative;
+    opacity: 1 !important;
+    left: 0 !important;
+    background-image: url(/assets/images/res/int-1.webp);
+    height: 390px;
+  }
   .interiors .right {
-    display: none;
+    width: 100%;
+  }
+  .interiors .right .bg-right {
+    position: relative;
+    opacity: 1 !important;
+    right: 0 !important;
+    background-image: url(/assets/images/res/int-2.webp);
+    height: 390px;
   }
   .interiors .middle {
-    width: 100%;
-    padding: 0 16px;
+    width: 100% !important;
+    padding: 30px 16px;
   }
   .interiors .middle .content {
     width: 100%;
@@ -1631,7 +1680,7 @@ p.label {
     display: none !important;
   }
   .plans {
-    padding: 60px 0;
+    padding: 60px 16px 40px 16px;
     background-size: contain;
   }
   .plans h2.heading {
@@ -1650,15 +1699,23 @@ p.label {
   .plans .btn-antelopes2 {
     min-width: 216px !important;
   }
+  .plans .carousel-control-next-icon {
+    background-image: url(/assets/images/res/next.png);
+    margin-right: -50px;
+  }
+  .plans .carousel-control-prev-icon {
+    background-image: url(/assets/images/res/prev.png);
+    margin-left: -50px;
+  }
   .location .bg {
-    background-position: bottom left;
+    background-position: bottom;
   }
   .location .bg .info {
     height: auto;
     padding: 40px 15px;
   }
   .location:hover .bg {
-    background-position: top center;
+    background-position: bottom;
   }
   .distination {
     padding: 30px 0;
@@ -1685,6 +1742,7 @@ p.label {
   .distination #accordionExample .accordion-item .accordion-button {
     padding-top: 20px;
     padding-bottom: 16px;
+    font-size: 18px;
   }
   .distination .map-bg {
     background-image: url(/assets/images/res/map.webp);
@@ -1697,6 +1755,7 @@ p.label {
   }
   .contact .heading {
     font-size: 44px;
+    line-height: 50px;
   }
   .contact-form {
     width: 98%;
@@ -1756,16 +1815,18 @@ p.label {
   }
   .thanks .thanks-content {
     bottom: 42%;
+    right: 3%;
   }
   .thanks .thanks-content .heading {
-    font-size: 44px;
-    line-height: 50px;
+    font-size: 38px;
+    line-height: 46px;
   }
   .thanks .thanks-content .heading br {
     display: block;
   }
   .thanks .thanks-content .para {
-    font-size: 20px;
+    font-size: 16px;
+    text-align: right;
   }
   .thanks .logo2 {
     top: 30px;
@@ -1774,7 +1835,130 @@ p.label {
   .thanks .logo2 img {
     width: 100px;
   }
+  #downloadBrochure .modal-dialog .modal-content {
+    padding-left: 0;
+    border-radius: 20px;
+    padding-bottom: 10px;
+  }
+  #downloadBrochure .modal-dialog .modal-content .heading {
+    margin-top: -40px;
+    font-size: 40px;
+    line-height: 54px;
+  }
+  #downloadBrochure .modal-dialog .modal-content .contact-form {
+    padding: 0;
+  }
+  #downloadBrochure .modal-dialog .modal-content .contact-form p.required {
+    margin-top: -1.5rem;
+  }
+  #downloadBrochure .modal-dialog .modal-content .contact-form .mb-3 {
+    margin-bottom: 30px !important;
+  }
+  #downloadBrochure .modal-dialog .modal-content .contact-form .form-control,
+  #downloadBrochure .modal-dialog .modal-content .contact-form .form-select {
+    height: 50px;
+  }
   #loader .letters img {
-    width: 60px;
+    width: 24px;
+  }
+  #loader .letters img.a {
+    top: 25%;
+    left: 5%;
+  }
+  #loader .letters img.n {
+    top: 32%;
+    left: 25%;
+  }
+  #loader .letters img.t {
+    top: 30%;
+    left: 53%;
+  }
+  #loader .letters img.e {
+    top: 45%;
+    left: 66%;
+  }
+  #loader .letters img.l {
+    bottom: 25%;
+    left: 5%;
+  }
+  #loader .letters img.o {
+    bottom: 30%;
+    left: 27%;
+  }
+  #loader .letters img.p {
+    bottom: 33%;
+    left: 50%;
+  }
+  #loader .letters img.e1 {
+    bottom: 25%;
+    right: 20%;
+  }
+  #loader .letters img.s {
+    bottom: 40%;
+    right: 8%;
+  }
+}
+@media (max-width: 375px) {
+  .about h2.heading {
+    font-size: 34px;
+    line-height: 32px;
+  }
+  .about .bottom .col-md-7 .heading.secondary {
+    margin-top: 195px;
+  }
+  .modal-body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .about {
+    background-position: 0% 320px;
+  }
+  .style .left-bg p {
+    line-height: 28px;
+  }
+  .heading {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .architecture .wonder p {
+    font-size: 26px;
+  }
+  .suites .suites-info {
+    top: 56%;
+  }
+  .amenities #pills-tab .nav-item .nav-link {
+    font-size: 18px;
+    padding: 0.5rem 1rem 0.3rem 0;
+  }
+  .location .heading {
+    font-size: 28px;
+  }
+  .location .heading br {
+    display: none;
+  }
+  .distination .heading {
+    line-height: 50px;
+  }
+  .thanks .thanks-content .heading {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .thanks .logo2 img {
+    width: 81px;
+  }
+}
+@media (max-width: 340px) {
+  .about h2.heading {
+    font-size: 32px;
+  }
+  .about {
+    background-position: 0% 356px;
+  }
+  .amenities .para {
+    font-size: 14px;
+  }
+  .architecture .wonder ul li {
+    font-size: 14px;
+    line-height: 38px;
   }
 }/*# sourceMappingURL=main.css.map */
