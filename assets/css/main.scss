@@ -6,17 +6,28 @@ $secondary: #823C47;
 $white: #ffffff;
 
 @font-face {
-    font-family: 'Gtultra';
-    src: url('/assets/fonts/GT-Ultra-Fine-Thin-Trial.woff2') format('woff2');
-    font-weight: 400;
+    font-family: 'GT-Ultra';
+    src: url('/assets/fonts/GT-Ultra-Fine-Thin-Trial.otf') format('opentype');
     font-style: normal;
+    font-weight: normal;
 }
 
 @font-face {
-    font-family: 'Abcfavorite';
-    src: url('/assets/fonts/ABCFavoritMono-Book.otf') format('opentype');
-    font-weight: normal;
+    font-family: 'Abc-Fvorite';
+    src: url('/assets/fonts/ABCFavorit-Regular-Trial.woff2') format('woff2'),
+        url('/assets/fonts/ABCFavorit-Regular-Trial.woff') format('woff'),
+        url('/assets/fonts/ABCFavorit-Regular-Trial.otf') format('opentype');
     font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Abc-Fvorite';
+    src: url('/assets/fonts/ABCFavorit-Light-Trial.woff2') format('woff2'),
+        url('/assets/fonts/ABCFavorit-Light-Trial.woff') format('woff'),
+        url('/assets/fonts/ABCFavorit-Light-Trial.otf') format('opentype');
+    font-style: normal;
+    font-weight: 300;
 }
 
 h1,
@@ -25,7 +36,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Gtultra;
+    font-family: 'GT-Ultra';
 }
 
 html {
@@ -33,9 +44,10 @@ html {
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Abc-Fvorite';
     overflow-x: hidden;
     background: $primary;
+    font-weight: 300;
 }
 
 .main-wrapper {
@@ -111,7 +123,6 @@ body {
 .para {
     font-size: 20px;
     line-height: 30px;
-    font-weight: 400;
     margin-bottom: 0;
 
     &.primary {
@@ -331,7 +342,7 @@ p.label {
         .heading {
             font-size: 64px;
             line-height: 70px;
-            font-weight: 500;
+            font-weight: 600;
             font-feature-settings: 'liga' off, 'clig' off;
             -webkit-text-stroke-color: #FBE8D1;
             -webkit-text-stroke-width: 1;
@@ -361,7 +372,7 @@ p.label {
         .discover {
             position: absolute;
             left: 50%;
-            bottom: 15px;
+            bottom: 30px;
             transform: translate(-50%);
 
             a {
@@ -372,23 +383,33 @@ p.label {
                 color: $primary;
                 font-weight: 400;
                 text-transform: uppercase;
+                position: relative;
             }
 
             img {
                 display: block;
                 margin: 0 auto;
                 width: 30px;
-                transition: width 0.5s ease;
-                margin-top: 8px;
+                margin-top: 12px;
+
+                &.circle {
+                    position: absolute;
+                    top: 19px;
+                    left: 31px;
+                    transform: rotate(0deg) scale(1);
+                    transition: transform 0.5s ease;
+                    /* Smooth rotation and scaling */
+                }
             }
 
-            &:hover {
-                img {
-                    width: 35px;
-                    transition: width 0.5s ease;
+            a:hover {
+                .circle {
+                    transform: rotate(60deg) scale(1.2);
+                    /* Rotate and enlarge */
                 }
             }
         }
+
     }
 
     .right {
@@ -458,7 +479,7 @@ p.label {
     position: relative;
     background-image: url(/assets/images/about-wave1.svg);
     background-size: cover;
-    background-position: center center;
+    background-position: center -14px;
     transition: background 0.5s ease-in-out;
     min-height: 100vh;
 
@@ -483,7 +504,7 @@ p.label {
     }
 
     .bottom {
-        padding-top: 26%;
+        padding-top: 440px;
         margin-bottom: 30px;
 
         ul {
@@ -590,7 +611,7 @@ p.label {
 // Start Architecture
 .architecture {
     padding-top: 100px;
-    padding-bottom: 80px;
+    padding-bottom: 0px;
     min-height: 100vh;
 
     .col-md-8 {
@@ -606,7 +627,7 @@ p.label {
 
         p {
             color: $secondary;
-            font-weight: 500;
+            font-weight: 400;
             font-size: 32px;
         }
 
@@ -617,6 +638,7 @@ p.label {
             li {
                 color: $secondary;
                 line-height: 56px;
+                font-weight: 400;
             }
         }
     }
@@ -723,6 +745,7 @@ p.label {
 // Start lifestyle
 .suites {
     position: relative;
+    padding-top: 60px;
 
     .slick-slider {
         margin: 0 -6px;
@@ -755,7 +778,7 @@ p.label {
     }
 
     #pills-tab {
-        padding-top: 80px;
+        padding-top: 100px;
         border-bottom: 1px solid $secondary;
 
         .nav-item {
@@ -779,8 +802,12 @@ p.label {
         padding-top: 10px;
     }
 
+    .para {
+        font-weight: 400;
+    }
+
     .clubhouse {
-        padding-top: 100px;
+        padding-top: 30px;
 
         .head {
             border-bottom: 1px solid $secondary;
@@ -801,6 +828,7 @@ p.label {
             .para {
                 width: 20%;
                 padding-bottom: 2rem;
+                font-weight: 400;
             }
         }
 
@@ -1040,7 +1068,7 @@ p.label {
 // Start Plans
 .plans {
     padding-top: 90px;
-    padding-bottom: 110px;
+    padding-bottom: 120px;
     background-color: #61624D;
     background-image: url(/assets/images/plans/floorplans.png);
     background-size: cover;
@@ -1064,6 +1092,7 @@ p.label {
         color: $primarydark;
         font-size: 20px;
         margin-top: 12px;
+        font-weight: 400;
     }
 
     .plan-item {

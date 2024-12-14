@@ -1,14 +1,20 @@
 @font-face {
-  font-family: "Gtultra";
-  src: url("/assets/fonts/GT-Ultra-Fine-Thin-Trial.woff2") format("woff2");
-  font-weight: 400;
+  font-family: "GT-Ultra";
+  src: url("/assets/fonts/GT-Ultra-Fine-Thin-Trial.otf") format("opentype");
   font-style: normal;
+  font-weight: normal;
 }
 @font-face {
-  font-family: "Abcfavorite";
-  src: url("/assets/fonts/ABCFavoritMono-Book.otf") format("opentype");
-  font-weight: normal;
+  font-family: "Abc-Fvorite";
+  src: url("/assets/fonts/ABCFavorit-Regular-Trial.woff2") format("woff2"), url("/assets/fonts/ABCFavorit-Regular-Trial.woff") format("woff"), url("/assets/fonts/ABCFavorit-Regular-Trial.otf") format("opentype");
   font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Abc-Fvorite";
+  src: url("/assets/fonts/ABCFavorit-Light-Trial.woff2") format("woff2"), url("/assets/fonts/ABCFavorit-Light-Trial.woff") format("woff"), url("/assets/fonts/ABCFavorit-Light-Trial.otf") format("opentype");
+  font-style: normal;
+  font-weight: 300;
 }
 h1,
 h2,
@@ -16,7 +22,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Gtultra;
+  font-family: "GT-Ultra";
 }
 
 html {
@@ -24,9 +30,10 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Abc-Fvorite";
   overflow-x: hidden;
   background: #F8E9D4;
+  font-weight: 300;
 }
 
 .main-wrapper {
@@ -93,7 +100,6 @@ body {
 .para {
   font-size: 20px;
   line-height: 30px;
-  font-weight: 400;
   margin-bottom: 0;
 }
 .para.primary {
@@ -284,7 +290,7 @@ p.label {
 .banner .middle .heading {
   font-size: 64px;
   line-height: 70px;
-  font-weight: 500;
+  font-weight: 600;
   font-feature-settings: "liga" off, "clig" off;
   -webkit-text-stroke-color: #FBE8D1;
   -webkit-text-stroke-width: 1;
@@ -309,7 +315,7 @@ p.label {
 .banner .middle .discover {
   position: absolute;
   left: 50%;
-  bottom: 15px;
+  bottom: 30px;
   transform: translate(-50%);
 }
 .banner .middle .discover a {
@@ -320,17 +326,25 @@ p.label {
   color: #F8E9D4;
   font-weight: 400;
   text-transform: uppercase;
+  position: relative;
 }
 .banner .middle .discover img {
   display: block;
   margin: 0 auto;
   width: 30px;
-  transition: width 0.5s ease;
-  margin-top: 8px;
+  margin-top: 12px;
 }
-.banner .middle .discover:hover img {
-  width: 35px;
-  transition: width 0.5s ease;
+.banner .middle .discover img.circle {
+  position: absolute;
+  top: 19px;
+  left: 31px;
+  transform: rotate(0deg) scale(1);
+  transition: transform 0.5s ease;
+  /* Smooth rotation and scaling */
+}
+.banner .middle .discover a:hover .circle {
+  transform: rotate(60deg) scale(1.2);
+  /* Rotate and enlarge */
 }
 .banner .right {
   width: 20%;
@@ -380,7 +394,7 @@ p.label {
   position: relative;
   background-image: url(/assets/images/about-wave1.svg);
   background-size: cover;
-  background-position: center center;
+  background-position: center -14px;
   transition: background 0.5s ease-in-out;
   min-height: 100vh;
 }
@@ -400,7 +414,7 @@ p.label {
   font-size: 48px;
 }
 .about .bottom {
-  padding-top: 26%;
+  padding-top: 440px;
   margin-bottom: 30px;
 }
 .about .bottom ul {
@@ -482,7 +496,7 @@ p.label {
 
 .architecture {
   padding-top: 100px;
-  padding-bottom: 80px;
+  padding-bottom: 0px;
   min-height: 100vh;
 }
 .architecture .col-md-8 {
@@ -496,7 +510,7 @@ p.label {
 }
 .architecture .wonder p {
   color: #823C47;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 32px;
 }
 .architecture .wonder ul {
@@ -506,6 +520,7 @@ p.label {
 .architecture .wonder ul li {
   color: #823C47;
   line-height: 56px;
+  font-weight: 400;
 }
 .architecture .creative {
   position: relative;
@@ -586,6 +601,7 @@ p.label {
 
 .suites {
   position: relative;
+  padding-top: 60px;
 }
 .suites .slick-slider {
   margin: 0 -6px;
@@ -613,7 +629,7 @@ p.label {
   line-height: 100px;
 }
 .amenities #pills-tab {
-  padding-top: 80px;
+  padding-top: 100px;
   border-bottom: 1px solid #823C47;
 }
 .amenities #pills-tab .nav-item .nav-link {
@@ -630,8 +646,11 @@ p.label {
   padding-right: 0;
   padding-top: 10px;
 }
+.amenities .para {
+  font-weight: 400;
+}
 .amenities .clubhouse {
-  padding-top: 100px;
+  padding-top: 30px;
 }
 .amenities .clubhouse .head {
   border-bottom: 1px solid #823C47;
@@ -650,6 +669,7 @@ p.label {
 .amenities .clubhouse .amenities-list .para {
   width: 20%;
   padding-bottom: 2rem;
+  font-weight: 400;
 }
 
 .interiors {
@@ -842,7 +862,7 @@ p.label {
 
 .plans {
   padding-top: 90px;
-  padding-bottom: 110px;
+  padding-bottom: 120px;
   background-color: #61624D;
   background-image: url(/assets/images/plans/floorplans.png);
   background-size: cover;
@@ -864,6 +884,7 @@ p.label {
   color: #61624D;
   font-size: 20px;
   margin-top: 12px;
+  font-weight: 400;
 }
 .plans .plan-item {
   margin-bottom: 10px;
