@@ -1949,14 +1949,11 @@ p.label {
 
     .suites {
         height: 100vh;
-
-        .suites-slider {
-            display: none;
-        }
+        padding-top: 40px;
 
         .suites-info {
             left: 0;
-            top: 52%;
+            top: 60%;
             transform: unset;
             width: auto;
             padding: 15px;
@@ -2278,10 +2275,11 @@ p.label {
     .thanks {
         .thanks-content {
             bottom: 42%;
+            right: 3%;
 
             .heading {
-                font-size: 44px;
-                line-height: 50px;
+                font-size: 38px;
+                line-height: 46px;
 
                 br {
                     display: block;
@@ -2289,7 +2287,8 @@ p.label {
             }
 
             .para {
-                font-size: 20px;
+                font-size: 16px;
+                text-align: right;
             }
 
 
@@ -2391,5 +2390,87 @@ p.label {
                 }
             }
         }
+    }
+}
+
+@media(max-width: 375px) {
+    .about h2.heading {
+        font-size: 34px;
+        line-height: 32px;
+    }
+
+    .about .bottom .col-md-7 .heading.secondary {
+        margin-top: 195px;
+    }
+
+    .modal-body {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .about {
+        background-position: 0% 320px;
+    }
+
+    .style .left-bg p {
+        line-height: 28px;
+    }
+
+    .heading {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .architecture .wonder p {
+        font-size: 26px;
+    }
+
+    .suites .suites-info {
+        top: 56%;
+    }
+
+    .amenities #pills-tab .nav-item .nav-link {
+        font-size: 18px;
+        padding: 0.5rem 1rem 0.3rem 0;
+    }
+
+    .location .heading {
+        font-size: 28px;
+
+        br {
+            display: none;
+        }
+    }
+
+    .distination .heading {
+        line-height: 50px;
+    }
+
+    .thanks .thanks-content .heading {
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .thanks .logo2 img {
+        width: 81px;
+    }
+}
+
+@media(max-width: 340px) {
+    .about h2.heading {
+        font-size: 32px;
+    }
+
+    .about {
+        background-position: 0% 356px;
+    }
+
+    .amenities .para {
+        font-size: 14px;
+    }
+
+    .architecture .wonder ul li {
+        font-size: 14px;
+        line-height: 38px;
     }
 }
