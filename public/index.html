@@ -15,11 +15,6 @@
     <link rel="stylesheet" href="assets/css/slick-theme.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
@@ -43,7 +38,8 @@
                 <li><a href="#architecture">Architechture</a></li>
                 <li><a href="#lifestyle">LifeStyle</a></li>
                 <li><a href="#amenities">Amenities</a></li>
-                <li><a href="/"><img class="logo" src="/assets/images/antelopes-logo.png" alt=""></a></li>
+                <li><a href="#banner"><img class="logo" id="headerLogo" src="/assets/images/antelopes-logo.png"
+                            alt=""></a></li>
                 <li><a href="#interiors">Interiors</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#unitplans">Unit Plans</a></li>
@@ -51,9 +47,9 @@
             </ul>
         </section>
         <div class="mobile-header mobile">
-            <a href="/"><img src="/assets/images/res/logo.png" alt=""></a>
+            <a href="#banner"><img src="/assets/images/res/logo.png" alt=""></a>
         </div>
-        <section class="banner">
+        <section class="banner" id="banner">
             <div class="left"></div>
             <div class="middle">
                 <div class="logo">
@@ -82,14 +78,14 @@
                             alt="">Back </button>
                     <img class="humbergure" src="assets/images/humbergure.svg" alt="">
                     <ul>
-                        <li><a href="#about">Project</a></li>
-                        <li><a href="#architecture">Architechture</a></li>
-                        <li><a href="#lifestyle">LifeStyle</a></li>
-                        <li><a href="#amenities">Amenities</a></li>
-                        <li><a href="#interiors">Interiors</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#unitplans">Unit Plans</a></li>
-                        <li><a href="#location">Location</a></li>
+                        <li class="close-menu"><a href="#about">Project</a></li>
+                        <li class="close-menu"><a href="#architecture">Architechture</a></li>
+                        <li class="close-menu"><a href="#lifestyle">LifeStyle</a></li>
+                        <li class="close-menu"><a href="#amenities">Amenities</a></li>
+                        <li class="close-menu"><a href="#interiors">Interiors</a></li>
+                        <li class="close-menu"><a href="#gallery">Gallery</a></li>
+                        <li class="close-menu"><a href="#unitplans">Unit Plans</a></li>
+                        <li class="close-menu"><a href="#location">Location</a></li>
                     </ul>
                     <button class="btn-antelopes" data-bs-target="#downloadBrochure" data-bs-toggle="modal">Discover
                         More <img src="/assets/images/arrow.png" alt=""> </button>
@@ -572,9 +568,9 @@
         <section class="distination">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-7 map-bg">
-                        <img class="zoom mobile" data-bs-target="#map" data-bs-toggle="modal"
-                            src="/assets/images/zoom.png" width="30px" alt="">
+                    <div class="col-md-7 map-bg" data-bs-target="#map" data-bs-toggle="modal">
+                        <!-- <img class="zoom mobile" data-bs-target="#map" data-bs-toggle="modal"
+                            src="/assets/images/zoom.png" width="30px" alt=""> -->
                     </div>
                     <div class="col-md-5">
                         <h2 class="heading">Location Map</h2>
@@ -1091,6 +1087,17 @@
                 });
             });
         </script>
+        <!-- <script>
+            $(document).ready(function () {
+                $('#headerLogo').click(function () {
+                    $('#banner').removeClass('full-banner')
+                    $('.left')
+                    setTimeout(() => {
+                        $('#banner').addClass('full-banner')
+                    }, 1000);
+                })
+            });
+        </script> -->
 </body>
 
 </html>
