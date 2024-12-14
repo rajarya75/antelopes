@@ -234,7 +234,7 @@ p.label {
   justify-content: center;
   z-index: 1000;
   position: relative;
-  transition: all 0.3s ease;
+  transition: visibility 1s ease;
   visibility: hidden;
 }
 .desktop-header.sticky ul {
@@ -301,7 +301,7 @@ p.label {
 }
 .banner .middle .logo img {
   width: 170px;
-  transition: width 0.5s ease;
+  transition: visibility 1s ease;
   padding-top: 6px;
 }
 .banner .middle .content {
@@ -1355,7 +1355,7 @@ p.label {
   /* Position each letter dynamically */
 }
 #loader .letters img.a {
-  top: 10%;
+  top: 8%;
   left: 10%;
 }
 #loader .letters img.n {
@@ -1371,7 +1371,7 @@ p.label {
   left: 80%;
 }
 #loader .letters img.l {
-  bottom: 10%;
+  bottom: 8%;
   left: 10%;
 }
 #loader .letters img.o {

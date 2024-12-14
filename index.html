@@ -1019,7 +1019,9 @@
                     }
 
                     if (desktopHeader) {
-                        desktopHeader.style.visibility = "visible";
+                        setTimeout(() => {
+                            desktopHeader.style.visibility = "visible";
+                        }, 1000);
                     }
                 }, 3000);
 

@@ -274,7 +274,7 @@ p.label {
     justify-content: center;
     z-index: 1000;
     position: relative;
-    transition: all 0.3s ease;
+    transition: visibility 1s ease;
     visibility: hidden;
 
     &.sticky {
@@ -354,7 +354,7 @@ p.label {
 
             img {
                 width: 170px;
-                transition: width 0.5s ease;
+                transition: visibility 1s ease;
                 padding-top: 6px;
             }
         }
@@ -1675,7 +1675,7 @@ p.label {
         /* Smooth transition for animation */
         /* Position each letter dynamically */
         &.a {
-            top: 10%;
+            top: 8%;
             left: 10%;
         }
 
@@ -1695,7 +1695,7 @@ p.label {
         }
 
         &.l {
-            bottom: 10%;
+            bottom: 8%;
             left: 10%;
         }
 
