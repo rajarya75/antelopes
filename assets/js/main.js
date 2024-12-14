@@ -3,6 +3,10 @@ $(document).ready(function () {
     $(".banner").toggleClass("full-banner");
   });
 
+  $(".close-menu").click(function () {
+    $(".banner").toggleClass("full-banner");
+  });
+
   $(".humbergure").click(function () {
     $(".banner").toggleClass("full-banner");
   });

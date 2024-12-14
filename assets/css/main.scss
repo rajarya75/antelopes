@@ -48,6 +48,7 @@ body {
     overflow-x: hidden;
     background: $primary;
     font-weight: 300;
+    scroll-behavior: smooth;
 }
 
 .main-wrapper {
@@ -1806,6 +1807,7 @@ p.label {
             right: 0;
             height: 100%;
             z-index: 13;
+            transition: width .5s ease-in-out;
 
             .humbergure {
                 right: 10px !important;
