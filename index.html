@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <div id="loader">
+    <!-- <div id="loader">
         <div class="letters">
             <img class="a" src="/assets/images/loader/a.png" alt="">
             <img class="n" src="/assets/images/loader/n.png" alt="">
@@ -35,7 +35,7 @@
             <img class="e1" src="/assets/images/loader/e.png" alt="">
             <img class="s" src="/assets/images/loader/s.png" alt="">
         </div>
-    </div>
+    </div> -->
     <div class="main-wrapper">
         <section class="desktop-header sticky desktop">
             <ul>
@@ -51,7 +51,7 @@
             </ul>
         </section>
         <div class="mobile-header mobile">
-            <img src="/assets/images/res/logo.png" alt="">
+            <a href="/"><img src="/assets/images/res/logo.png" alt=""></a>
         </div>
         <section class="banner">
             <div class="left"></div>
@@ -378,7 +378,7 @@
                             </div>
                             <div class="tab-pane fade" id="pills-profile1" role="tabpanel"
                                 aria-labelledby="pills-profile1-tab">
-                                <div class="flex-between">
+                                <div class="flex-between full-width">
                                     <p class="para secondary"> Open-air theatre and BBQ area</p>
                                     <p class="para secondary"> Viewing decks</p>
                                     <p class="para secondary"> Elevated event spaces for gatherings</p>
@@ -446,7 +446,7 @@
             <div class="container">
                 <h2 class="heading primary">Unit Plans</h2>
             </div>
-            <div class="container">
+            <div class="container desktop">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="plan-item">
@@ -489,6 +489,59 @@
                     </div>
                 </div>
             </div>
+            <div id="carouselExampleControls" class="carousel slide mobile" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="plan-item">
+                            <h3 class="heading">east villa</h3>
+                            <p>35ft x 45ft</p>
+                            <p>Starting from XX Cr*</p>
+                            <div class="img-box">
+                                <img src="assets/images/plans/plan.webp" class="img-fluid" alt="">
+                                <button class="btn-antelopes2" data-bs-target="#downloadBrochure"
+                                    data-bs-toggle="modal">Discover More <img src="/assets/images/arrow1.png"
+                                        alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="plan-item">
+                            <h3 class="heading">east villa</h3>
+                            <p>35ft x 50ft</p>
+                            <p>Starting from XX Cr*</p>
+                            <div class="img-box">
+                                <img src="assets/images/plans/plan.webp" class="img-fluid" alt="">
+                                <button class="btn-antelopes2" data-bs-target="#downloadBrochure"
+                                    data-bs-toggle="modal">Discover More <img src="/assets/images/arrow1.png"
+                                        alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="plan-item">
+                            <h3 class="heading">North villa</h3>
+                            <p>35ft x 45ft</p>
+                            <p>Starting from XX Cr*</p>
+                            <div class="img-box">
+                                <img src="assets/images/plans/plan.webp" class="img-fluid" alt="">
+                                <button class="btn-antelopes2" data-bs-target="#downloadBrochure"
+                                    data-bs-toggle="modal">Discover More <img src="/assets/images/arrow1.png"
+                                        alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </section>
         <!-- Start Locations -->
         <section class="location" id="location">
@@ -521,8 +574,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-7 map-bg">
-                        <!-- <img class="zoom" data-bs-target="#map" data-bs-toggle="modal" src="/assets/images/zoom.png"
-                            alt=""> -->
+                        <img class="zoom mobile" data-bs-target="#map" data-bs-toggle="modal"
+                            src="/assets/images/zoom.png" width="30px" alt="">
                     </div>
                     <div class="col-md-5">
                         <h2 class="heading">Location Map</h2>
@@ -907,7 +960,7 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        <img src="/assets/images/mapmodal.webp" class="img-fluid" alt="">
+                        <img src="/assets/images/res/map.webp" class="img-fluid" alt="">
                     </div>
                 </div>
             </div>

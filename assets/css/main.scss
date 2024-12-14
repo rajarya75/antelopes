@@ -1742,10 +1742,6 @@ p.label {
         font-size: 28px;
         line-height: 36px;
         letter-spacing: 1px;
-
-        br {
-            display: none;
-        }
     }
 
     .desktop {
@@ -1757,9 +1753,8 @@ p.label {
     }
 
     .para {
-        font-size: 18px;
-        line-height: 27px;
-        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
         text-align: justify;
     }
 
@@ -1771,13 +1766,7 @@ p.label {
             min-width: 100% !important;
 
             .logo {
-                position: fixed;
-                width: 100%;
-                z-index: 10;
-
-                img {
-                    width: 250px;
-                }
+                display: none;
             }
 
             .heading {
@@ -1787,9 +1776,15 @@ p.label {
             }
 
             .content {
-                padding-top: 30vh;
+                padding-top: 33vh;
                 max-width: 380px;
                 margin: 0 auto;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .para {
+                text-align: center;
             }
 
 
@@ -1819,7 +1814,14 @@ p.label {
 
             .btn-antelopes {
                 margin-left: 16px;
-                margin-top: 44px
+                margin-top: 20px;
+                width: 200px;
+
+                &.btn-back {
+                    width: 130px;
+                    display: block;
+                    margin-top: 50px;
+                }
             }
 
             ul li a {
@@ -1827,6 +1829,7 @@ p.label {
                 color: #050100;
                 text-transform: uppercase;
                 font-size: 14px;
+                font-weight: 400;
             }
         }
     }
@@ -1846,11 +1849,15 @@ p.label {
         background-image: url(/assets/images/res/about.png);
         background-size: contain;
         background-repeat: no-repeat;
-        background-position: 0% 62%;
+        background-position: 0% 300px;
         padding-bottom: 60px;
 
         &:hover {
-            background-image: unset;
+            background-image: url(/assets/images/res/about.png);
+        }
+
+        &::before {
+            display: none;
         }
 
         .row {
@@ -1896,6 +1903,10 @@ p.label {
 
         .left-bg {
             padding: 60px 15px;
+
+            p {
+                line-height: 30px;
+            }
         }
 
         .style-images {
@@ -1920,7 +1931,7 @@ p.label {
 
     .architecture {
         padding-top: 79px;
-        padding-bottom: 70px;
+        padding-bottom: 0px;
 
         .col-md-8,
         .col-md-4 {
@@ -1982,7 +1993,7 @@ p.label {
                 flex-wrap: wrap;
 
                 p {
-                    width: 50%;
+                    width: 49%;
                     padding-bottom: 10px;
                 }
             }
@@ -1993,6 +2004,10 @@ p.label {
 
             .nav-item .nav-link {
                 text-align: left;
+            }
+
+            .full-width p {
+                width: 100%;
             }
 
             .amenities-list {
@@ -2008,18 +2023,39 @@ p.label {
     }
 
     .interiors {
-        min-height: auto;
-        padding-top: 70px;
-        padding-bottom: 70px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        display: flex;
+        flex-direction: column;
+        height: auto;
 
-        .left,
+        .left {
+            width: 100%;
+
+            .bg-left {
+                position: relative;
+                opacity: 1 !important;
+                left: 0 !important;
+                background-image: url(/assets/images/res/int-1.webp);
+                height: 390px;
+            }
+        }
+
         .right {
-            display: none;
+            width: 100%;
+
+            .bg-right {
+                position: relative;
+                opacity: 1 !important;
+                right: 0 !important;
+                background-image: url(/assets/images/res/int-2.webp);
+                height: 390px;
+            }
         }
 
         .middle {
-            width: 100%;
-            padding: 0 16px;
+            width: 100% !important;
+            padding: 30px 16px;
 
             .content {
                 width: 100%;
@@ -2064,7 +2100,7 @@ p.label {
     }
 
     .plans {
-        padding: 60px 0;
+        padding: 60px 16px 40px 16px;
         background-size: contain;
 
         h2.heading {
@@ -2087,12 +2123,21 @@ p.label {
             min-width: 216px !important;
         }
 
+        .carousel-control-next-icon {
+            background-image: url(/assets/images/res/next.png);
+            margin-right: -50px;
+        }
+
+        .carousel-control-prev-icon {
+            background-image: url(/assets/images/res/prev.png);
+            margin-left: -50px;
+        }
     }
 
     .location {
 
         .bg {
-            background-position: bottom left;
+            background-position: bottom;
 
             .info {
                 height: auto;
@@ -2103,7 +2148,7 @@ p.label {
 
         &:hover {
             .bg {
-                background-position: top center;
+                background-position: bottom;
             }
         }
     }
@@ -2137,6 +2182,7 @@ p.label {
             .accordion-item .accordion-button {
                 padding-top: 20px;
                 padding-bottom: 16px;
+                font-size: 18px;
             }
         }
 
@@ -2153,6 +2199,7 @@ p.label {
 
         .heading {
             font-size: 44px;
+            line-height: 50px;
         }
     }
 
@@ -2258,7 +2305,91 @@ p.label {
         }
     }
 
-    #loader .letters img {
-        width: 60px;
+    #downloadBrochure {
+        .modal-dialog {
+            .modal-content {
+                padding-left: 0;
+                border-radius: 20px;
+                padding-bottom: 10px;
+
+                .heading {
+                    margin-top: -40px;
+                    font-size: 40px;
+                    line-height: 54px;
+                }
+
+
+
+                .contact-form {
+                    padding: 0;
+
+                    p.required {
+                        margin-top: -1.5rem;
+                    }
+
+                    .mb-3 {
+                        margin-bottom: 30px !important;
+                    }
+
+                    .form-control,
+                    .form-select {
+                        height: 50px;
+                    }
+                }
+            }
+        }
+    }
+
+    #loader {
+        .letters {
+            img {
+                width: 24px;
+
+                &.a {
+                    top: 25%;
+                    left: 5%;
+                }
+
+                &.n {
+                    top: 32%;
+                    left: 25%;
+                }
+
+                &.t {
+                    top: 30%;
+                    left: 53%;
+                }
+
+                &.e {
+                    top: 45%;
+                    left: 66%;
+                }
+
+                &.l {
+                    bottom: 25%;
+                    left: 5%;
+                }
+
+                &.o {
+                    bottom: 30%;
+                    left: 27%;
+                }
+
+                &.p {
+                    bottom: 33%;
+                    left: 50%;
+                }
+
+                &.e1 {
+                    bottom: 25%;
+                    right: 20%;
+                }
+
+                &.s {
+                    bottom: 40%;
+                    right: 8%;
+                }
+            }
+        }
     }
 }
