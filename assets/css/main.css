@@ -280,7 +280,7 @@ p.label {
 .banner .left {
   width: 20%;
   background: #F8E9D4;
-  transition: width 0.5s ease;
+  transition: width 1s ease-in-out;
 }
 .banner .middle {
   width: 60%;
@@ -349,7 +349,7 @@ p.label {
 .banner .right {
   width: 20%;
   background: #F8E9D4;
-  transition: width 0.5s ease;
+  transition: width 1s ease-in-out;
 }
 .banner .right .btn-back {
   margin: 30px;

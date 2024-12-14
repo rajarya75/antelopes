@@ -330,7 +330,7 @@ p.label {
     .left {
         width: 20%;
         background: $primary;
-        transition: width 0.5s ease;
+        transition: width 1s ease-in-out;
 
     }
 
@@ -415,7 +415,7 @@ p.label {
     .right {
         width: 20%;
         background: $primary;
-        transition: width 0.5s ease;
+        transition: width 1s ease-in-out;
 
         .btn-back {
             margin: 30px;
