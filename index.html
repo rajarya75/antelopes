@@ -1019,8 +1019,13 @@
                     }
 
                     if (desktopHeader) {
+                        desktopHeader.style.opacity = "0"; // Start with invisible
+                        desktopHeader.style.visibility = "hidden"; // Hide it initially
+                        desktopHeader.style.transition = "opacity 0.5s ease-in-out"; // Smooth fade-in transition
+
                         setTimeout(() => {
-                            desktopHeader.style.visibility = "visible";
+                            desktopHeader.style.visibility = "visible"; // Make it visible
+                            desktopHeader.style.opacity = "1"; // Fade it in smoothly
                         }, 1000);
                     }
                 }, 3000);
