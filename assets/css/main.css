@@ -149,6 +149,7 @@ p.label {
   overflow: hidden;
   z-index: 1;
   text-decoration: none;
+  white-space: nowrap;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2), 0px 5px 15px 0px rgba(5, 1, 0, 0.2);
 }
 .btn-antelopes img {
@@ -177,6 +178,7 @@ p.label {
   overflow: hidden;
   z-index: 1;
   text-decoration: none;
+  white-space: nowrap;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2), 0px 5px 15px 0px rgba(5, 1, 0, 0.2);
 }
 .btn-antelopes1 img {
@@ -205,6 +207,7 @@ p.label {
   overflow: hidden;
   z-index: 1;
   text-decoration: none;
+  white-space: nowrap;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2), 0px 5px 15px 0px rgba(5, 1, 0, 0.2);
 }
 .btn-antelopes2 img {
@@ -948,6 +951,7 @@ p.label {
   background-position: center;
   position: relative;
   height: 1050px;
+  background-repeat: no-repeat;
 }
 .distination .map-bg .zoom {
   position: absolute;
@@ -1402,9 +1406,16 @@ p.label {
   visibility: none;
 }
 
-@media (max-width: 1440px) and (min-width: 1200px) {
+@media (max-width: 1440px) and (min-width: 1366px) {
+  .banner .middle .heading {
+    font-size: 60px;
+    line-height: 68px;
+  }
   .about h2.heading {
-    font-size: 70px;
+    font-size: 60px;
+  }
+  .about h2.heading span {
+    font-size: 70%;
   }
   .heading {
     font-size: 50px;
@@ -1421,11 +1432,19 @@ p.label {
   .contact .heading,
   .plans h2.heading,
   .gallery .heading {
-    font-size: 70px;
-    line-height: 80px;
+    font-size: 60px;
+    line-height: 70px;
+  }
+  .interiors .middle .content {
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .interiors .heading {
     font-size: 60px;
+    line-height: 44px;
+  }
+  .plans h3.heading {
+    font-size: 40px;
     line-height: 44px;
   }
   .location br {
@@ -1434,6 +1453,159 @@ p.label {
   .location .bg .info {
     padding-left: 60px;
     padding-right: 60px;
+  }
+  .architecture .creative .art-label.art-label-1 {
+    top: 200px;
+    right: -60px;
+  }
+  .architecture .creative .art-label.art-label-2 {
+    top: 330px;
+    right: -24px;
+  }
+  .architecture .creative .art-label.art-label-3 {
+    bottom: 290px;
+    left: -90px;
+  }
+  .architecture .creative .art-label.art-label-4 {
+    bottom: 50px;
+  }
+}
+@media (max-width: 1366px) and (min-width: 1280px) {
+  .banner .middle .heading {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .about h2.heading {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  .about h2.heading span {
+    font-size: 70%;
+  }
+  .heading {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .para {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .style .left-bg {
+    padding: 30px 60px;
+  }
+  .style .left-bg p {
+    line-height: 30px;
+  }
+  .style .py-5 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  .amenities .heading,
+  .contact .heading,
+  .plans h2.heading,
+  .gallery .heading {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .interiors .heading {
+    font-size: 50px;
+    line-height: 44px;
+  }
+  .plans h3.heading {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  .location br {
+    display: none;
+  }
+  .location .bg .info {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .architecture .creative .art-label.art-label-1 {
+    top: 130px;
+    right: -100px;
+  }
+  .architecture .creative .art-label.art-label-2 {
+    top: 270px;
+    right: -24px;
+  }
+  .architecture .creative .art-label.art-label-3 {
+    bottom: 220px;
+    left: -140px;
+  }
+  .architecture .creative .art-label.art-label-4 {
+    bottom: 20px;
+  }
+  #loader .letters img {
+    width: 60px;
+  }
+}
+@media (max-width: 1280px) and (min-width: 768px) {
+  .banner .middle .heading {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .about h2.heading {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .about h2.heading span {
+    font-size: 70%;
+  }
+  .heading {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .para {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .style .left-bg {
+    padding: 15px 15px;
+  }
+  .style .left-bg p {
+    line-height: 26px;
+  }
+  .style .py-5 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  .amenities .heading,
+  .contact .heading,
+  .plans h2.heading,
+  .gallery .heading {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .interiors .heading {
+    font-size: 40px;
+    line-height: 34px;
+  }
+  .plans h3.heading {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .location br {
+    display: none;
+  }
+  .location .bg .info {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .interiors .middle .content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .amenities #pills-tab .nav-item .nav-link {
+    padding: 0.5rem 2rem 0.3rem 0;
+    font-size: 26px;
+  }
+  .amenities .clubhouse .amenities-list .para {
+    width: 25%;
+  }
+  #loader .letters img {
+    width: 50px;
   }
 }
 @media (max-width: 768px) {
@@ -1614,7 +1786,7 @@ p.label {
   }
   .suites .suites-info {
     left: 0;
-    top: 60%;
+    top: 500px;
     transform: unset;
     width: auto;
     padding: 15px;
@@ -1625,7 +1797,7 @@ p.label {
   }
   .amenities {
     padding-bottom: 30px;
-    padding-top: 40px;
+    padding-top: 150px;
     position: relative;
   }
   .amenities br {
@@ -1966,6 +2138,9 @@ p.label {
     font-size: 34px;
     line-height: 32px;
   }
+  .about h2.heading span {
+    font-size: 75%;
+  }
   .about .bottom .col-md-7 .heading.secondary {
     margin-top: 195px;
   }
@@ -1987,7 +2162,7 @@ p.label {
     font-size: 26px;
   }
   .suites .suites-info {
-    top: 56%;
+    top: 450px;
   }
   .amenities #pills-tab .nav-item .nav-link {
     font-size: 18px;
@@ -2011,17 +2186,40 @@ p.label {
   }
 }
 @media (max-width: 340px) {
+  .banner {
+    height: 110vh;
+  }
   .about h2.heading {
-    font-size: 32px;
+    font-size: 28px;
+    line-height: 24px;
+  }
+  .about .bottom .col-md-7 h2.heading.secondary.uppercase.pb-2 span,
+  .style .heading,
+  .heading {
+    font-size: 22px;
+    line-height: 28px;
   }
   .about {
     background-position: 0% 356px;
   }
   .amenities {
-    padding-top: 80px;
+    padding-top: 380px;
+  }
+  .distination {
+    padding-top: 140px;
   }
   .amenities .para {
     font-size: 14px;
+  }
+  .interiors .middle .content .heading {
+    font-size: 36px;
+    line-height: 30px;
+  }
+  .gallery .heading,
+  .plans h2.heading,
+  .distination .heading,
+  .contact .heading {
+    font-size: 36px;
   }
   .architecture .wonder ul li {
     font-size: 14px;
