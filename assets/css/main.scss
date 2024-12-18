@@ -483,7 +483,7 @@ p.label {
     position: relative;
     background-image: url(/assets/images/about-wave1.svg);
     background-size: cover;
-    background-position: center -14px;
+    background-position: center 35px;
     transition: background 0.5s ease-in-out;
     min-height: 100vh;
 
@@ -2010,6 +2010,35 @@ p.label {
 
     .amenities .clubhouse .amenities-list .para {
         width: 25%;
+    }
+
+    .architecture {
+        .creative {
+
+            .art-label {
+
+                &.art-label-1 {
+                    top: 150px;
+                    right: -100px;
+                }
+
+                &.art-label-2 {
+                    top: 280px;
+                    right: -24px;
+                }
+
+                &.art-label-3 {
+                    bottom: 230px;
+                    left: -140px;
+                }
+
+                &.art-label-4 {
+                    bottom: 30px;
+                }
+            }
+
+        }
+
     }
 
     #loader .letters img {
