@@ -1653,6 +1653,11 @@ p.label {
     width: 50px;
   }
 }
+@media (max-width: 1024px) and (min-width: 1000px) {
+  .banner .middle .discover {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   .heading {
     font-size: 28px;
