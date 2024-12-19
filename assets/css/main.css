@@ -884,6 +884,11 @@ p.label {
   line-height: 50px;
   padding-top: 20px;
 }
+.plans p.subhead {
+  font-size: 26px;
+  margin: 0;
+  letter-spacing: 2px;
+}
 .plans p {
   color: #61624D;
   font-size: 20px;
