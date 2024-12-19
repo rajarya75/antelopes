@@ -329,7 +329,7 @@ p.label {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 110vh;
+    height: 100vh;
 
     .left {
         width: 20%;
@@ -365,7 +365,7 @@ p.label {
 
         .content {
             text-align: center;
-            padding-top: 25vh;
+            padding-top: 23vh;
 
             .para {
                 padding-top: 10px;
@@ -483,7 +483,7 @@ p.label {
     position: relative;
     background-image: url(/assets/images/about-wave1.svg);
     background-size: cover;
-    background-position: center 35px;
+    background-position: center 20px;
     transition: background 0.5s ease-in-out;
     min-height: 100vh;
 
@@ -508,7 +508,7 @@ p.label {
     }
 
     .bottom {
-        padding-top: 440px;
+        padding-top: 380px;
         margin-bottom: 30px;
 
         ul {
@@ -627,7 +627,7 @@ p.label {
     }
 
     .wonder {
-        padding-top: 29%;
+        padding-top: 28%;
 
         p {
             color: $secondary;
@@ -766,7 +766,7 @@ p.label {
         padding: 40px;
         position: absolute;
         left: 50%;
-        bottom: -26%;
+        bottom: -20%;
         transform: translate(-50%, -50%);
     }
 }
@@ -782,7 +782,7 @@ p.label {
     }
 
     #pills-tab {
-        padding-top: 100px;
+        padding-top: 90px;
         border-bottom: 1px solid $secondary;
 
         .nav-item {
@@ -1748,6 +1748,48 @@ p.label {
 }
 
 // Responsiveness
+@media(max-width: 1680px) and (min-width: 1440px) {
+    .heading {
+        font-size: 64px;
+        line-height: 74px;
+    }
+
+    .architecture {
+        .creative {
+
+            .art-label {
+
+                &.art-label-1 {
+                    top: 250px;
+                    right: -14px;
+                }
+
+                &.art-label-2 {
+                    top: 390px;
+                    right: -5px;
+                }
+
+                &.art-label-3 {
+                    bottom: 380px;
+                    left: -70px;
+                }
+
+                &.art-label-4 {
+                    bottom: 50px;
+                }
+            }
+
+        }
+
+    }
+
+    .location .bg .info {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+}
+
 @media(max-width: 1440px) and (min-width: 1366px) {
     .banner .middle .heading {
         font-size: 60px;
@@ -1829,7 +1871,7 @@ p.label {
                 }
 
                 &.art-label-4 {
-                    bottom: 50px;
+                    bottom: 30px;
                 }
             }
 
@@ -1910,8 +1952,8 @@ p.label {
             .art-label {
 
                 &.art-label-1 {
-                    top: 130px;
-                    right: -100px;
+                    top: 140px;
+                    right: -80px;
                 }
 
                 &.art-label-2 {
@@ -2024,8 +2066,8 @@ p.label {
             .art-label {
 
                 &.art-label-1 {
-                    top: 150px;
-                    right: -100px;
+                    top: 160px;
+                    right: -70px;
                 }
 
                 &.art-label-2 {

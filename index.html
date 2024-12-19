@@ -15,10 +15,39 @@
     <link rel="stylesheet" href="assets/css/slick-theme.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Meta Pixel Code -->
+    <script>
+
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+
+            n.queue = []; t = b.createElement(e); t.async = !0;
+
+            t.src = v; s = b.getElementsByTagName(e)[0];
+
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+
+            'https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '1515096699187095');
+
+        fbq('track', 'PageView');
+
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src=https://www.facebook.com/tr?id=1515096699187095&ev=PageView&noscript=1 /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 
 <body>
-    <!-- <div id="loader">
+    <div id="loader">
         <div class="letters">
             <img class="a" src="/assets/images/loader/a.png" alt="">
             <img class="n" src="/assets/images/loader/n.png" alt="">
@@ -30,7 +59,7 @@
             <img class="e1" src="/assets/images/loader/e.png" alt="">
             <img class="s" src="/assets/images/loader/s.png" alt="">
         </div>
-    </div> -->
+    </div>
     <div class="main-wrapper">
         <section class="desktop-header sticky desktop">
             <ul>
