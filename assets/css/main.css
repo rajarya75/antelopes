@@ -1124,6 +1124,7 @@ p.label {
 }
 .footer .top a {
   color: #040100;
+  text-decoration: none;
 }
 .footer .top p.label {
   font-weight: 500;
