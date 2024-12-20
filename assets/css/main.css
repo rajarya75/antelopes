@@ -340,8 +340,8 @@ p.label {
 }
 .banner .middle .discover img.circle {
   position: absolute;
-  top: 19px;
-  left: 31px;
+  top: -13px;
+  left: 0px;
   transform: rotate(0deg) scale(1);
   transition: transform 0.5s ease;
   /* Smooth rotation and scaling */
@@ -398,7 +398,7 @@ p.label {
   position: relative;
   background-image: url(/assets/images/about-wave1.svg);
   background-size: cover;
-  background-position: center 20px;
+  background-position: center -40px;
   transition: background 0.5s ease-in-out;
   min-height: 100vh;
 }
@@ -408,14 +408,14 @@ p.label {
 .about h2.heading {
   text-transform: unset;
   line-height: 60px;
-  font-size: 92px;
+  font-size: 90px;
   letter-spacing: 1px;
 }
 .about h2.heading.lheight {
   line-height: 50px;
 }
 .about h2.heading span {
-  font-size: 48px;
+  font-size: 50%;
 }
 .about .bottom {
   padding-top: 380px;
@@ -539,30 +539,38 @@ p.label {
   transition: all 0.3s ease-in-out;
 }
 .architecture .creative .art1 {
-  margin-bottom: -160px;
+  margin-bottom: -111px;
   z-index: 4;
+  position: relative;
 }
 .architecture .creative .art2 {
-  margin-bottom: -210px;
+  margin-bottom: -172px;
   z-index: 3;
+  position: relative;
 }
 .architecture .creative .art3 {
+  position: relative;
+}
+.architecture .creative .art3 img {
+  margin-left: -44px;
+  margin-bottom: -35px;
   z-index: 2;
 }
 .architecture .creative .art4 {
   margin-top: -180px;
   z-index: 1;
+  position: relative;
 }
-.architecture .creative:hover .art1 {
-  transform: translateY(-200px);
+.architecture .creative:hover .art1 img {
+  transform: translateY(-190px);
 }
-.architecture .creative:hover .art2 {
+.architecture .creative:hover .art2 img {
   transform: translateY(-120px);
 }
-.architecture .creative:hover .art3 {
+.architecture .creative:hover .art3 img {
   transform: translateY(-10px);
 }
-.architecture .creative:hover .art4 {
+.architecture .creative:hover .art4 img {
   transform: translateY(70px);
 }
 .architecture .creative:hover .art-label {
@@ -584,22 +592,37 @@ p.label {
   text-align: left;
 }
 .architecture .creative .art-label.art-label-1 {
-  top: 180px;
-  right: -60px;
+  top: 10px;
+  right: -40px;
+}
+.architecture .creative .art-label.art-label-1 p:before {
+  content: url(/assets/images/art-line-1.png);
+  position: absolute;
+  left: -70px;
+  top: 10px;
 }
 .architecture .creative .art-label.art-label-2 {
-  top: 330px;
-  right: -24px;
+  top: -60px;
+  right: -20px;
+}
+.architecture .creative .art-label.art-label-2 p:before {
+  content: url(/assets/images/art-line-2.png);
+  position: absolute;
+  left: -120px;
+  top: 10px;
 }
 .architecture .creative .art-label.art-label-3 {
-  bottom: 330px;
-  left: -90px;
+  top: 130px;
+  left: -120px;
 }
-.architecture .creative .art-label.art-label-3 img {
-  transform: rotate(180deg);
+.architecture .creative .art-label.art-label-3 p:before {
+  content: url(/assets/images/art-line-1.png);
+  position: absolute;
+  right: -70px;
+  top: 24px;
 }
 .architecture .creative .art-label.art-label-4 {
-  bottom: 50px;
+  bottom: -160px;
   transform: translate(50%);
 }
 
@@ -881,7 +904,8 @@ p.label {
 .plans h3.heading {
   color: #61624D;
   font-size: 48px;
-  line-height: 50px;
+  line-height: 54px;
+  letter-spacing: 2px;
   padding-top: 20px;
 }
 .plans p.subhead {
@@ -1222,16 +1246,16 @@ p.label {
 }
 .thanks .thanks-content {
   position: absolute;
-  bottom: 25%;
-  right: 5%;
+  bottom: 32%;
+  right: 3%;
   text-align: right;
 }
 .thanks .thanks-content .heading {
-  font-size: 96px;
+  font-size: 90px;
   line-height: 74px;
 }
 .thanks .thanks-content .heading span {
-  font-size: 75%;
+  font-size: 70%;
 }
 .thanks .thanks-content .para {
   font-size: 32px;
@@ -1416,21 +1440,6 @@ p.label {
     font-size: 64px;
     line-height: 74px;
   }
-  .architecture .creative .art-label.art-label-1 {
-    top: 250px;
-    right: -14px;
-  }
-  .architecture .creative .art-label.art-label-2 {
-    top: 390px;
-    right: -5px;
-  }
-  .architecture .creative .art-label.art-label-3 {
-    bottom: 380px;
-    left: -70px;
-  }
-  .architecture .creative .art-label.art-label-4 {
-    bottom: 50px;
-  }
   .location .bg .info {
     padding-left: 80px;
     padding-right: 80px;
@@ -1485,19 +1494,16 @@ p.label {
     padding-right: 60px;
   }
   .architecture .creative .art-label.art-label-1 {
-    top: 200px;
-    right: -60px;
+    top: 10px;
+    right: -25px;
   }
   .architecture .creative .art-label.art-label-2 {
-    top: 330px;
-    right: -24px;
+    top: -60px;
+    right: -40px;
   }
   .architecture .creative .art-label.art-label-3 {
-    bottom: 290px;
-    left: -90px;
-  }
-  .architecture .creative .art-label.art-label-4 {
-    bottom: 30px;
+    top: 130px;
+    left: -135px;
   }
 }
 @media (max-width: 1366px) and (min-width: 1280px) {
@@ -1552,23 +1558,20 @@ p.label {
     padding-left: 60px;
     padding-right: 60px;
   }
-  .architecture .creative .art-label.art-label-1 {
-    top: 140px;
-    right: -80px;
-  }
-  .architecture .creative .art-label.art-label-2 {
-    top: 270px;
-    right: -24px;
-  }
-  .architecture .creative .art-label.art-label-3 {
-    bottom: 220px;
-    left: -140px;
-  }
-  .architecture .creative .art-label.art-label-4 {
-    bottom: 20px;
-  }
   #loader .letters img {
     width: 60px;
+  }
+  .architecture .creative .art-label.art-label-1 {
+    top: -15px;
+    right: -90px;
+  }
+  .architecture .creative .art-label.art-label-2 {
+    top: -60px;
+    right: -90px;
+  }
+  .architecture .creative .art-label.art-label-3 {
+    top: 130px;
+    left: -180px;
   }
 }
 @media (max-width: 1280px) and (min-width: 768px) {
@@ -1634,28 +1637,37 @@ p.label {
   .amenities .clubhouse .amenities-list .para {
     width: 25%;
   }
-  .architecture .creative .art-label.art-label-1 {
-    top: 160px;
-    right: -70px;
-  }
-  .architecture .creative .art-label.art-label-2 {
-    top: 280px;
-    right: -24px;
-  }
-  .architecture .creative .art-label.art-label-3 {
-    bottom: 230px;
-    left: -140px;
-  }
-  .architecture .creative .art-label.art-label-4 {
-    bottom: 30px;
-  }
   #loader .letters img {
     width: 50px;
+  }
+  .architecture .creative .art-label.art-label-1 {
+    top: -15px;
+    right: -75px;
+  }
+  .architecture .creative .art-label.art-label-2 {
+    top: -60px;
+    right: -70px;
+  }
+  .architecture .creative .art-label.art-label-3 {
+    top: 130px;
+    left: -180px;
   }
 }
 @media (max-width: 1024px) and (min-width: 1000px) {
   .banner .middle .discover {
     display: none;
+  }
+  .architecture .creative .art-label.art-label-1 {
+    top: -30px;
+    right: -45px;
+  }
+  .architecture .creative .art-label.art-label-2 {
+    top: -60px;
+    right: -30px;
+  }
+  .architecture .creative .art-label.art-label-3 {
+    top: 130px;
+    left: -200px;
   }
 }
 @media (max-width: 768px) {
@@ -1950,7 +1962,7 @@ p.label {
     display: none !important;
   }
   .plans {
-    padding: 60px 16px 40px 16px;
+    padding: 60px 0px;
     background-size: contain;
   }
   .plans h2.heading {
@@ -1969,13 +1981,17 @@ p.label {
   .plans .btn-antelopes2 {
     min-width: 216px !important;
   }
+  .plans .carousel-item {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   .plans .carousel-control-next-icon {
     background-image: url(/assets/images/res/next.png);
-    margin-right: -50px;
+    margin-right: -30px;
   }
   .plans .carousel-control-prev-icon {
     background-image: url(/assets/images/res/prev.png);
-    margin-left: -50px;
+    margin-left: -30px;
   }
   .location .bg {
     background-position: bottom;
@@ -2145,6 +2161,8 @@ p.label {
   }
   #loader .letters img {
     width: 24px;
+    margin-bottom: -50px;
+    margin-top: 10px;
   }
   #loader .letters img.a {
     top: 25%;
