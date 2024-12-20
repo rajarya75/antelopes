@@ -1796,11 +1796,11 @@ p.label {
     }
 
     .about h2.heading {
-        font-size: 60px;
+        font-size: 70px;
+    }
 
-        span {
-            font-size: 70%;
-        }
+    .about .bottom {
+        padding-top: 300px;
     }
 
     .heading {
@@ -1884,11 +1884,11 @@ p.label {
 
     .about h2.heading {
         font-size: 50px;
-        line-height: 50px;
+        line-height: 40px;
+    }
 
-        span {
-            font-size: 70%;
-        }
+    .about h2.heading.lheight {
+        line-height: 36px;
     }
 
     .heading {

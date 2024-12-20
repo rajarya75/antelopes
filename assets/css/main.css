@@ -1452,10 +1452,10 @@ p.label {
     line-height: 68px;
   }
   .about h2.heading {
-    font-size: 60px;
+    font-size: 70px;
   }
-  .about h2.heading span {
-    font-size: 70%;
+  .about .bottom {
+    padding-top: 300px;
   }
   .heading {
     font-size: 50px;
@@ -1514,10 +1514,10 @@ p.label {
   }
   .about h2.heading {
     font-size: 50px;
-    line-height: 50px;
+    line-height: 40px;
   }
-  .about h2.heading span {
-    font-size: 70%;
+  .about h2.heading.lheight {
+    line-height: 36px;
   }
   .heading {
     font-size: 40px;
