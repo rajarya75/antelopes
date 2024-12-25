@@ -2158,8 +2158,8 @@ p.label {
     background-position: left center;
   }
   #loader .letters {
-    height: 500px;
-    margin-top: -50px;
+    height: 400px;
+    margin-top: -60px;
   }
   #loader .letters img {
     width: 24px;
