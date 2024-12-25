@@ -1545,13 +1545,13 @@ p.label {
 
     .thanks-content {
         position: absolute;
-        bottom: 32%;
+        bottom: 34%;
         right: 3%;
         text-align: right;
 
         .heading {
-            font-size: 90px;
-            line-height: 74px;
+            font-size: 80px;
+            line-height: 64px;
 
             span {
                 font-size: 70%;
@@ -2738,10 +2738,11 @@ p.label {
 
     #loader {
         background-image: url(/assets/images/res/Loading.png);
-        background-position: center center;
+        background-position: left center;
 
         .letters {
-            height: 400px;
+            height: 500px;
+            margin-top: -50px;
 
             img {
                 width: 24px;
