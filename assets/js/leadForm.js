@@ -43,6 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
             SchemaName: "mx_Custom_1",
             Value: `${firstName} - Website Inquiry`,
           },
+          {
+            SchemaName: "mx_Custom_16",
+            Value: "Antelopes",
+          },
           { SchemaName: "mx_Custom_3", Value: "Website" },
         ],
       },
@@ -122,6 +126,10 @@ document.addEventListener("DOMContentLoaded", () => {
           {
             SchemaName: "mx_Custom_1",
             Value: `${firstName} - Website Inquiry`,
+          },
+          {
+            SchemaName: "mx_Custom_16",
+            Value: "Antelopes",
           },
           { SchemaName: "mx_Custom_3", Value: "Website" },
         ],
