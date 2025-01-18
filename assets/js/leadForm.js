@@ -89,7 +89,7 @@ document
 async function handleSubmit(payload) {
   try {
     const response = await fetch(
-      "https://api-in21.leadsquared.com/v2/OpportunityManagement.svc/Capture?accessKey=u%24r7b3a5c5c20947d02ad372f707c93a0b6&secretKey=8d135be8ffe8346e335fe50ef899a55c9618ce9b",
+      "https://api-in21.leadsquared.com/v2/OpportunityManagement.svc/Capture?accessKey=u$r7b3a5c5c20947d02ad372f707c93a0b6&secretKey=8d135be8ffe8346e335fe50ef899a55c9618ce9b",
       {
         method: "POST",
         headers: {
