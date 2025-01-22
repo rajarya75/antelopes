@@ -92,7 +92,7 @@ async function handleSubmit(payload) {
     if (response.ok) {
       const data = await response.json(); // Parse response data
       console.log("API Response:", data); // Log success
-      // window.location.href = "/thank-you.html";
+      window.location.href = "/thank-you.html";
     } else {
       const errorData = await response.json();
       console.error("API Error Response:", errorData); // Log error response
