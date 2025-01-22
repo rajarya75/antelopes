@@ -18,17 +18,16 @@ document
         { Attribute: "FirstName", Value: firstName },
         { Attribute: "LastName", Value: lastName || "" },
         { Attribute: "EmailAddress", Value: email },
+        { Attribute: "SearchBy", Value: "Phone" },
       ],
       Opportunity: {
         OpportunityEventCode: 12000,
         Fields: [
-          {
-            SchemaName: "mx_Custom_1",
-            Value: `${firstName} - Website Inquiry`,
-          },
+          { SchemaName: "mx_Custom_1", Value: "Merusri Antelopes" },
           { SchemaName: "mx_Custom_16", Value: "Merusri Antelopes" },
           { SchemaName: "mx_Custom_73", Value: "Web Leads" },
           { SchemaName: "mx_Custom_2", Value: "Not Attempted" },
+          { SchemaName: "mx_Custom_64", Value: "4 BHK" },
         ],
       },
     };
@@ -56,17 +55,16 @@ document
         { Attribute: "FirstName", Value: firstName },
         { Attribute: "LastName", Value: lastName || "" },
         { Attribute: "EmailAddress", Value: email },
+        { Attribute: "SearchBy", Value: "Phone" },
       ],
       Opportunity: {
         OpportunityEventCode: 12000,
         Fields: [
-          {
-            SchemaName: "mx_Custom_1",
-            Value: `${firstName} - Website Inquiry`,
-          },
+          { SchemaName: "mx_Custom_1", Value: "Merusri Antelopes" },
           { SchemaName: "mx_Custom_16", Value: "Merusri Antelopes" },
           { SchemaName: "mx_Custom_73", Value: "Web Leads" },
           { SchemaName: "mx_Custom_2", Value: "Not Attempted" },
+          { SchemaName: "mx_Custom_64", Value: "4 BHK" },
         ],
       },
     };
@@ -92,7 +90,7 @@ async function handleSubmit(payload) {
     if (response.ok) {
       const data = await response.json(); // Parse response data
       console.log("API Response:", data); // Log success
-      window.location.href = "/thank-you.html";
+      // window.location.href = "/thank-you.html";
     } else {
       const errorData = await response.json();
       console.error("API Error Response:", errorData); // Log error response
