@@ -1225,6 +1225,7 @@ p.label {
 #downloadBrochure .modal-dialog {
   max-width: 1450px;
   width: 90%;
+  margin: 0 auto;
 }
 #downloadBrochure .modal-dialog .modal-content {
   background-image: url(/assets/images/form-bg.webp);
