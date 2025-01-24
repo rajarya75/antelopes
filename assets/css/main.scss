@@ -1515,7 +1515,7 @@ p.label {
 #downloadBrochure {
     .modal-dialog {
         max-width: 1450px;
-
+        width: 90%;
 
         .modal-content {
             background-image: url(/assets/images/form-bg.webp);
@@ -1970,6 +1970,10 @@ p.label {
 }
 
 @media(max-width: 1280px) and (min-width: 768px) {
+    .banner .middle .discover {
+        display: none;
+    }
+
     .banner .middle .heading {
         font-size: 40px;
         line-height: 50px;
@@ -2054,7 +2058,17 @@ p.label {
 
 
     .architecture {
+        .wonder {
+            padding-top: 14%;
+
+            ul li {
+                line-height: 40px;
+            }
+        }
+
         .creative {
+
+
             .art-label {
 
                 &.art-label-1 {
@@ -2070,6 +2084,20 @@ p.label {
                 &.art-label-3 {
                     top: 130px;
                     left: -180px;
+                }
+            }
+
+            &:hover {
+                .img-fluid {
+                    max-width: 80%;
+                }
+
+                .art2 {
+                    margin-bottom: -230px;
+                }
+
+                .art3 {
+                    margin-bottom: 20px;
                 }
             }
         }
