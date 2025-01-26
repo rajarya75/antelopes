@@ -1256,12 +1256,15 @@ p.label {
     height: 40px;
   }
   #downloadBrochure .modal-dialog .contact-form p.required {
-    margin-top: -1.5rem;
+    margin-top: -1.2rem;
   }
 }
 @media (max-width: 480px) {
   #downloadBrochure .modal-dialog {
     width: 96%;
+  }
+  #downloadBrochure .btn-close {
+    z-index: 10;
   }
 }
 

@@ -1556,7 +1556,7 @@ p.label {
                 }
 
                 p.required {
-                    margin-top: -1.5rem;
+                    margin-top: -1.2rem;
                 }
             }
         }
@@ -1565,6 +1565,10 @@ p.label {
     @media(max-width: 480px) {
         .modal-dialog {
             width: 96%;
+        }
+
+        .btn-close {
+            z-index: 10;
         }
     }
 }
